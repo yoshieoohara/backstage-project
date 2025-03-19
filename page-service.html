@@ -1,4 +1,4 @@
-single-artist.html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -17,98 +17,114 @@ single-artist.html<!DOCTYPE html>
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-      <!-- header -->
-      <header class="header" id="header">
-        <div class="header__inner">
-          <div class="header__logo">
-            <a href="/">
-              <img src="img/logo-black.png" alt="" />
-            </a>
-          </div>
-          <nav class="header__nav">
-            <ul class="header__nav-list">
-              <li class="header__nav-item">
-                <a href="/page-service.html">service</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="/page-works.html">works</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="/archive-artist.html">artist</a>
-              </li>
-              <li class="header__nav-item dropdown">
-                <p>about</p>
-                <ul class="dropdown-menu">
-                  <li class="dropdown__menu-item"><a href="/page-about.html">日本語</a></li>
-                  <li class="dropdown__menu-item"><a href="#">English</a></li>
-                </ul>
-              </li>
-              <li class="header__nav-item dropdown">
-                <p>group</p>
-                <ul class="dropdown-menu">
-                  <li class="dropdown__menu-item"><a href="/page-group.html">日本語</a></li>
-                  <li class="dropdown__menu-item"><a href="#">English</a></li>
-                </ul>
-              </li>
-              <li class="header__nav-item dropdown">
-                <p>contact</p>
-                <ul class="dropdown-menu">
-                  <li class="dropdown__menu-item"><a href="/page-contact.html" target="_blank" rel="noopener"
-                    >バックステージプロジェクト<br>へのお問い合わせ</a></li>
-                    <li class="dropdown__menu-item"><a href="#" target="_blank" rel="noopener"
-                    >アーティストマネジメント<br>に関するお問い合わせ</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-          <button class="hamburger js-hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+    <!-- header -->
+    <header class="header" id="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="/">
+            <img src="img/logo-black.png" alt="" />
+          </a>
         </div>
-        <nav class="drawer__nav js-drawer">
-          <ul class="drawer__nav-list">
-            <li class="drawer__nav-item">
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
               <a href="/page-service.html">service</a>
             </li>
-            <li class="drawer__nav-item">
+            <li class="header__nav-item">
               <a href="/page-works.html">works</a>
             </li>
-            <li class="drawer__nav-item">
+            <li class="header__nav-item">
               <a href="/archive-artist.html">artist</a>
             </li>
-            <li class="drawer__nav-item accordion">
-              <p class="js-drawer-accordion">about</p>
-              <ul class="accordion-menu">
-                <li><a href="/page-about.html">日本語</a></li>
-                <li><a href="#">English</a></li>
+            <li class="header__nav-item dropdown">
+              <p>about</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-about.html">日本語</a>
+                </li>
+                <li class="dropdown__menu-item"><a href="#">English</a></li>
               </ul>
             </li>
-            <li class="drawer__nav-item accordion">
-              <p class="js-drawer-accordion">group</p>
-              <ul class="accordion-menu">
-                <li><a href="/page-group.html">日本語</a></li>
-                <li><a href="#">English</a></li>
+            <li class="header__nav-item dropdown">
+              <p>group</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-group.html">日本語</a>
+                </li>
+                <li class="dropdown__menu-item"><a href="#">English</a></li>
               </ul>
             </li>
-            <li class="drawer__nav-item accordion">
-              <p class="js-drawer-accordion">contact</p>
-              <ul class="accordion-menu">
-                <li><a href="/page-contact.html" target="_blank" rel="noopener"
-                  >バックステージプロジェクトへの<br>お問い合わせ</a></li>
-                <li><a href="#" target="_blank" rel="noopener"
-                  >アーティストマネジメントに関する<br>お問い合わせ</a></li>
+            <li class="header__nav-item dropdown">
+              <p>contact</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-contact.html" target="_blank" rel="noopener"
+                    >バックステージプロジェクト<br />へのお問い合わせ</a
+                  >
+                </li>
+                <li class="dropdown__menu-item">
+                  <a href="#" target="_blank" rel="noopener"
+                    >アーティストマネジメント<br />に関するお問い合わせ</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
         </nav>
-      </header>
+        <button class="hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="drawer__nav js-drawer">
+        <ul class="drawer__nav-list">
+          <li class="drawer__nav-item">
+            <a href="/page-service.html">service</a>
+          </li>
+          <li class="drawer__nav-item">
+            <a href="/page-works.html">works</a>
+          </li>
+          <li class="drawer__nav-item">
+            <a href="/archive-artist.html">artist</a>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">about</p>
+            <ul class="accordion-menu">
+              <li><a href="/page-about.html">日本語</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">group</p>
+            <ul class="accordion-menu">
+              <li><a href="/page-group.html">日本語</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">contact</p>
+            <ul class="accordion-menu">
+              <li>
+                <a href="/page-contact.html" target="_blank" rel="noopener"
+                  >バックステージプロジェクトへの<br />お問い合わせ</a
+                >
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener"
+                  >アーティストマネジメントに関する<br />お問い合わせ</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
       <!-- page-ttl -->
@@ -149,8 +165,8 @@ single-artist.html<!DOCTYPE html>
                     <a href="/page-works.html"><span>E-commerce</span></a>
                   </div>
                   <div class="service-message__link-line">
-                  <span class="arrow"></span>
-                </div>
+                    <span class="arrow"></span>
+                  </div>
                 </div>
                 <div class="service-message__link-list">
                   <div class="service-message__link-item">
@@ -163,8 +179,8 @@ single-artist.html<!DOCTYPE html>
                     <a href="/page-works.html"><span>Sports</span></a>
                   </div>
                   <div class="service-message__link-line">
-                  <span class="arrow"></span>
-                </div>
+                    <span class="arrow"></span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -430,4 +446,3 @@ single-artist.html<!DOCTYPE html>
     <script type="text/javascript" src="js/tab.js"></script>
   </body>
 </html>
- 

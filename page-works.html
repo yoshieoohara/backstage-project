@@ -17,112 +17,128 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
-      <!-- header -->
-      <header class="header" id="header">
-        <div class="header__inner">
-          <div class="header__logo">
-            <a href="/">
-              <img src="img/logo-black.png" alt="" />
-            </a>
-          </div>
-          <nav class="header__nav">
-            <ul class="header__nav-list">
-              <li class="header__nav-item">
-                <a href="/page-service.html">service</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="/page-works.html">works</a>
-              </li>
-              <li class="header__nav-item">
-                <a href="/archive-artist.html">artist</a>
-              </li>
-              <li class="header__nav-item dropdown">
-                <p>about</p>
-                <ul class="dropdown-menu">
-                  <li class="dropdown__menu-item"><a href="/page-about.html">日本語</a></li>
-                  <li class="dropdown__menu-item"><a href="#">English</a></li>
-                </ul>
-              </li>
-              <li class="header__nav-item dropdown">
-                <p>group</p>
-                <ul class="dropdown-menu">
-                  <li class="dropdown__menu-item"><a href="/page-group.html">日本語</a></li>
-                  <li class="dropdown__menu-item"><a href="#">English</a></li>
-                </ul>
-              </li>
-              <li class="header__nav-item dropdown">
-                <p>contact</p>
-                <ul class="dropdown-menu">
-                  <li class="dropdown__menu-item"><a href="/page-contact.html" target="_blank" rel="noopener"
-                    >バックステージプロジェクト<br>へのお問い合わせ</a></li>
-                    <li class="dropdown__menu-item"><a href="#" target="_blank" rel="noopener"
-                    >アーティストマネジメント<br>に関するお問い合わせ</a></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-          <button class="hamburger js-hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+    <!-- header -->
+    <header class="header" id="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="/">
+            <img src="img/logo-black.png" alt="" />
+          </a>
         </div>
-        <nav class="drawer__nav js-drawer">
-          <ul class="drawer__nav-list">
-            <li class="drawer__nav-item">
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
               <a href="/page-service.html">service</a>
             </li>
-            <li class="drawer__nav-item">
+            <li class="header__nav-item">
               <a href="/page-works.html">works</a>
             </li>
-            <li class="drawer__nav-item">
+            <li class="header__nav-item">
               <a href="/archive-artist.html">artist</a>
             </li>
-            <li class="drawer__nav-item accordion">
-              <p class="js-drawer-accordion">about</p>
-              <ul class="accordion-menu">
-                <li><a href="/page-about.html">日本語</a></li>
-                <li><a href="#">English</a></li>
+            <li class="header__nav-item dropdown">
+              <p>about</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-about.html">日本語</a>
+                </li>
+                <li class="dropdown__menu-item"><a href="#">English</a></li>
               </ul>
             </li>
-            <li class="drawer__nav-item accordion">
-              <p class="js-drawer-accordion">group</p>
-              <ul class="accordion-menu">
-                <li><a href="/page-group.html">日本語</a></li>
-                <li><a href="#">English</a></li>
+            <li class="header__nav-item dropdown">
+              <p>group</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-group.html">日本語</a>
+                </li>
+                <li class="dropdown__menu-item"><a href="#">English</a></li>
               </ul>
             </li>
-            <li class="drawer__nav-item accordion">
-              <p class="js-drawer-accordion">contact</p>
-              <ul class="accordion-menu">
-                <li><a href="/page-contact.html" target="_blank" rel="noopener"
-                  >バックステージプロジェクトへの<br>お問い合わせ</a></li>
-                <li><a href="#" target="_blank" rel="noopener"
-                  >アーティストマネジメントに関する<br>お問い合わせ</a></li>
+            <li class="header__nav-item dropdown">
+              <p>contact</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-contact.html" target="_blank" rel="noopener"
+                    >バックステージプロジェクト<br />へのお問い合わせ</a
+                  >
+                </li>
+                <li class="dropdown__menu-item">
+                  <a href="#" target="_blank" rel="noopener"
+                    >アーティストマネジメント<br />に関するお問い合わせ</a
+                  >
+                </li>
               </ul>
             </li>
           </ul>
         </nav>
-      </header>
+        <button class="hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="drawer__nav js-drawer">
+        <ul class="drawer__nav-list">
+          <li class="drawer__nav-item">
+            <a href="/page-service.html">service</a>
+          </li>
+          <li class="drawer__nav-item">
+            <a href="/page-works.html">works</a>
+          </li>
+          <li class="drawer__nav-item">
+            <a href="/archive-artist.html">artist</a>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">about</p>
+            <ul class="accordion-menu">
+              <li><a href="/page-about.html">日本語</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">group</p>
+            <ul class="accordion-menu">
+              <li><a href="/page-group.html">日本語</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">contact</p>
+            <ul class="accordion-menu">
+              <li>
+                <a href="/page-contact.html" target="_blank" rel="noopener"
+                  >バックステージプロジェクトへの<br />お問い合わせ</a
+                >
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener"
+                  >アーティストマネジメントに関する<br />お問い合わせ</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
-         <!-- page-ttl --> 
-         <section class="page-ttl" id="page-ttl">
-          <div class="page-ttl__inner inner">
-            <div class="p-ttl">
-              <h1>works<span>実績事例</span></h1>
-              <div class="p-ttl__circle"></div>
-            </div>
+      <!-- page-ttl -->
+      <section class="page-ttl" id="page-ttl">
+        <div class="page-ttl__inner inner">
+          <div class="p-ttl">
+            <h1>works<span>実績事例</span></h1>
+            <div class="p-ttl__circle"></div>
           </div>
-        </section>
+        </div>
+      </section>
 
       <!-- works -->
-       <section class="works" id="works">
+      <section class="works" id="works">
         <div class="works__inner inner">
           <div class="works__tab tab">
             <ul class="tab__link">
@@ -148,7 +164,7 @@
               <ul class="works__list">
                 <li class="works__list-item">
                   <div class="work__list-img">
-                    <img src="img/works-img_1.png" alt="" />
+                    <img src="img/works-img_2.png" alt="" />
                   </div>
                   <div class="work__list-ttl">
                     <h3>乃木坂46 真夏の全国ツアー 2024</h3>
@@ -160,33 +176,31 @@
                     </p>
                   </div>
                   <ul class="works__list-category">
-                      <li class="works__category-item">
-                        <p># 国内外コンサートプロモート</p>
-                      </li>
-                      <li class="works__category-item">
-                        <p># イベント・アーティストグッズ製作</p>
-                      </li>
-                    </ul>
+                    <li class="works__category-item">
+                      <p># 国内外コンサートプロモート</p>
+                    </li>
+                    <li class="works__category-item">
+                      <p># イベント・アーティストグッズ製作</p>
+                    </li>
+                  </ul>
                   <ul class="works__list-sub-img__wrap">
                     <li class="works__list-sub-img">
-                      <img src="img/works-img_1.png" alt="" />
+                      <img src="img/works-img_8.png" alt="" />
                     </li>
                     <li class="works__list-sub-img">
-                      <img src="img/sample_01.png" alt="" />
+                      <img src="img/works-img_9.png" alt="" />
                     </li>
                     <li class="works__list-sub-img">
-                      <img src="img/sample_01.png" alt="" />
+                      <img src="img/works-img_10.png" alt="" />
                     </li>
                   </ul>
                   <div class="works__list-date">
-                    <time datetime="2025-01-01"
-                      ><p>2025.01.01</p></time
-                    >
+                    <time datetime="2025-01-01">2025.01.01</time>
                   </div>
                 </li>
                 <li class="works__list-item">
                   <div class="work__list-img">
-                    <img src="img/sample_01.png" alt="" />
+                    <img src="img/works-img_2.png" alt="" />
                   </div>
                   <div class="work__list-ttl">
                     <h3>乃木坂46 真夏の全国ツアー 2024</h3>
@@ -198,28 +212,98 @@
                     </p>
                   </div>
                   <ul class="works__list-category">
-                      <li class="works__category-item">
-                        <p># 国内外コンサートプロモート</p>
-                      </li>
-                      <li class="works__category-item">
-                        <p># イベント・アーティストグッズ製作</p>
-                      </li>
-                    </ul>
+                    <li class="works__category-item">
+                      <p># 国内外コンサートプロモート</p>
+                    </li>
+                    <li class="works__category-item">
+                      <p># イベント・アーティストグッズ製作</p>
+                    </li>
+                  </ul>
                   <ul class="works__list-sub-img__wrap">
                     <li class="works__list-sub-img">
-                      <img src="img/sample_01.png" alt="" />
+                      <img src="img/works-img_8.png" alt="" />
                     </li>
                     <li class="works__list-sub-img">
-                      <img src="img/sample_01.png" alt="" />
+                      <img src="img/works-img_9.png" alt="" />
                     </li>
                     <li class="works__list-sub-img">
-                      <img src="img/sample_01.png" alt="" />
+                      <img src="img/works-img_10.png" alt="" />
                     </li>
                   </ul>
                   <div class="works__list-date">
-                    <time datetime="2025-01-01"
-                      ><p>2025.01.01</p></time
-                    >
+                    <time datetime="2025-01-01">2025.01.01</time>
+                  </div>
+                </li>
+                <li class="works__list-item">
+                  <div class="work__list-img">
+                    <img src="img/works-img_2.png" alt="" />
+                  </div>
+                  <div class="work__list-ttl">
+                    <h3>乃木坂46 真夏の全国ツアー 2024</h3>
+                  </div>
+
+                  <div class="work__list-txt">
+                    <p>
+                      グッズの企画から販売まで一貫して担当。販売ページはこちら
+                    </p>
+                  </div>
+                  <ul class="works__list-category">
+                    <li class="works__category-item">
+                      <p># 国内外コンサートプロモート</p>
+                    </li>
+                    <li class="works__category-item">
+                      <p># イベント・アーティストグッズ製作</p>
+                    </li>
+                  </ul>
+                  <ul class="works__list-sub-img__wrap">
+                    <li class="works__list-sub-img">
+                      <img src="img/works-img_8.png" alt="" />
+                    </li>
+                    <li class="works__list-sub-img">
+                      <img src="img/works-img_9.png" alt="" />
+                    </li>
+                    <li class="works__list-sub-img">
+                      <img src="img/works-img_10.png" alt="" />
+                    </li>
+                  </ul>
+                  <div class="works__list-date">
+                    <time datetime="2025-01-01">2025.01.01</time>
+                  </div>
+                </li>
+                <li class="works__list-item">
+                  <div class="work__list-img">
+                    <img src="img/works-img_2.png" alt="" />
+                  </div>
+                  <div class="work__list-ttl">
+                    <h3>乃木坂46 真夏の全国ツアー 2024</h3>
+                  </div>
+
+                  <div class="work__list-txt">
+                    <p>
+                      グッズの企画から販売まで一貫して担当。販売ページはこちら
+                    </p>
+                  </div>
+                  <ul class="works__list-category">
+                    <li class="works__category-item">
+                      <p># 国内外コンサートプロモート</p>
+                    </li>
+                    <li class="works__category-item">
+                      <p># イベント・アーティストグッズ製作</p>
+                    </li>
+                  </ul>
+                  <ul class="works__list-sub-img__wrap">
+                    <li class="works__list-sub-img">
+                      <img src="img/works-img_8.png" alt="" />
+                    </li>
+                    <li class="works__list-sub-img">
+                      <img src="img/works-img_9.png" alt="" />
+                    </li>
+                    <li class="works__list-sub-img">
+                      <img src="img/works-img_10.png" alt="" />
+                    </li>
+                  </ul>
+                  <div class="works__list-date">
+                    <time datetime="2025-01-01">2025.01.01</time>
                   </div>
                 </li>
               </ul>
@@ -248,84 +332,82 @@
         </div>
       </section>
 
-    <!-- cta -->
-    <section class="cta" id="cta">
-      <div class="cta__inner">
-        <div class="cta__ttl">
-          <h2><span>お問い合わせはこちら</span>Contact Us</h2>
+      <!-- cta -->
+      <section class="cta" id="cta">
+        <div class="cta__inner">
+          <div class="cta__ttl">
+            <h2><span>お問い合わせはこちら</span>Contact Us</h2>
+          </div>
+          <div class="cta__btn btn--border">
+            <a href="/page-contact.html"
+              >お問い合わせをする<i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
         </div>
-        <div class="cta__btn btn--border">
-          <a href="/page-contact.html"
-            >お問い合わせをする<i class="fa-solid fa-arrow-right"></i
-          ></a>
-        </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <!-- footer -->
-  <footer class="footer" id="footer">
-    <div class="footer__inner inner">
-      <div class="footer__top">
-        <div class="footer__logo">
-          <a href="#">
-            <img src="img/logo-black.png" alt="" />
-          </a>
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <div class="footer__inner inner">
+        <div class="footer__top">
+          <div class="footer__logo">
+            <a href="#">
+              <img src="img/logo-black.png" alt="" />
+            </a>
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="/page-works.html">works</a>
+              </li>
+              <li class="footer__nav-item">
+                <p>about</p>
+                <ul class="footer__nav-item-wrap">
+                  <li><a href="/page-about.html">日本語</a></li>
+                  <li><a href="#">English</a></li>
+                </ul>
+              </li>
+              <li class="footer__nav-item">
+                <p>group</p>
+                <ul class="footer__nav-item-wrap">
+                  <li><a href="/page-group.html">日本語</a></li>
+                  <li><a href="#">English</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <nav class="footer__nav">
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <a href="/page-works.html">works</a>
-            </li>
-            <li class="footer__nav-item">
-              <p>about</p>
-              <ul class="footer__nav-item-wrap">
-                <li><a href="/page-about.html">日本語</a></li>
-                <li><a href="#">English</a></li>
-              </ul>
-            </li>
-            <li class="footer__nav-item">
-              <p>group</p>
-              <ul class="footer__nav-item-wrap">
-                <li><a href="/page-group.html">日本語</a></li>
-                <li><a href="#">English</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer__bottom">
-        <small class="footer__copyright"
-          >&copy;2025 All Rights Reserved.</small
-        >
-        <div class="footer__policy">
-          <a href="/page-policy.html">プライバシーポリシー</a>
+        <div class="footer__bottom">
+          <small class="footer__copyright"
+            >&copy;2025 All Rights Reserved.</small
+          >
+          <div class="footer__policy">
+            <a href="/page-policy.html">プライバシーポリシー</a>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- page-top -->
-    <div class="page-top js-page-top">
-      <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
-    </div>
-  </footer>
+      <!-- page-top -->
+      <div class="page-top js-page-top">
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </footer>
 
-  <script
-    src="https://kit.fontawesome.com/f0efad86bc.js"
-    crossorigin="anonymous"
-  ></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script type="text/javascript" src="js/accordion.js"></script>
-  <script type="text/javascript" src="js/animation.js"></script>
-  <script type="text/javascript" src="js/hamburger.js"></script>
-  <script type="text/javascript" src="js/pagetop.js"></script>
-  <script type="text/javascript" src="js/slick.js"></script>
-  <script type="text/javascript" src="js/smoothscroll.js"></script>
-  <script type="text/javascript" src="js/tab.js"></script>
-</div>
-</body>
+    <script
+      src="https://kit.fontawesome.com/f0efad86bc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/accordion.js"></script>
+    <script type="text/javascript" src="js/animation.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
+    <script type="text/javascript" src="js/pagetop.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/tab.js"></script>
+  </body>
 </html>
-

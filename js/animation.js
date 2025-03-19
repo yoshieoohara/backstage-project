@@ -1,16 +1,17 @@
 // loading
-// document.addEventListener("DOMContentLoaded", () => {
-//   if (!localStorage.getItem("visited")) {
-//     setTimeout(() => {
-//       document.querySelector(".top-container").style.opacity = "1";
-//       document.querySelector(".top-container").style.transform =
-//         "translateX(0)";
-//       localStorage.setItem("visited", "true");
-//     }, 3000);
-//     document.querySelector(".top-container").style.opacity = "1";
-//     document.querySelector(".top-container").style.transform = "translateX(0)";
-//   }
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  if (!localStorage.getItem("visited")) {
+    setTimeout(() => {
+      document.querySelector(".top-container").style.opacity = "1";
+      document.querySelector(".top-container").style.transform =
+        "translateX(0)";
+      localStorage.setItem("visited", "true");
+    }, 3000);
+    document.querySelector(".top-container").style.opacity = "1";
+    document.querySelector(".top-container").style.transform = "translateX(0)";
+  }
+});
+
 // top-line-animation
 gsap.registerPlugin(ScrollTrigger);
 

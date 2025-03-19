@@ -140,10 +140,8 @@
 .works__list-date {
   text-align: right;
   margin-top: rem(20);
-  p {
-    font-size: rem(20);
-    color: $gray3;
-  }
+  font-size: rem(20);
+  color: $gray3;
 }
 
 .pagination {
@@ -180,13 +178,13 @@
 .pagination__num.--current {
   a {
     color: $white;
-  background-color: $gray3;
+    background-color: $gray3;
   }
 }
 
 .pagination__num.--ellipses {
-a {
-  color: $white;
-  background-color: unset;
-}
+  a {
+    color: $white;
+    background-color: unset;
+  }
 }

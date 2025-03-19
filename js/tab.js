@@ -2,7 +2,7 @@
 function GethashID(hashIDName) {
   if (hashIDName) {
     $(".tab__link li").removeClass("is-active");
-    $(".tab-content").removeClass("is-show");
+    $(".tab__content").removeClass("is-show");
 
     $(".tab__link a").each(function () {
       var idName = $(this).attr("href");
