@@ -1139,7 +1139,7 @@ body.no-scroll {
 
 .top-message__slick .slick-list {
   transform: rotate(180deg) !important;
-  height: 50vh !important;
+  height: 70vh !important;
 }
 
 .top-message__slick-img {
