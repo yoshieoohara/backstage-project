@@ -231,25 +231,25 @@ $animation-time: 1.5s;
     font-size: rem(50);
     font-weight: 800;
     text-transform: uppercase;
-    span {
-      &.--underline {
-        position: relative;
-        display: inline-block;
-        &::after {
-          content: "";
-          position: absolute;
-          width: 108%;
-          height: rem(25);
-          border-radius: rem(13);
-          background-color: $main;
-          bottom: rem(8);
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: -1;
-        }
-      }
-    }
   }
+}
+
+.top-message__ttl--en span {
+  position: relative;
+  display: inline-block;
+}
+
+.top-message__ttl--en span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: rem(8);
+  width: 100%;
+  height: rem(25);
+  background: $main;
+  border-radius: rem(13);
+  transition: width 0.5s ease;
+  z-index: -1;
 }
 
 .top-message__ttl--ja {
@@ -274,13 +274,13 @@ $animation-time: 1.5s;
 
 .top-message__slick.slick-slider {
   width: 30%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
 .top-message__slick .slick-list {
   transform: rotate(180deg) !important;
-  height: 100vh !important;
+  height: 50vh !important; 
 }
 
 .top-message__slick-img {
@@ -299,8 +299,16 @@ $animation-time: 1.5s;
 }
 
 /* 各スライドサイズ */
-.--slide1, .--slide2, .--slide3, .--slide4, .--slide5,
-.--slide6, .--slide7, .--slide8, .--slide9, .--slide10 {
+.--slide1,
+.--slide2,
+.--slide3,
+.--slide4,
+.--slide5,
+.--slide6,
+.--slide7,
+.--slide8,
+.--slide9,
+.--slide10 {
   position: relative;
   margin: 0 auto;
   overflow: hidden;
@@ -308,8 +316,16 @@ $animation-time: 1.5s;
 }
 
 /* 画像が回転してもはみ出さないようにするために縮小 */
-.--slide1 img, .--slide2 img, .--slide3 img, .--slide4 img, .--slide5 img,
-.--slide6 img, .--slide7 img, .--slide8 img, .--slide9 img, .--slide10 img {
+.--slide1 img,
+.--slide2 img,
+.--slide3 img,
+.--slide4 img,
+.--slide5 img,
+.--slide6 img,
+.--slide7 img,
+.--slide8 img,
+.--slide9 img,
+.--slide10 img {
   width: 120%;
   height: auto;
 }
@@ -359,7 +375,6 @@ $animation-time: 1.5s;
 .--slide9 {
   width: rem(200);
   height: rem(200);
-  
 }
 .--slide10 {
   width: rem(300);
@@ -372,7 +387,6 @@ $animation-time: 1.5s;
 .top-message__slick-wrap.--group2 {
   display: flex;
 }
-
 
 // top-works
 .top-works {
