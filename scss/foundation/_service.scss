@@ -1,0 +1,205 @@
+@use "../global" as *;
+
+// service
+.service {
+  padding: rem(60) 0;
+}
+
+.service-message {
+}
+
+.service-message__body {
+}
+
+.service-message__ttl--en {
+  h2 {
+    font-family: $font-family-en1;
+    font-size: rem(65);
+    text-transform: uppercase;
+  }
+}
+
+.service-message__txt {
+  max-width: 95%;
+  margin-top: rem(20);
+  margin-left: auto;
+  p {
+    font-size: rem(20);
+  }
+}
+
+.service-message__link-wrap {
+  margin-top: rem(60);
+}
+
+.service-message__link-list {
+  position: relative;
+  @include flex(center);
+  gap: rem(40);
+  width: 98%;
+  margin: 0 auto;
+}
+
+// line-animation
+.service-message__link-line {
+  position: absolute;
+  width: 100%;
+  height: rem(5);
+  background-color: $gray7;
+  z-index: -1;
+  transform-origin: left center;
+  transform: scaleX(0);
+  overflow: visible;
+
+  .arrow {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+   right: rem(-4);
+    transform: translateY(-50%);
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    width: rem(30);
+    height: rem(30);
+    background-color: $gray7;
+    opacity: 0;
+  }
+}
+
+.service-message__link-list:nth-of-type(2) {
+  width: 78%;
+  margin-top: rem(20);
+}
+
+.service-message__link-item {
+  width: rem(210);
+  height: rem(210);
+  a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $main;
+    border-radius: rem(15);
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      font-family: $font-family-en1;
+      font-size: rem(30);
+      color: $white;
+      white-space: nowrap;
+    }
+
+    &:hover {
+      transform: rotate(60deg);
+      opacity: 1;
+    }
+  }
+}
+
+.service-message__link-item:nth-of-type(even) a {
+  background-color: $main2;
+}
+
+.service__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(60);
+  margin-top: rem(100);
+}
+
+.service__list-item {
+  @include flex(space-between);
+}
+
+.service__list-item:nth-of-type(odd) {
+  flex-direction: row-reverse;
+}
+
+.service__list-item:nth-of-type(even) .service__list-category,
+.service__list-item:nth-of-type(even) .service__list-number,
+.service__list-item:nth-of-type(even) .service__btn a,
+.service__list-item:nth-of-type(even) .service__btn i {
+  color: $main2;
+}
+
+.service__list-wrap {
+  color: $main;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.service__list-category {
+  font-size: rem(35);
+  font-family: $font-family-en2;
+}
+
+.service__list-number {
+  font-size: rem(100);
+  font-family: $font-family-en1;
+  font-weight: 900;
+}
+
+.service__list-img {
+  width: 45%;
+  img {
+    @include img;
+  }
+}
+
+.service__list-img.--img1 {
+width: rem(220);
+}
+
+
+.service__list-img.--img2 {
+  width: rem(270);
+}
+
+.service__list-img-wrap {
+  width: 45%;
+  display: flex;
+  align-items: end;
+gap: rem(14);
+}
+
+.service__list-body {
+  width: 51%;
+}
+
+.service__list-ttl {
+ display: flex;
+ align-items: center;
+  gap: rem(20);
+  h3 {
+    font-weight: 900;
+    font-size: rem(35);
+  }
+}
+
+.service__list-txt {
+  p {
+    font-size: rem(20);
+    line-height: 35 / 20;
+  }
+}
+
+.service__btn {
+  margin-top: rem(30);
+  margin-left: auto;
+  a {
+    color: $main;
+    font-size: rem(25);
+    i {
+      color: $main;
+      font-size: rem(25);
+    }
+  }
+}
+

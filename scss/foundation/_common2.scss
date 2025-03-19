@@ -1,0 +1,66 @@
+@use "../global" as *;
+
+// page-ttl
+.page-ttl {
+  background-color: $gray;
+  position: relative;
+}
+
+.page-ttl__inner {
+  height: rem(620);
+}
+
+.p-ttl {
+  position: absolute;
+  top: 45%;
+  z-index: 0;
+  h1 {
+    font-family: $font-family-en1;
+    font-size: rem(75);
+    font-weight: 900;
+    text-transform: uppercase;
+    span {
+      position: relative;
+      display: block;
+      font-size: rem(30);
+      font-family: $font-family-ja;
+      font-weight: 700;
+      padding-left: rem(40);
+      color: $gray8;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: rem(8);
+        transform: translateY(-50%);
+        width: rem(20);
+        height: rem(3);
+        background-color: $gray8;
+      }
+    }
+  }
+}
+
+.p-ttl__circle {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  left: rem(-40);
+  width: rem(80);
+  height: rem(80);
+  background-color: $main;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.p-ttl.--section {
+  h2 {
+    font-size: rem(75);
+    text-transform: uppercase;
+    span {
+      display: block;
+      font-size: rem(30);
+    }
+  }
+}

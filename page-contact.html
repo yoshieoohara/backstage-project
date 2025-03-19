@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BACKSTAGE PROJECT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Jost:wght@500;700;800;900&family=Noto+Sans+JP:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+      <!-- header -->
+      <header class="header" id="header">
+        <div class="header__inner">
+          <div class="header__logo">
+            <a href="/">
+              <img src="img/logo-black.png" alt="" />
+            </a>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="/page-service.html">service</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/page-works.html">works</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/archive-artist.html">artist</a>
+              </li>
+              <li class="header__nav-item dropdown">
+                <p>about</p>
+                <ul class="dropdown-menu">
+                  <li class="dropdown__menu-item"><a href="/page-about.html">日本語</a></li>
+                  <li class="dropdown__menu-item"><a href="#">English</a></li>
+                </ul>
+              </li>
+              <li class="header__nav-item dropdown">
+                <p>group</p>
+                <ul class="dropdown-menu">
+                  <li class="dropdown__menu-item"><a href="/page-group.html">日本語</a></li>
+                  <li class="dropdown__menu-item"><a href="#">English</a></li>
+                </ul>
+              </li>
+              <li class="header__nav-item dropdown">
+                <p>contact</p>
+                <ul class="dropdown-menu">
+                  <li class="dropdown__menu-item"><a href="/page-contact.html" target="_blank" rel="noopener"
+                    >バックステージプロジェクト<br>へのお問い合わせ</a></li>
+                    <li class="dropdown__menu-item"><a href="#" target="_blank" rel="noopener"
+                    >アーティストマネジメント<br>に関するお問い合わせ</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <button class="hamburger js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <nav class="drawer__nav js-drawer">
+          <ul class="drawer__nav-list">
+            <li class="drawer__nav-item">
+              <a href="/page-service.html">service</a>
+            </li>
+            <li class="drawer__nav-item">
+              <a href="/page-works.html">works</a>
+            </li>
+            <li class="drawer__nav-item">
+              <a href="/archive-artist.html">artist</a>
+            </li>
+            <li class="drawer__nav-item accordion">
+              <p class="js-drawer-accordion">about</p>
+              <ul class="accordion-menu">
+                <li><a href="/page-about.html">日本語</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </li>
+            <li class="drawer__nav-item accordion">
+              <p class="js-drawer-accordion">group</p>
+              <ul class="accordion-menu">
+                <li><a href="/page-group.html">日本語</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </li>
+            <li class="drawer__nav-item accordion">
+              <p class="js-drawer-accordion">contact</p>
+              <ul class="accordion-menu">
+                <li><a href="/page-contact.html" target="_blank" rel="noopener"
+                  >バックステージプロジェクトへの<br>お問い合わせ</a></li>
+                <li><a href="#" target="_blank" rel="noopener"
+                  >アーティストマネジメントに関する<br>お問い合わせ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+    <main>
+      <!-- page-ttl --> 
+       <section class="page-ttl" id="page-ttl">
+        <div class="page-ttl__inner inner">
+          <div class="p-ttl">
+            <h1>contact<span>お問い合わせ</span></h1>
+            <div class="p-ttl__circle"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact -->
+      <section class="contact" id="contact">
+        <div class="contact__inner inner">
+          <div class="contact__con">
+            <div class="contact__txt">
+              <p>
+                以下のフォームよりお問合わせを承っております。<br />必要事項を記入して、「入力内容を確認する」ボタンをクリックしてください。
+              </p>
+            </div>
+
+            <form class="contact__form">
+              <dl class="form__wrap --select">
+                <dt class="form__label">お問い合わせ項目<span>必須</span></dt>
+                <dd class="form__select">
+                  <select>
+                    <option hidden>選択してください</option>
+                    <option value="○○について">○○について</option>
+                    <option value="○○に関するご相談">○○に関するご相談</option>
+                    <option value="その他">その他</option>
+                  </select>
+                </dd>
+              </dl>
+              <dl class="form__wrap --radio">
+                <dt class="form__label">お問い合わせ項目<span>必須</span></dt>
+                <dd class="form__radio">
+                  <label
+                    ><input
+                      type="radio"
+                      name="category"
+                      value="○○について"
+                    /><span>○○について</span></label
+                  >
+                  <label
+                    ><input
+                      type="radio"
+                      name="category"
+                      value="○○に関するご相談"
+                    /><span>○○に関するご相談</span></label
+                  >
+                  <label
+                    ><input type="radio" name="category" value="その他" /><span
+                      >その他</span
+                    ></label
+                  >
+                </dd>
+              </dl>
+              <dl class="form__wrap --checkbox">
+                <dt class="form__label">お問い合わせ項目<span>必須</span></dt>
+                <dd class="form__checkbox">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="category"
+                      value="○○について"
+                    /><span>○○について</span></label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="category"
+                      value="○○に関するご相談"
+                    /><span>○○に関するご相談</span></label
+                  >
+
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="category"
+                      value="その他"
+                    /><span>その他</span></label
+                  >
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">会社名<span>必須</span></dt>
+                <dd class="form__input">
+                  <input type="text" placeholder="株式会社○○○○" />
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">部署名</dt>
+                <dd class="form__input">
+                  <input type="text" placeholder="営業部営業部" />
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">氏名<span>必須</span></dt>
+                <dd class="form__input">
+                  <input type="text" placeholder="山田　太郎" />
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">フリガナ<span>必須</span></dt>
+                <dd class="form__input">
+                  <input type="text" placeholder="ヤマダ　タロウ" />
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">メールアドレス<span>必須</span></dt>
+                <dd class="form__input">
+                  <input type="email" placeholder="XXXX@example.com" />
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">
+                  メールアドレス（確認）<span>必須</span>
+                </dt>
+                <dd class="form__input">
+                  <input type="email" placeholder="XXXX@example.com（確認）" />
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">郵便番号<span>必須</span></dt>
+                <dd class="form__input">
+                  <input type="email" placeholder="000-0000" />
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">都道府県<span>必須</span></dt>
+                <dd class="form__input">
+                  <input type="email" placeholder="東京都" />
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">住所<span>必須</span></dt>
+                <dd class="form__input">
+                  <input
+                    type="email"
+                    placeholder="○○区○○町1-1-1 ○○マンション201"
+                  />
+                </dd>
+              </dl>
+              <dl class="form__wrap">
+                <dt class="form__label">電話番号<span>必須</span></dt>
+                <dd class="form__input">
+                  <input type="tel" placeholder="000-0000-0000" />
+                </dd>
+              </dl>
+              <dl class="form__wrap --textarea">
+                <dt class="form__label">お問い合わせ内容<span>必須</span></dt>
+                <dd class="form__textarea">
+                  <textarea
+                    name="message"
+                    placeholder="お問い合わせ内容をご入力ください。"
+                  ></textarea>
+                </dd>
+              </dl>
+              <div class="form__privacy">
+                <label>
+                  <input type="checkbox" name="privacy-policy" value="agree" />
+                  <span><a href="/page-policy.html">プライバシーポリシー</a>に同意する。</span>
+                </label>
+              </div>
+              <div class="form__btn">
+                <input type="submit" value="送信する" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+      <!-- footer -->
+      <footer class="footer" id="footer">
+        <div class="footer__inner inner">
+          <div class="footer__top">
+            <div class="footer__logo">
+              <a href="#">
+                <img src="img/logo-black.png" alt="" />
+              </a>
+            </div>
+            <nav class="footer__nav">
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item">
+                  <a href="/page-works.html">works</a>
+                </li>
+                <li class="footer__nav-item">
+                  <p>about</p>
+                  <ul class="footer__nav-item-wrap">
+                    <li><a href="/page-about.html">日本語</a></li>
+                    <li><a href="#">English</a></li>
+                  </ul>
+                </li>
+                <li class="footer__nav-item">
+                  <p>group</p>
+                  <ul class="footer__nav-item-wrap">
+                    <li><a href="/page-group.html">日本語</a></li>
+                    <li><a href="#">English</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__bottom">
+            <small class="footer__copyright"
+              >&copy;2025 All Rights Reserved.</small
+            >
+            <div class="footer__policy">
+              <a href="/page-policy.html">プライバシーポリシー</a>
+            </div>
+          </div>
+        </div>
+        <!-- page-top -->
+        <div class="page-top js-page-top">
+          <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </footer>
+
+      <script
+        src="https://kit.fontawesome.com/f0efad86bc.js"
+        crossorigin="anonymous"
+      ></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <script type="text/javascript" src="js/accordion.js"></script>
+      <script type="text/javascript" src="js/animation.js"></script>
+      <script type="text/javascript" src="js/hamburger.js"></script>
+      <script type="text/javascript" src="js/pagetop.js"></script>
+      <script type="text/javascript" src="js/slick.js"></script>
+      <script type="text/javascript" src="js/smoothscroll.js"></script>
+      <script type="text/javascript" src="js/tab.js"></script>
+  </body>
+</html>
