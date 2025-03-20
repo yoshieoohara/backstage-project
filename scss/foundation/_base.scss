@@ -27,7 +27,8 @@
     width: 35%;
     opacity: 0;
     transform: translateX(-50%);
-    animation: logoFadeIn 1s ease-in-out 0.5s forwards, logoFadeOut 0.5s ease-in-out 2.5s forwards;
+    animation: logoFadeIn 1s ease-in-out 0.5s forwards,
+      logoFadeOut 0.5s ease-in-out 2.5s forwards;
     img {
       @include img;
     }
@@ -40,7 +41,8 @@
     width: 0%;
     height: rem(3);
     background-color: $main;
-    animation: lineMove 0.5s ease-in-out 1.5s forwards, lineFadeOut 0.5s ease-in-out 2.5s forwards;
+    animation: lineMove 0.5s ease-in-out 1.5s forwards,
+      lineFadeOut 0.5s ease-in-out 2.5s forwards;
   }
 }
 
@@ -93,14 +95,16 @@
 
 // top-fv
 .top-fv {
-  position: relative;
+ 
 }
 
 .top-fv__movie {
   width: 100%;
   height: 100vh;
-  img {
-    @include img;
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 }
@@ -186,11 +190,11 @@
 .line {
   position: absolute;
   left: rem(-20);
-  bottom: rem(4);
+  bottom: rem(16);
   height: rem(25);
   width: calc(100% + rem(40));
   border-radius: rem(13);
-  background: $main; 
+  background: $main;
   transform: scaleX(0);
   transform-origin: left center;
   z-index: -1;
@@ -206,7 +210,7 @@
 }
 
 .top-message__txt {
-max-width: rem(670);
+  max-width: rem(670);
   margin-top: rem(34);
   margin-left: auto;
   p {
@@ -221,14 +225,14 @@ max-width: rem(670);
 }
 
 .top-message__slick.slick-slider {
-  width: 30%;  
-  height: 100vh; 
+  width: 30%;
+  height: 100vh;
 }
 
 .top-message__slick .slick-list {
   transform: rotate(180deg) !important;
-  height: 100vh !important; 
-  overflow: hidden; 
+  height: 100vh !important;
+  overflow: hidden;
 }
 
 .top-message__slick-img {
@@ -365,13 +369,8 @@ max-width: rem(670);
   margin-top: rem(56);
 }
 
-.works__slick-list.--top {
-  padding-right: 10%;
-}
-
 .works__slick-list.--bottom {
   margin-top: rem(55);
-  padding-left: 10%;
 }
 
 .works__slick-img {

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BACKSTAGE PROJECT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Jost:wght@500;700;800;900&family=Noto+Sans+JP:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="header" id="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="/">
+            <img src="img/logo-black.png" alt="" />
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="/page-service.html">service</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/page-works.html">works</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/archive-artist.html">artist</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">recruit</a>
+            </li>
+            <li class="header__nav-item dropdown">
+              <p>about</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-about.html">日本語</a>
+                </li>
+                <li class="dropdown__menu-item"><a href="#">English</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item dropdown">
+              <p>group</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-group.html">日本語</a>
+                </li>
+                <li class="dropdown__menu-item"><a href="#">English</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item dropdown">
+              <p>contact</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-contact.html" target="_blank" rel="noopener"
+                    >バックステージプロジェクト</a
+                  >
+                </li>
+                <li class="dropdown__menu-item">
+                  <a href="#" target="_blank" rel="noopener"
+                    >アーティストマネジメント<i
+                      class="fa-solid fa-up-right-from-square"
+                    ></i
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <button class="hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="drawer__nav js-drawer">
+        <ul class="drawer__nav-list">
+          <li class="drawer__nav-item">
+            <a href="/page-service.html">service</a>
+          </li>
+          <li class="drawer__nav-item">
+            <a href="/page-works.html">works</a>
+          </li>
+          <li class="drawer__nav-item">
+            <a href="/archive-artist.html">artist</a>
+          </li>
+          <li class="drawer__nav-item">
+            <a href="#">recruit</a>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">about</p>
+            <ul class="accordion-menu">
+              <li><a href="/page-about.html">日本語</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">group</p>
+            <ul class="accordion-menu">
+              <li><a href="/page-group.html">日本語</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">contact</p>
+            <ul class="accordion-menu">
+              <li>
+                <a href="/page-contact.html" target="_blank" rel="noopener"
+                  >バックステージプロジェクト</a
+                >
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener"
+                  >アーティストマネジメント<i
+                    class="fa-solid fa-up-right-from-square"
+                  ></i
+                ></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- page-ttl -->
+      <section class="page-ttl" id="page-ttl">
+        <div class="page-ttl__inner inner">
+          <div class="p-ttl">
+            <h1>privacy policy<span>プライバシーポリシー</span></h1>
+            <div class="p-ttl__circle"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- policy -->
+      <section class="policy" id="policy">
+        <div class="policy__inner inner">
+          <div class="policy__con">
+            <p>
+              株式会社バックステージプロジェクト（以下、「当社」といいます。）は、個人情報の重要性を認識し、以下の方針に基づき、個人情報の適切な管理・保護に努めます。
+            </p>
+            <p>
+              1. 個人情報の取得について<br />当社は、業務の遂行に必要な範囲で、適法かつ公正な手段により個人情報を取得いたします。
+            </p>
+            <p>
+              2. 個人情報の利用目的<br />取得した個人情報は、以下の目的で利用いたします。
+            </p>
+            <p>
+              お問い合わせやご依頼への対応<br>商品・サービスの提供、発送、アフターサービス<br />イベント・キャンペーンの案内および運営<br />マーケティング・アンケートの実施採<br />用選考および雇用管理<br />その他、取得時に明示した目的
+            </p>
+            <p>
+              3. 個人情報の管理<br />当社は、個人情報を正確かつ最新の状態に保ち、不正アクセス、紛失、破壊、改ざん、漏えい等を防ぐために適切な安全管理措置を講じます。
+            </p>
+            <p>
+              4. 個人情報の第三者提供について<br />当社は、法令で認められる場合を除き、ご本人の同意なく第三者に個人情報を提供することはありません。
+            </p>
+            <p>
+              5. 個人情報の開示・訂正・削除について<br />
+              ご本人からの請求に基づき、当社は個人情報の開示・訂正・削除・利用停止等の対応を法令に従って適切に行います。
+            </p>
+            <p>
+              6. 法令遵守と継続的改善<br />当社は、個人情報保護に関する法令およびその他の規範を遵守し、適宜ポリシーを見直し、改善に努めます。
+            </p>
+            <p>
+              7. お問い合わせ先<br />本ポリシーに関するお問い合わせは、以下の窓口までご連絡ください。
+            </p>
+            <p>
+              株式会社バックステージプロジェクト<br />〒151-0051
+              東京都渋谷区千駄ヶ谷1-19-8 HIRO BLDG. 2F<br />TEL: 03-3479-8711<br />MAIL：info@backstage.co.jp
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- cta -->
+      <section class="cta" id="cta">
+        <div class="cta__inner">
+          <div class="cta__ttl">
+            <h2><span>ご相談・お問い合わせはこちら</span>Contact Us</h2>
+          </div>
+          <div class="cta__btn btn--border">
+            <a href="/page-contact.html"
+              >お問い合わせをする<i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <div class="footer__inner inner">
+        <div class="footer__top">
+          <div class="footer__logo">
+            <a href="#">
+              <img src="img/logo-black.png" alt="" />
+            </a>
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="/page-works.html">works</a>
+              </li>
+              <li class="footer__nav-item">
+                <p>about</p>
+                <ul class="footer__nav-item-wrap">
+                  <li><a href="/page-about.html">日本語</a></li>
+                  <li><a href="#">English</a></li>
+                </ul>
+              </li>
+              <li class="footer__nav-item">
+                <p>group</p>
+                <ul class="footer__nav-item-wrap">
+                  <li><a href="/page-group.html">日本語</a></li>
+                  <li><a href="#">English</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <small class="footer__copyright"
+            >&copy;2025 All Rights Reserved.</small
+          >
+          <div class="footer__policy">
+            <a href="/page-policy.html">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+      <!-- page-top -->
+      <div class="page-top js-page-top">
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/f0efad86bc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/accordion.js"></script>
+    <script type="text/javascript" src="js/animation.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
+    <script type="text/javascript" src="js/pagetop.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/tab.js"></script>
+  </body>
+</html>

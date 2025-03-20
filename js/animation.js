@@ -18,7 +18,7 @@ jQuery(function ($) {
     const fvHeight = $("#top-fv").outerHeight();
     const scroll = $(window).scrollTop();
 
-    if (scroll > fvHeight) {
+    if (scroll > fvHeight - 100) {
       $(".logo-img").attr("src", "img/logo-black.png");
     } else {
       $(".logo-img").attr("src", "img/logo-white.png");
@@ -45,31 +45,6 @@ jQuery(function ($) {
 });
 
 // service-line-animation
-jQuery(function ($) {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const lines = gsap.utils.toArray(".service-message__link-line");
-
-  lines.forEach((line, i) => {
-    const arrow = line.querySelector(".arrow");
-
-    // ラインのアニメーション
-    gsap.to(line, {
-      scaleX: 1,
-      transformOrigin: "left center",
-      ease: "power2.out",
-      duration: 1,
-      delay: i * 0.8, // 上下で時間差
-      scrollTrigger: {
-        trigger: line,
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-    });
-  });
-});
-
-// service-animation
 jQuery(function ($) {
   gsap.registerPlugin(ScrollTrigger);
 

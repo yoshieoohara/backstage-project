@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BACKSTAGE PROJECT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Jost:wght@500;700;800;900&family=Noto+Sans+JP:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+      <!-- header -->
+      <header class="header" id="header">
+        <div class="header__inner">
+          <div class="header__logo">
+            <a href="/">
+              <img src="img/logo-black.png" alt="" />
+            </a>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="/page-service.html">service</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/page-works.html">works</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/archive-artist.html">artist</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#">recruit</a>
+              </li>
+              <li class="header__nav-item dropdown">
+                <p>about</p>
+                <ul class="dropdown-menu">
+                  <li class="dropdown__menu-item"><a href="/page-about.html">日本語</a></li>
+                  <li class="dropdown__menu-item"><a href="#">English</a></li>
+                </ul>
+              </li>
+              <li class="header__nav-item dropdown">
+                <p>group</p>
+                <ul class="dropdown-menu">
+                  <li class="dropdown__menu-item"><a href="/page-group.html">日本語</a></li>
+                  <li class="dropdown__menu-item"><a href="#">English</a></li>
+                </ul>
+              </li>
+              <li class="header__nav-item dropdown">
+                <p>contact</p>
+                <ul class="dropdown-menu">
+                  <li class="dropdown__menu-item"><a href="/page-contact.html" target="_blank" rel="noopener"
+                    >バックステージプロジェクト</a></li>
+                    <li class="dropdown__menu-item"><a href="#" target="_blank" rel="noopener"
+                    >アーティストマネジメント<i class="fa-solid fa-up-right-from-square"></i></a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <button class="hamburger js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <nav class="drawer__nav js-drawer">
+          <ul class="drawer__nav-list">
+            <li class="drawer__nav-item">
+              <a href="/page-service.html">service</a>
+            </li>
+            <li class="drawer__nav-item">
+              <a href="/page-works.html">works</a>
+            </li>
+            <li class="drawer__nav-item">
+              <a href="/archive-artist.html">artist</a>
+            </li>
+            <li class="drawer__nav-item">
+              <a href="#">recruit</a>
+            </li>
+            <li class="drawer__nav-item accordion">
+              <p class="js-drawer-accordion">about</p>
+              <ul class="accordion-menu">
+                <li><a href="/page-about.html">日本語</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </li>
+            <li class="drawer__nav-item accordion">
+              <p class="js-drawer-accordion">group</p>
+              <ul class="accordion-menu">
+                <li><a href="/page-group.html">日本語</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </li>
+            <li class="drawer__nav-item accordion">
+              <p class="js-drawer-accordion">contact</p>
+              <ul class="accordion-menu">
+                <li><a href="/page-contact.html" target="_blank" rel="noopener"
+                  >バックステージプロジェクト</a></li>
+                <li><a href="#" target="_blank" rel="noopener"
+                  >アーティストマネジメント<i class="fa-solid fa-up-right-from-square"></i
+                    ></a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+    <main>
+      <!-- page-ttl -->
+      <section class="page-ttl" id="page-ttl">
+        <div class="page-ttl__inner inner">
+          <div class="p-ttl">
+            <h1>contact<span>お問い合わせ</span></h1>
+            <div class="p-ttl__circle"></div>
+          </div>
+        </div>
+      </section>
+      <!--group -->
+      <section class="group" id="group">
+        <div class="group__inner inner">
+          <div class="group__list">
+            <dl class="group__list-item">
+              <dh class="group__ttl">
+                <h2>株式会社ライブエグザム</h2>
+                <div class="group__link">
+                  <a href="#">
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </dh>
+              <dd class="group__txt">
+                <p>国内外コンサートプロモート<br>
+               乃木坂46 / 欅坂46 / 郷ひろみ / LUNA SEA etc.</p>
+              </dd>
+            </dl>
+            <dl class="group__list-item">
+              <dh class="group__ttl">
+                <h2>株式会社クリエイティブマンプロダクション</h2>
+                <div class="group__link">
+                  <a href="#">
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </dh>
+              <dd class="group__txt">
+                <p>フェスティバルプロデュース<br>SUMMER SONIC 、GREENROOM FESTIVAL、BLUE NOTE TOKYO、GMO SONIC etc.</p>
+                <p>国内外アーティスト招聘<br>コンサートプロダクション業務<br>JANET JACKSON、MAN WITH A MISSION、Green Day、Queen、Guns N' Roses、Radiohead、Earth, Wind & Fire etc.</p>
+              </dd>
+            </dl>
+            <dl class="group__list-item">
+              <dh class="group__ttl">
+                <h2>株式会社FYD</h2>
+                <div class="group__link">
+                  <a href="#">
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </dh>
+              <dd class="group__txt">
+                <p>アーティストマネージメント<br>MAN WITH A MISSION</p>
+              </dd>
+            </dl>
+            <dl class="group__list-item">
+              <dh class="group__ttl">
+                <h2>株式会社BIRTH ENTERTAINMENT</h2>
+                <div class="group__link">
+                  <a href="#">
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </dh>
+              <dd class="group__txt">
+                <p>アーティストマネジメント<br>ファンクラブ運営 / コンサート制作<br>薬師丸ひろ子 / GRANRODEO etc.</p>
+              </dd>
+            </dl>
+            <dl class="group__list-item">
+              <dh class="group__ttl">
+                <h2>トレジャーズ株式会社</h2>
+                <div class="group__link">
+                  <a href="#">
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </dh>
+              <dd class="group__txt">
+                <p>アーティストグッズ製作<br>販売・ライセンシー<br>THE ROLLING STONES / BON JOVI / SUMMER SONIC / FUJI ROCK FESTIVAL / THE POLICE etc.</p>
+              </dd>
+            </dl>
+            <dl class="group__list-item">
+              <dh class="group__ttl">
+                <h2>株式会社SC鳥取</h2>
+                <div class="group__link">
+                  <a href="#">
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </dh>
+              <dd class="group__txt">
+                <p>サッカーチーム経営<br>ガイナーレ鳥取（J3）</p>
+              </dd>
+            </dl>
+            <dl class="group__list-item">
+              <dh class="group__ttl">
+                <h2>株式会社イントロ</h2>
+                <div class="group__link">
+                  <a href="#">
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </dh>
+              <dd class="group__txt">
+                <p><a href="#">itumo</a></p>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+    <!-- cta -->
+    <section class="cta" id="cta">
+      <div class="cta__inner">
+        <div class="cta__ttl">
+          <h2><span>ご相談・お問い合わせはこちら</span>Contact Us</h2>
+        </div>
+        <div class="cta__btn btn--border">
+          <a href="/page-contact.html"
+            >お問い合わせをする<i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner inner">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <a href="#">
+            <img src="img/logo-black.png" alt="" />
+          </a>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a href="/page-works.html">works</a>
+            </li>
+            <li class="footer__nav-item">
+              <p>about</p>
+              <ul class="footer__nav-item-wrap">
+                <li><a href="/page-about.html">日本語</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </li>
+            <li class="footer__nav-item">
+              <p>group</p>
+              <ul class="footer__nav-item-wrap">
+                <li><a href="/page-group.html">日本語</a></li>
+                <li><a href="#">English</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <small class="footer__copyright"
+          >&copy;2025 All Rights Reserved.</small
+        >
+        <div class="footer__policy">
+          <a href="/page-policy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+    </div>
+    <!-- page-top -->
+    <div class="page-top js-page-top">
+      <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script
+    src="https://kit.fontawesome.com/f0efad86bc.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/accordion.js"></script>
+  <script type="text/javascript" src="js/animation.js"></script>
+  <script type="text/javascript" src="js/hamburger.js"></script>
+  <script type="text/javascript" src="js/pagetop.js"></script>
+  <script type="text/javascript" src="js/slick.js"></script>
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  <script type="text/javascript" src="js/tab.js"></script>
+</body>
+</html>

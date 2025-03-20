@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BACKSTAGE PROJECT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Jost:wght@500;700;800;900&family=Noto+Sans+JP:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header class="header" id="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="/">
+            <img src="img/logo-black.png" alt="" />
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="/page-service.html">service</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/page-works.html">works</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/archive-artist.html">artist</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#">recruit</a>
+            </li>
+            <li class="header__nav-item dropdown">
+              <p>about</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-about.html">日本語</a>
+                </li>
+                <li class="dropdown__menu-item"><a href="#">English</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item dropdown">
+              <p>group</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-group.html">日本語</a>
+                </li>
+                <li class="dropdown__menu-item"><a href="#">English</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item dropdown">
+              <p>contact</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-contact.html" target="_blank" rel="noopener"
+                    >バックステージプロジェクト</a
+                  >
+                </li>
+                <li class="dropdown__menu-item">
+                  <a href="#" target="_blank" rel="noopener"
+                    >アーティストマネジメント<i
+                      class="fa-solid fa-up-right-from-square"
+                    ></i
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <button class="hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="drawer__nav js-drawer">
+        <ul class="drawer__nav-list">
+          <li class="drawer__nav-item">
+            <a href="/page-service.html">service</a>
+          </li>
+          <li class="drawer__nav-item">
+            <a href="/page-works.html">works</a>
+          </li>
+          <li class="drawer__nav-item">
+            <a href="/archive-artist.html">artist</a>
+          </li>
+          <li class="drawer__nav-item">
+            <a href="#">recruit</a>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">about</p>
+            <ul class="accordion-menu">
+              <li><a href="/page-about.html">日本語</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">group</p>
+            <ul class="accordion-menu">
+              <li><a href="/page-group.html">日本語</a></li>
+              <li><a href="#">English</a></li>
+            </ul>
+          </li>
+          <li class="drawer__nav-item accordion">
+            <p class="js-drawer-accordion">contact</p>
+            <ul class="accordion-menu">
+              <li>
+                <a href="/page-contact.html" target="_blank" rel="noopener"
+                  >バックステージプロジェクト</a
+                >
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener"
+                  >アーティストマネジメント<i
+                    class="fa-solid fa-up-right-from-square"
+                  ></i
+                ></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- page-ttl -->
+      <section class="page-ttl" id="page-ttl">
+        <div class="page-ttl__inner inner">
+          <div class="p-ttl">
+            <h1>artist<span>所属アーティスト</span></h1>
+            <div class="p-ttl__circle"></div>
+          </div>
+        </div>
+      </section>
+
+      <!--artist -->
+      <section class="artist" id="artist">
+        <div class="artist__inner inner">
+          <div class="artist__top">
+            <div class="artist__img-wrap">
+              <div class="artist__img-grid">
+                <div class="artist__img --img-a">
+                  <img src="img/artist-img_4.png" alt="" />
+                </div>
+                <div class="artist__img --img-b">
+                  <img src="img/artist-img_5.png" alt="" />
+                </div>
+                <div class="artist__img --img-c">
+                  <img src="img/artist-img_6.png" alt="" />
+                </div>
+              </div>
+              <div class="artist___sns">
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              </div>
+            </div>
+            <div class="artist__content-wrap">
+              <div class="artist__name --small">
+                <h2><span>Emiko Suzuki</span>鈴木恵美子</h2>
+              </div>
+              <div class="artist__btn-wrap">
+                <div class="print__btn">
+                  <a href="#">印刷する<span>(日本語)</span></a>
+                </div>
+                <div class="print__btn --english">
+                  <a href="#">print<span>(English )</span></a>
+                </div>
+              </div>
+              <div class="artist__link">
+                <p>official hp</p>
+                <a href="#">https://emikosuzuki.fanpla.jp/</a>
+              </div>
+              <div class="artist__career">
+                <p>
+                  １９９９年５月１６日生まれ　千葉県出身<br />趣味・特技・・カメラ、映画鑑賞、絵、バレーボール<br />「湖池屋」ポテトチップスTVCM出演、FINAL
+                  FANTASY XVオンライン拡張パック:戦友 主題歌「Choosing
+                  Hope」歌唱、映画「恋は雨上がりのように」(主演：小松菜奈／大泉洋)の主題歌「フロントメモリー」(カバー曲)歌唱、実の家族のコーラスユニット“スギモト☆ファミリー”の一員としてCDアルバム「喜びあふれる」に参加他、本格デビュー前に様々なフィールドで活躍した。<br />2019年8月に自身の作詞・作曲による「FLY
+                  MY WAY/Soul Full of
+                  Music」でメジャーデビュー。2020年10月、「After
+                  All」を発売しオリコン＆ビルボードの配信チャートでTOP10入り。2021年7月、2ndシングル「kIng」(テレビアニメ『キングダム』エンディング曲)を発売し、11月5日には松本隆作詞活動50周年記念オフィシャル・プロジェクト『風街オデッセイ2021』(日本武道館)に出演。
+                </p>
+                <p>
+                  また、ミュージカル女優として2020年3月に日本初演の「ホイッスル・ダウン・ザ・ウインド～汚れなき瞳～」にキャンディ役でミュージカル初出演。11月には「RENT」でモーリーン役を好演。2021年3月、新作ミュージカル「PARTY」リーディングワークショップで主人公ユリ役を演じ、8月～9月、日本初演「ジェイミー」にベックス役で出演した。
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="artist__bottom">
+            <ul class="artist__accordion-list">
+              <li class="artist__accordion-item js-accordion">
+                <div class="artist__accordion-ttl js-accordion-ttl">
+                  <h3>音楽</h3>
+                </div>
+                <div class="artist__accordion-txt js-accordion-txt">
+                  <p>
+                    １９９９年５月１６日生まれ　千葉県出身<br />趣味・特技・・カメラ、映画鑑賞、絵、バレーボール<br />「湖池屋」ポテトチップスTVCM出演、FINAL
+                    FANTASY XVオンライン拡張パック:戦友 主題歌「Choosing
+                    Hope」歌唱、映画「恋は雨上がりのように」(主演：小松菜奈／大泉洋)の主題歌
+                  </p>
+                </div>
+              </li>
+              <li class="artist__accordion-item">
+                <div class="artist__accordion-ttl js-accordion-ttl">
+                  <h3>ミュージカル・舞台</h3>
+                </div>
+                <div class="artist__accordion-txt js-accordion-txt">
+                  <p>
+                    １９９９年５月１６日生まれ　千葉県出身<br />趣味・特技・・カメラ、映画鑑賞、絵、バレーボール<br />「湖池屋」ポテトチップスTVCM出演、FINAL
+                    FANTASY XVオンライン拡張パック:戦友 主題歌「Choosing
+                    Hope」歌唱、映画「恋は雨上がりのように」(主演：小松菜奈／大泉洋)の主題歌
+                  </p>
+                </div>
+              </li>
+              <li class="artist__accordion-item">
+                <div class="artist__accordion-ttl js-accordion-ttl">
+                  <h3>CM</h3>
+                </div>
+                <div class="artist__accordion-txt js-accordion-txt">
+                  <p>
+                    １９９９年５月１６日生まれ　千葉県出身<br />趣味・特技・・カメラ、映画鑑賞、絵、バレーボール<br />「湖池屋」ポテトチップスTVCM出演、FINAL
+                    FANTASY XVオンライン拡張パック:戦友 主題歌「Choosing
+                    Hope」歌唱、映画「恋は雨上がりのように」(主演：小松菜奈／大泉洋)の主題歌
+                  </p>
+                </div>
+              </li>
+              <li class="artist__accordion-item">
+                <div class="artist__accordion-ttl js-accordion-ttl">
+                  <h3>映画・声優</h3>
+                </div>
+                <div class="artist__accordion-txt js-accordion-txt">
+                  <p>
+                    １９９９年５月１６日生まれ　千葉県出身<br />趣味・特技・・カメラ、映画鑑賞、絵、バレーボール<br />「湖池屋」ポテトチップスTVCM出演、FINAL
+                    FANTASY XVオンライン拡張パック:戦友 主題歌「Choosing
+                    Hope」歌唱、映画「恋は雨上がりのように」(主演：小松菜奈／大泉洋)の主題歌
+                  </p>
+                </div>
+              </li>
+              <li class="artist__accordion-item">
+                <div class="artist__accordion-ttl js-accordion-ttl">
+                  <h3>その他</h3>
+                </div>
+                <div class="artist__accordion-txt js-accordion-txt">
+                  <p>
+                    １９９９年５月１６日生まれ　千葉県出身<br />趣味・特技・・カメラ、映画鑑賞、絵、バレーボール<br />「湖池屋」ポテトチップスTVCM出演、FINAL
+                    FANTASY XVオンライン拡張パック:戦友 主題歌「Choosing
+                    Hope」歌唱、映画「恋は雨上がりのように」(主演：小松菜奈／大泉洋)の主題歌
+                  </p>
+                </div>
+              </li>
+              <li class="artist__accordion-item">
+                <div class="artist__accordion-ttl js-accordion-ttl">
+                  <h3>主な受賞</h3>
+                </div>
+                <div class="artist__accordion-txt js-accordion-txt">
+                  <p>
+                    １９９９年５月１６日生まれ　千葉県出身<br />趣味・特技・・カメラ、映画鑑賞、絵、バレーボール<br />「湖池屋」ポテトチップスTVCM出演、FINAL
+                    FANTASY XVオンライン拡張パック:戦友 主題歌「Choosing
+                    Hope」歌唱、映画「恋は雨上がりのように」(主演：小松菜奈／大泉洋)の主題歌
+                  </p>
+                </div>
+              </li>
+              <li class="artist__accordion-item">
+                <div class="artist__accordion-ttl js-accordion-ttl">
+                  <h3>テレビ・ラジオ</h3>
+                </div>
+                <div class="artist__accordion-txt js-accordion-txt">
+                  <p>
+                    １９９９年５月１６日生まれ　千葉県出身<br />趣味・特技・・カメラ、映画鑑賞、絵、バレーボール<br />「湖池屋」ポテトチップスTVCM出演、FINAL
+                    FANTASY XVオンライン拡張パック:戦友 主題歌「Choosing
+                    Hope」歌唱、映画「恋は雨上がりのように」(主演：小松菜奈／大泉洋)の主題歌
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
+      <!-- cta -->
+      <section class="cta" id="cta">
+        <div class="cta__inner">
+          <div class="cta__ttl">
+            <h2><span>ご相談・お問い合わせはこちら</span>Contact Us</h2>
+          </div>
+          <div class="cta__btn btn--border">
+            <a href="/page-contact.html"
+              >お問い合わせをする<i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <div class="footer__inner inner">
+        <div class="footer__top">
+          <div class="footer__logo">
+            <a href="#">
+              <img src="img/logo-black.png" alt="" />
+            </a>
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="/page-works.html">works</a>
+              </li>
+              <li class="footer__nav-item">
+                <p>about</p>
+                <ul class="footer__nav-item-wrap">
+                  <li><a href="/page-about.html">日本語</a></li>
+                  <li><a href="#">English</a></li>
+                </ul>
+              </li>
+              <li class="footer__nav-item">
+                <p>group</p>
+                <ul class="footer__nav-item-wrap">
+                  <li><a href="/page-group.html">日本語</a></li>
+                  <li><a href="#">English</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <small class="footer__copyright"
+            >&copy;2025 All Rights Reserved.</small
+          >
+          <div class="footer__policy">
+            <a href="/page-policy.html">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+      <!-- page-top -->
+      <div class="page-top js-page-top">
+        <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/f0efad86bc.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/accordion.js"></script>
+    <script type="text/javascript" src="js/animation.js"></script>
+    <script type="text/javascript" src="js/hamburger.js"></script>
+    <script type="text/javascript" src="js/pagetop.js"></script>
+    <script type="text/javascript" src="js/slick.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    <script type="text/javascript" src="js/tab.js"></script>
+  </body>
+</html>

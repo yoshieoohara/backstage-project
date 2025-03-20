@@ -1,0 +1,66 @@
+@use "../global" as *;
+
+// group
+.group {
+  background-color: $black2;
+  padding: rem(80) 0;
+}
+
+.group__inner {
+}
+
+.inner {
+}
+
+.group__list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+}
+
+.group__list-item {
+  background-color: $white;
+  border-radius: rem(15);
+  padding: rem(30);
+}
+
+.group__ttl {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: rem(15);
+  border-bottom: rem(2) solid $gray2;
+  padding-bottom: rem(10);
+  h2 {
+    font-size: rem(30);
+  }
+}
+
+.group__link {
+  a {
+    @include flex(center);
+    width: rem(32);
+    height: rem(32);
+    background-color: $main;
+    border-radius: rem(15);
+    i {
+      font-size: rem(16);
+      color: $white;
+    }
+  }
+}
+
+.group__txt {
+  padding-top: rem(10);
+  p {
+    font-size: rem(20);
+    font-weight: 500;
+    a {
+      color: $main;
+      text-decoration: underline;
+    }
+  }
+  p + p {
+    margin-top: rem(20);
+  }
+}

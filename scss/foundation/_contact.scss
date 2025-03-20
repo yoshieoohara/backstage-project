@@ -3,7 +3,11 @@
 // contact-form
 .contact {
   background-color: $gray;
-  padding-bottom: rem(63);
+  padding-bottom: rem(80);
+}
+
+.contact__inner {
+  max-width: rem(980);
 }
 
 .contact__con {
@@ -32,8 +36,6 @@
   @include flex(space-between);
 }
 
-.form__wrap.--radio,
-.form__wrap.--checkbox,
 .form__wrap.--textarea {
   align-items: start;
 }
@@ -59,14 +61,7 @@
   }
 }
 
-.form__label span {
-
-}
-
 .form__input,
-.form__select,
-.form__radio,
-.form__checkbox,
 .form__textarea {
   width: 100%;
 }
@@ -87,69 +82,6 @@
   font-size: rem(14);
 }
 
-// form-select
-.form__select {
-  position: relative;
-  select {
-    width: 100%;
-    font-family: $font-family-ja;
-    font-size: rem(20);
-    border: rem(1) solid $black;
-    border-radius: rem(10);
-    padding: rem(20);
-    appearance: none;
-    cursor: pointer;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: rem(16);
-    width: rem(8);
-    height: rem(8);
-    border-top: rem(2) solid $black;
-    border-right: rem(2) solid $black;
-    transform: translateY(-50%) rotate(135deg);
-    pointer-events: none;
-  }
-}
-
-.form__privacy input {
-  display: none;
-}
-
-
-
-.form__privacy input + span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: rem(15);
-  height: rem(15);
-  background-color: $white;
-  border: rem(1.5) solid $black;
-}
-
-.form__privacy input + span::after {
-  content: "";
-  position: absolute;
-  top: rem(4);
-  left: rem(2);
-  transform: rotate(-45deg);
-  width: rem(16);
-  height: rem(8);
-  border-bottom: rem(3) solid $black;
-  border-left: rem(3) solid $black;
-  transition: all 0.3s;
-  opacity: 0;
-}
-
-.form__privacy input:checked + span::after {
-  opacity: 1;
-}
-
 // form-textarea
 .form__textarea textarea {
   height: rem(228);
@@ -168,6 +100,7 @@
 
 .form__privacy input + span {
   position: relative;
+  display: inline-flex;
   font-size: rem(15);
   padding-left: rem(24);
   cursor: pointer;
@@ -211,8 +144,8 @@
 
 // form-btn
 .form__btn {
-  width: rem(395);
-  height: rem(105);
+  width: rem(260);
+  height: rem(70);
   margin: rem(8) auto 0;
   input {
     width: 100%;
@@ -224,7 +157,7 @@
     font-weight: 700;
     background-color: $black;
     border: rem(3) solid $black;
-    border-radius: rem(53);
+    border-radius: rem(35);
     cursor: pointer;
     transition: all 0.3s;
     @include mq("md") {
