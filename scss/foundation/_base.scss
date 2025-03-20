@@ -1,97 +1,64 @@
 @use "../global" as *;
 
 // loading
-$primary-color: $main;
-$background-color: $black;
-$animation-time: 1.5s;
-
 .loading-screen {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: $background-color;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: $black;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   z-index: 100;
-  -webkit-animation: slideOut 1s ease-in-out 3s forwards;
-  animation: slideOut 1s ease-in-out 3s forwards;
+  animation: screenFadeOut 1s ease-in-out 3s forwards;
 }
 
 .logo-container {
   position: relative;
   width: 100%;
+  height: 100%;
 
-  .logo {
-    width: 30%;
+  .loading-logo {
+    position: absolute;
+    top: 21%;
+    left: 50%;
+    width: 48%;
     opacity: 0;
-    -webkit-transform: scale(0.5);
-    -ms-transform: scale(0.5);
-    transform: scale(0.5);
-    -webkit-animation: fadeInScale $animation-time ease-out forwards,
-      fadeOut 1s ease-in-out 2s forwards;
-    animation: fadeInScale $animation-time ease-out forwards,
-      fadeOut 1s ease-in-out 2s forwards;
+    transform: translateX(-50%);
+    animation: logoFadeIn 1s ease-in-out 0.5s forwards, logoFadeOut 0.5s ease-in-out 2.5s forwards;
     img {
       @include img;
     }
-    margin: 0 auto;
   }
 
-  .line {
+  .loading-line {
     position: absolute;
-    bottom: rem(-100);
+    bottom: 24%;
     left: 0;
     width: 0%;
-    height: rem(4);
+    height: rem(3);
     background-color: $main;
-    -webkit-animation: lineMove 0.5s $animation-time ease-in-out forwards,
-      fadeOut 1s ease-in-out 2s forwards;
-    animation: lineMove 0.5s $animation-time ease-in-out forwards,
-      fadeOut 1s ease-in-out 2s forwards;
+    animation: lineMove 0.5s ease-in-out 1.5s forwards, lineFadeOut 0.5s ease-in-out 2.5s forwards;
   }
 }
 
-@-webkit-keyframes fadeInScale {
+@keyframes logoFadeIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
   }
   100% {
     opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
   }
 }
 
-@keyframes fadeInScale {
+@keyframes logoFadeOut {
   0% {
-    opacity: 0;
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-  }
-  100% {
     opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@-webkit-keyframes lineMove {
-  0% {
-    width: 0;
   }
   100% {
-    width: 100%;
+    opacity: 0;
   }
 }
 
@@ -104,7 +71,7 @@ $animation-time: 1.5s;
   }
 }
 
-@-webkit-keyframes fadeOut {
+@keyframes lineFadeOut {
   0% {
     opacity: 1;
   }
@@ -113,34 +80,14 @@ $animation-time: 1.5s;
   }
 }
 
-@keyframes fadeOut {
+@keyframes screenFadeOut {
   0% {
     opacity: 1;
+    visibility: visible;
   }
   100% {
     opacity: 0;
-  }
-}
-
-@-webkit-keyframes slideOut {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes slideOut {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+    visibility: hidden;
   }
 }
 
@@ -162,7 +109,7 @@ $animation-time: 1.5s;
 .scroll-down {
   position: absolute;
   bottom: 0;
-  left: rem(50);
+  left: rem(48);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -179,7 +126,7 @@ $animation-time: 1.5s;
   .scroll-down__line {
     position: relative;
     width: rem(2);
-    height: rem(60);
+    height: rem(40);
     background: $white;
 
     .scroll-down__dot {
@@ -210,9 +157,6 @@ $animation-time: 1.5s;
 
 // top
 .top-message {
-  width: 100%;
-  height: 100%;
-  overflow-y: hidden;
 }
 
 .top-message__inner {
@@ -220,7 +164,7 @@ $animation-time: 1.5s;
 }
 
 .top-message__body {
-  width: 65%;
+  width: 67%;
   padding: rem(60) 0;
 }
 
@@ -234,37 +178,41 @@ $animation-time: 1.5s;
   }
 }
 
-.top-message__ttl--en span {
+.line-wrap {
   position: relative;
   display: inline-block;
 }
 
-.top-message__ttl--en span::after {
-  content: "";
+.line {
   position: absolute;
-  left: 0;
-  bottom: rem(8);
-  width: 100%;
+  left: rem(-20);
+  bottom: rem(4);
   height: rem(25);
-  background: $main;
+  width: calc(100% + rem(40));
   border-radius: rem(13);
-  transition: width 0.5s ease;
+  background: $main; 
+  transform: scaleX(0);
+  transform-origin: left center;
   z-index: -1;
 }
 
 .top-message__ttl--ja {
-  margin-top: rem(40);
+  margin-top: rem(50);
   p {
     font-size: rem(30);
     text-align: right;
+    line-height: 1;
   }
 }
 
 .top-message__txt {
-  margin-top: rem(30);
+max-width: rem(670);
+  margin-top: rem(34);
+  margin-left: auto;
   p {
     font-size: rem(18);
     font-weight: 500;
+    line-height: 1.7;
   }
 }
 
@@ -273,28 +221,27 @@ $animation-time: 1.5s;
 }
 
 .top-message__slick.slick-slider {
-  width: 30%;
-  height: 100%;
-  overflow: hidden;
+  width: 30%;  
+  height: 100vh; 
 }
 
 .top-message__slick .slick-list {
   transform: rotate(180deg) !important;
-  height: 70vh !important; 
+  height: 100vh !important; 
+  overflow: hidden; 
 }
 
 .top-message__slick-img {
   width: 100%;
-  margin: rem(10) 0;
+  height: 100%;
+  margin: rem(-10) 0;
   position: relative;
   transform: rotate(180deg);
 
   img {
     @include img;
+    @include img;
     object-fit: cover;
-    width: 100%;
-    height: auto;
-    display: block;
   }
 }
 
@@ -391,7 +338,7 @@ $animation-time: 1.5s;
 // top-works
 .top-works {
   background-color: $black2;
-  padding: rem(60) 0;
+  padding: rem(74) 0 rem(78);
   overflow-x: hidden;
 }
 
@@ -415,7 +362,7 @@ $animation-time: 1.5s;
 }
 
 .works__slick-wrap {
-  margin-top: rem(55);
+  margin-top: rem(56);
 }
 
 .works__slick-list.--top {
@@ -424,7 +371,7 @@ $animation-time: 1.5s;
 
 .works__slick-list.--bottom {
   margin-top: rem(55);
-  margin-left: 10%;
+  padding-left: 10%;
 }
 
 .works__slick-img {
@@ -440,7 +387,7 @@ $animation-time: 1.5s;
 
 // top-artist
 .top-artist {
-  padding: rem(60) 0;
+  padding: rem(86) 0 rem(74);
 }
 
 .top-artist__list {
@@ -492,7 +439,7 @@ $animation-time: 1.5s;
   a {
     i {
       color: $white;
-      font-size: rem(32);
+      font-size: rem(30);
     }
   }
 }
@@ -500,8 +447,8 @@ $animation-time: 1.5s;
 .top-artist__sns {
   display: flex;
   align-items: center;
-  gap: rem(20);
-  margin-top: rem(30);
+  gap: rem(30);
+  margin-top: rem(24);
   a {
     i {
       color: $white;

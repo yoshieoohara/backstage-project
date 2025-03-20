@@ -45,12 +45,4 @@ jQuery(function ($) {
   });
 });
 
-//     $(window).on("resize", function () {
-//       if (window.matchMedia("(min-width: 768px)").matches) {
-//         $(".js-hamburger").removeClass("is-open");
-//         $(".js-drawer").removeClass("is-open");
-//         $(".body").removeClass("no-scroll");
-//       }
-//     });
-//   });
-// });
+

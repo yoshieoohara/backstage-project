@@ -3,7 +3,7 @@
 // contact-form
 .contact {
   background-color: $gray;
-  padding-bottom: rem(80);
+  padding-bottom: rem(63);
 }
 
 .contact__con {
@@ -14,7 +14,6 @@
 
 .contact__txt {
   padding-bottom: rem(50);
-  border-bottom: rem(2) solid $gray2;
   p {
     font-size: rem(20);
   }
@@ -23,10 +22,9 @@
 .contact__form {
   display: flex;
   flex-direction: column;
-  gap: rem(22);
+  gap: rem(25);
   width: 100%;
-  border-top: rem(2) solid $black;
-
+  border-top: rem(2) solid $gray2;
   padding: rem(22) 0;
 }
 
@@ -86,6 +84,7 @@
 ::placeholder {
   font-family: $font-family-ja;
   color: #ccc;
+  font-size: rem(14);
 }
 
 // form-select
@@ -115,69 +114,24 @@
   }
 }
 
-// radio
-.form__radio,
-.form__checkbox {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: rem(20);
-}
-
-.form__radio input,
-.form__checkbox input,
 .form__privacy input {
   display: none;
 }
 
-.form__radio input + span,
-.form__checkbox input + span,
-.form__privacy input + span {
-  cursor: pointer;
-  padding-left: rem(32);
-  position: relative;
-}
 
-.form__radio input + span::before,
-.form__checkbox input + span::before,
+
 .form__privacy input + span::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  width: rem(20);
-  height: rem(20);
+  width: rem(15);
+  height: rem(15);
   background-color: $white;
-  border: 1px solid $gray3;
+  border: rem(1.5) solid $black;
 }
 
-.form__radio input + span::before {
-  border-radius: 50%;
-}
-
-.form__radio input + span::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: rem(5);
-  transform: translateY(-50%);
-  width: rem(6);
-  height: rem(6);
-  background-color: $black;
-  border: 1px solid transparent;
-  border-radius: 50%;
-  padding: rem(2);
-  opacity: 0;
-  transition: all 0.3s;
-}
-
-.form__radio input:checked + span::after {
-  opacity: 1;
-}
-
-// checkbox
-.form__checkbox input + span::after,
 .form__privacy input + span::after {
   content: "";
   position: absolute;
@@ -192,21 +146,20 @@
   opacity: 0;
 }
 
-.form__checkbox input:checked + span::after,
 .form__privacy input:checked + span::after {
   opacity: 1;
 }
 
 // form-textarea
 .form__textarea textarea {
-  height: rem(268);
+  height: rem(228);
 }
 
 // form-privacy
 .form__privacy {
-  padding-top: rem(40);
+  border-top: rem(2) solid $gray2;
+  padding-top: rem(28);
   text-align: center;
-  border-top: rem(2) solid $black;
 }
 
 .form__privacy input {
@@ -216,7 +169,7 @@
 .form__privacy input + span {
   position: relative;
   font-size: rem(15);
-  padding-left: rem(30);
+  padding-left: rem(24);
   cursor: pointer;
 }
 
@@ -260,7 +213,7 @@
 .form__btn {
   width: rem(395);
   height: rem(105);
-  margin: rem(40) auto 0;
+  margin: rem(8) auto 0;
   input {
     width: 100%;
     height: inherit;

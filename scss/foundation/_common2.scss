@@ -7,33 +7,36 @@
 }
 
 .page-ttl__inner {
-  height: rem(620);
+  height: rem(600);
 }
 
 .p-ttl {
   position: absolute;
-  top: 45%;
+  top: 46%;
   z-index: 0;
   h1 {
     font-family: $font-family-en1;
-    font-size: rem(75);
+    font-size: rem(65);
     font-weight: 900;
+    line-height: 1;
     text-transform: uppercase;
     span {
       position: relative;
       display: block;
-      font-size: rem(30);
+      font-size: rem(24);
+      line-height: 1;
       font-family: $font-family-ja;
       font-weight: 700;
-      padding-left: rem(40);
+      padding-left: rem(28);
       color: $gray8;
+      margin-top: rem(20);
       &::before {
         content: "";
         position: absolute;
         top: 50%;
         left: rem(8);
         transform: translateY(-50%);
-        width: rem(20);
+        width: rem(16);
         height: rem(3);
         background-color: $gray8;
       }
@@ -42,13 +45,11 @@
 }
 
 .p-ttl__circle {
-  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  left: rem(-40);
-  width: rem(80);
-  height: rem(80);
+  top: rem(-15);
+  left: rem(-25);
+  width: rem(60);
+  height: rem(60);
   background-color: $main;
   border-radius: 50%;
   z-index: -1;

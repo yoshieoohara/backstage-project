@@ -12,18 +12,61 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// top-line-animation
-gsap.registerPlugin(ScrollTrigger);
+// header-color
+jQuery(function ($) {
+  $(window).on("scroll", function () {
+    const fvHeight = $("#top-fv").outerHeight();
+    const scroll = $(window).scrollTop();
 
-gsap.to(".top-message__ttl--en span::after", {
-  scrollTrigger: {
-    trigger: ".top-message__ttl--en span",
-    start: "top 80%", // ビューポートの80%の位置で開始
-    toggleActions: "play none none none",
-  },
-  width: "100%",
-  duration: 1,
-  ease: "power2.out",
+    if (scroll > fvHeight) {
+      $(".logo-img").attr("src", "img/logo-black.png");
+    } else {
+      $(".logo-img").attr("src", "img/logo-white.png");
+    }
+  });
+});
+
+// top-line-animation
+jQuery(function ($) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const line = document.querySelector(".line");
+
+  gsap.to(line, {
+    scaleX: 1,
+    ease: "power2.out",
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".line-wrap",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+  });
+});
+
+// service-line-animation
+jQuery(function ($) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const lines = gsap.utils.toArray(".service-message__link-line");
+
+  lines.forEach((line, i) => {
+    const arrow = line.querySelector(".arrow");
+
+    // ラインのアニメーション
+    gsap.to(line, {
+      scaleX: 1,
+      transformOrigin: "left center",
+      ease: "power2.out",
+      duration: 1,
+      delay: i * 0.8, // 上下で時間差
+      scrollTrigger: {
+        trigger: line,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+  });
 });
 
 // service-animation

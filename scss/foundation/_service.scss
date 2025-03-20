@@ -2,7 +2,7 @@
 
 // service
 .service {
-  padding: rem(60) 0;
+  padding: rem(60) 0 rem(50);
 }
 
 .service-message {
@@ -20,23 +20,24 @@
 }
 
 .service-message__txt {
-  max-width: 95%;
-  margin-top: rem(20);
+  max-width: 87%;
+  margin-top: rem(4);
   margin-left: auto;
   p {
     font-size: rem(20);
+    line-height: 1.75;
   }
 }
 
 .service-message__link-wrap {
-  margin-top: rem(60);
+  margin-top: rem(66);
 }
 
 .service-message__link-list {
   position: relative;
   @include flex(center);
-  gap: rem(40);
-  width: 98%;
+  gap: rem(22);
+  width: 92%;
   margin: 0 auto;
 }
 
@@ -66,7 +67,7 @@
 }
 
 .service-message__link-list:nth-of-type(2) {
-  width: 78%;
+  width: 74%;
   margin-top: rem(20);
 }
 
@@ -108,12 +109,13 @@
 .service__list {
   display: flex;
   flex-direction: column;
-  gap: rem(60);
-  margin-top: rem(100);
+  gap: rem(63);
+  margin-top: rem(94);
 }
 
 .service__list-item {
-  @include flex(space-between);
+  @include flex(center);
+  gap: rem(60);
 }
 
 .service__list-item:nth-of-type(odd) {
@@ -127,6 +129,10 @@
   color: $main2;
 }
 
+.service__list-ttl {
+
+}
+
 .service__list-wrap {
   color: $main;
   display: flex;
@@ -138,6 +144,7 @@
 .service__list-category {
   font-size: rem(35);
   font-family: $font-family-en2;
+  white-space: nowrap;
 }
 
 .service__list-number {
@@ -147,55 +154,81 @@
 }
 
 .service__list-img {
-  width: 45%;
   img {
     @include img;
   }
 }
 
 .service__list-img.--img1 {
-width: rem(220);
+width: 41%;
 }
-
 
 .service__list-img.--img2 {
-  width: rem(270);
+  width: 32%;
 }
 
+.service__list-img.--img3 {
+  width: 34%;
+}
+
+
+.service__list-img.--img4 {
+  width: 41%;
+}
+
+.service__list-img.--img5 {
+  width: 32%;
+}
+
+.service__list-img.--img6 {
+  width: 40%;
+}
+
+.service__list-img.--img7 {
+  width: 48%;
+}
+
+.service__list-img.--img8 {
+  width: 34%;
+}
+
+
 .service__list-img-wrap {
-  width: 45%;
   display: flex;
   align-items: end;
-gap: rem(14);
+  justify-content: center;
+gap: rem(8);
 }
 
 .service__list-body {
-  width: 51%;
+  width: 48%;
 }
 
 .service__list-ttl {
  display: flex;
  align-items: center;
-  gap: rem(20);
+  gap: rem(14);
   h3 {
     font-weight: 900;
     font-size: rem(35);
+    white-space: nowrap;
   }
 }
 
 .service__list-txt {
   p {
     font-size: rem(20);
-    line-height: 35 / 20;
+    line-height: 1.75;
   }
 }
 
 .service__btn {
-  margin-top: rem(30);
+  margin-top: rem(12);
   margin-left: auto;
   a {
     color: $main;
     font-size: rem(25);
+    line-height: 1;
     i {
       color: $main;
       font-size: rem(25);
