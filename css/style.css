@@ -296,7 +296,7 @@ li {
   justify-content: center;
   width: 100%;
   height: 100%;
-  border-radius: 2.1875rem;
+  border-radius: 6.25rem;
   background-color: #FFF;
   border: 0.1875rem solid #00AEEF;
   font-size: 1.25rem;
@@ -678,21 +678,40 @@ body.no-scroll {
   font-size: 1.25rem;
 }
 
+.cta__btn-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.75rem;
+  margin-top: 2.5rem;
+}
+
 .cta__btn {
-  width: 17.5rem;
-  margin: 1.875rem auto 0;
+  width: 22.5rem;
 }
 .cta__btn a {
   color: #000;
   background-color: #FFF;
-  border: 0.1875rem solid #FFF;
+  border: 0.1875rem solid #000;
 }
 .cta__btn a i {
   right: 1.25rem;
 }
 
-.cta a:hover {
-  background-color: transparent;
+.cta__btn.--black a {
+  color: #FFF;
+  background-color: black;
+  border: 0.1875rem solid black;
+}
+
+.btn--border.cta__btn a:hover {
+  color: #FFF;
+  background-color: #000;
+}
+
+.btn--border.cta__btn.--black a:hover {
+  background-color: #FFF;
+  color: #000;
 }
 
 .footer {
@@ -1540,7 +1559,7 @@ body.no-scroll {
 }
 .service__list-txt p {
   font-size: 1.25rem;
-  line-height: 1.75;
+  font-weight: 500;
 }
 
 .service__btn {
@@ -1656,7 +1675,7 @@ body.no-scroll {
   position: relative;
   display: inline-flex;
   font-size: 0.9375rem;
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   cursor: pointer;
 }
 
@@ -1669,21 +1688,21 @@ body.no-scroll {
   background-color: #FFF;
   border: 0.09375rem solid #000;
   display: block;
-  width: 0.9375rem;
-  height: 0.9375rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .form__privacy input + span::after {
   content: "";
   position: absolute;
-  top: 0.3125rem;
-  left: 0.125rem;
+  top: 0.4375rem;
+  left: 0.25rem;
   transform: rotate(-45deg);
   display: block;
   width: 0.75rem;
   height: 0.375rem;
-  border-bottom: 0.125rem solid #000;
-  border-left: 0.125rem solid #000;
+  border-bottom: 0.1875rem solid #000;
+  border-left: 0.1875rem solid #000;
   transition: all 0.3s;
   opacity: 0;
 }
@@ -1711,7 +1730,7 @@ body.no-scroll {
   font-weight: 700;
   background-color: #000;
   border: 0.1875rem solid #000;
-  border-radius: 2.1875rem;
+  border-radius: 6.25rem;
   cursor: pointer;
   transition: all 0.3s;
 }
