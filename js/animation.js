@@ -1,15 +1,49 @@
 // loading
-document.addEventListener("DOMContentLoaded", () => {
-  if (!localStorage.getItem("visited")) {
-    setTimeout(() => {
-      document.querySelector(".top-container").style.opacity = "1";
-      document.querySelector(".top-container").style.transform =
-        "translateX(0)";
-      localStorage.setItem("visited", "true");
-    }, 3000);
-    document.querySelector(".top-container").style.opacity = "1";
-    document.querySelector(".top-container").style.transform = "translateX(0)";
+// document.addEventListener("DOMContentLoaded", () => {
+//   const topContainer = document.querySelector(".top-container");
+
+//   if (!localStorage.getItem("visited")) {
+//     // 初回のみ3秒後に表示
+//     setTimeout(() => {
+//       topContainer.style.opacity = "1";
+//       topContainer.style.transform = "translateX(0)";
+//       localStorage.setItem("visited", "true");
+//     }, 3000);
+//   } else {
+//     // 2回目以降は即表示
+//     topContainer.style.opacity = "1";
+//     topContainer.style.transform = "translateX(0)";
+//   }
+// });
+
+// // bfcache（戻るキャッシュ）対応
+// window.addEventListener("pageshow", (event) => {
+//   if (event.persisted) {
+//     const topContainer = document.querySelector(".top-container");
+//     topContainer.style.opacity = "1";
+//     topContainer.style.transform = "translateX(0)";
+//   }
+// });
+
+$(window).on('load', function () {
+  // 初回アクセス時のみ実行
+  if (!sessionStorage.getItem('splashShown')) {
+    $("#splash-logo").delay(1200).fadeOut('slow'); // ロゴを1.2秒でフェードアウト
+    $("#splash").delay(1500).fadeOut('slow', function () { // splashエリアを1.5秒でフェードアウト
+      $('body').addClass('appear'); // フェードアウト後bodyにappearクラス付与
+    });
+
+    // sessionStorageに「splashShown」を設定して、2回目以降は実行されないようにする
+    sessionStorage.setItem('splashShown', 'true');
+  } else {
+    // 2回目以降は即座にappearクラスを付与
+    $('body').addClass('appear');
   }
+});
+
+// body-animation
+$(function() {
+	$('body').fadeIn(1000); 
 });
 
 // header-color

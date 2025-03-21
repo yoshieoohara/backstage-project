@@ -1,0 +1,197 @@
+@use "../global" as *;
+
+// archive-artist
+// artist-Slick
+.artist-slick {
+  padding: rem(200) 0 rem(130);
+  background-color: $gray;
+}
+.artist-slick__inner {
+  max-width: rem(900);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slick-list {
+  position: relative;
+}
+
+.artist__slick-img {
+  width: 100%;
+  aspect-ratio: 900 / 500;
+  img {
+    @include img;
+    object-fit: cover;
+    border-radius: rem(15);
+  }
+}
+
+// slick-dots
+#artist-slick.slick-dots {
+  bottom: rem(-60);
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 rem(12);
+}
+
+.slick-dots button {
+  display: block;
+  width: rem(15);
+  height: rem(15);
+  color: transparent;
+  background-color: $white;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  padding: rem(4);
+  cursor: pointer;
+}
+
+#artist-slick .slick-dots {
+  bottom: rem(-80);
+}
+
+#artist-slick .slick-dots .slick-active button {
+  background-color: $gray5;
+}
+
+// archive-artist
+.archive-artist {
+  padding: rem(80) 0;
+}
+
+.archive-artist__inner {
+  position: relative;
+}
+#archive-artist .p-ttl {
+  position: static;
+}
+
+#archive-artist .p-ttl__circle {
+  left: rem(20);
+}
+
+.archive-artist__list {
+  margin-top: rem(60);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: rem(28);
+}
+
+.archive-artist__item a {
+  position: relative;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.archive-artist__img {
+  position: relative;
+  max-width: rem(910);
+  width: 100%;
+  aspect-ratio: 910 / 420;
+  border-radius: rem(15);
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: rem(15);
+    transition: background-color 0.3s;
+    z-index: 2;
+  }
+
+  img {
+    @include img;
+    object-fit: cover;
+    border-radius: rem(15);
+    display: block;
+  }
+}
+
+.archive-artist__name {
+  position: absolute;
+  bottom: rem(40);
+  left: rem(40);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 3;
+
+  h2 {
+    font-size: rem(30);
+    color: $white;
+    span {
+      display: block;
+      font-size: rem(20);
+    }
+  }
+}
+
+.archive-artist__btn {
+  position: absolute;
+  bottom: rem(40);
+  right: rem(40);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: rem(44);
+  font-size: rem(20);
+  color: $white;
+  padding: rem(6);
+  transition: opacity 0.3s, visibility 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+  i {
+    color: $white;
+    font-size: rem(20);
+  }
+}
+
+.btn {
+  width: fit-content;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: rem(44);
+    font-size: rem(20);
+    color: $white;
+    padding: rem(6);
+    &:hover {
+      opacity: 1;
+    }
+    i {
+      color: $white;
+      font-size: rem(20);
+      transition: transform 0.3s ease;
+    }
+    &:hover i {
+      transform: translateX(rem(10));
+    }
+  }
+}
+
+.archive-artist__item a:hover {
+  opacity: 1;
+}
+
+.archive-artist__item a:hover .archive-artist__img::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.archive-artist__item a:hover .archive-artist__name,
+.archive-artist__item a:hover .archive-artist__btn {
+  opacity: 1;
+  visibility: visible;
+}
