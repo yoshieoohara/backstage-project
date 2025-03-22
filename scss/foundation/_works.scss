@@ -1,5 +1,6 @@
 @use "../global" as *;
 
+// works
 .works {
   background-color: $black2;
   padding: rem(80) 0;
@@ -85,9 +86,9 @@
   border-radius: rem(10);
   box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
+  display: block;
   position: relative;
+  cursor: pointer;
 }
 
 .work__list-img {
@@ -166,7 +167,7 @@
   margin-top: rem(16);
 }
 
-.works__list-top.is-open + .works__list-bottom {
+.works__list-item.is-open .works__list-bottom {
   max-height: rem(1000); 
   opacity: 1;
 }
@@ -189,7 +190,7 @@ color: $gray3;
   transition: transform 0.3s ease;
 }
 
-.works__list-top.is-open .accordion__btn::before {
+.works__list-item.is-open .works__list-top .accordion__btn::before {
   transform: rotate(-45deg);
 }
 
@@ -199,52 +200,13 @@ color: $gray3;
 
 .close__btn {
   display: none;
-  margin-right: rem(30);
 }
 
-.works__list-top.is-open .open__btn {
+.works__list-item.is-open .open__btn {
   display: none;
 }
 
-.works__list-top.is-open .close__btn {
-  display: block;
-}
-
-.works__list-item.is-open {
-  margin-bottom: rem(40);  
-}
-
-.accordion__btn::before {
-  content: "";
-  position: absolute;
-  top: 25%;
-  left: rem(-24);
-  transform: rotate(135deg);
-  width: rem(8);
-  height: rem(8);
-  border-top: rem(2) solid $gray3;
-  border-right: rem(2) solid $gray3;
-  transition: transform 0.3s ease;
-}
-
-.works__list-top.is-open .accordion__btn::before {
-  transform: rotate(-45deg);
-}
-
-.open__btn {
-  display: block;
-}
-
-.close__btn {
-  display: none;
-  margin-right: rem(34);
-}
-
-.works__list-top.is-open .open__btn {
-  display: none;
-}
-
-.works__list-top.is-open .close__btn {
+.works__list-item.is-open .close__btn {
   display: block;
 }
 

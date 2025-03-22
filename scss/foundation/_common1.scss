@@ -12,9 +12,8 @@ body {
 
 // fade-in
 body {
-	display: none;
+  display: none;
 }
-
 
 a {
   text-decoration: none;
@@ -151,6 +150,7 @@ li {
   background: transparent;
   z-index: 90;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .header.scrolled .header__nav {
@@ -174,6 +174,7 @@ li {
   width: 100%;
   height: inherit;
   transition: transform 0.3s ease;
+  pointer-events: auto;
 }
 a {
   display: flex;
@@ -208,6 +209,7 @@ a {
   text-transform: uppercase;
   font-size: rem(18);
   padding: rem(14);
+  pointer-events: auto;
 }
 
 .top-header .header__nav-item a,
@@ -226,16 +228,17 @@ a {
 // dropdown
 .dropdown {
   position: relative;
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     right: 0;
-    top: 40%;
+    top: 42%;
     transform: rotate(135deg);
     width: rem(6);
     height: rem(6);
     border-top: rem(2) solid $black;
     border-right: rem(2) solid $black;
+    transition: transform 0.3s;
   }
 }
 
@@ -255,6 +258,11 @@ a {
 .dropdown:active > .dropdown-menu {
   opacity: 1;
   visibility: visible;
+}
+
+.dropdown:hover::after,
+.dropdown:active::after {
+  transform: rotate(-45deg);
 }
 
 .dropdown__menu-item a {
@@ -295,6 +303,7 @@ a {
   opacity: 0;
   visibility: hidden;
   z-index: 9999;
+  pointer-events: auto;
   @include mq("md") {
     display: block;
   }
@@ -360,6 +369,7 @@ body.no-scroll {
   transition: right 0.5s ease;
   z-index: 900;
   overflow: auto;
+  pointer-events: auto;
 }
 .drawer__nav.is-open {
   right: 0;
@@ -375,7 +385,7 @@ body.no-scroll {
   opacity: 0;
   position: absolute;
   z-index: 999;
-  top: 8%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   width: 65%;
@@ -403,7 +413,7 @@ body.no-scroll {
   color: $white;
   border-bottom: rem(2) dashed $white;
   text-transform: uppercase;
-  padding: rem(23);
+  padding: rem(16);
   &:before {
     content: "";
     position: absolute;
