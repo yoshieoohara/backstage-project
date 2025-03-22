@@ -2543,7 +2543,6 @@ body.no-scroll {
   border: 0.125rem solid #000;
   border-radius: 2.5rem;
   font-weight: 700;
-  cursor: pointer;
 }
 .print__btn button span {
   display: block;
