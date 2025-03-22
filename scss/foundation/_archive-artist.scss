@@ -158,29 +158,29 @@
   }
 }
 
-.btn {
-  width: fit-content;
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    gap: rem(44);
-    font-size: rem(20);
-    color: $white;
-    padding: rem(6);
-    &:hover {
-      opacity: 1;
-    }
-    i {
-      color: $white;
-      font-size: rem(20);
-      transition: transform 0.3s ease;
-    }
-    &:hover i {
-      transform: translateX(rem(10));
-    }
-  }
-}
+// .btn {
+//   width: fit-content;
+//   a {
+//     display: flex;
+//     align-items: center;
+//     justify-content: end;
+//     gap: rem(44);
+//     font-size: rem(20);
+//     color: $white;
+//     padding: rem(6);
+//     &:hover {
+//       opacity: 1;
+//     }
+//     i {
+//       color: $white;
+//       font-size: rem(20);
+//       transition: transform 0.3s ease;
+//     }
+//     &:hover i {
+//       transform: translateX(rem(10));
+//     }
+//   }
+// }
 
 .archive-artist__item a:hover {
   opacity: 1;
