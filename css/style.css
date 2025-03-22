@@ -2123,6 +2123,7 @@ body.no-scroll {
 
 .close__btn {
   display: none;
+  margin-right: 1.875rem;
 }
 
 .works__list-item.is-open .open__btn {
