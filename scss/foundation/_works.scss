@@ -72,11 +72,17 @@
   }
 }
 
+.tab__content-wrap {
+  display: flex;
+  align-items: start;
+  gap: rem(45);
+}
+
 // works-list
 .works__list {
-  display: grid; 
-  grid-template-columns: repeat(2, 1fr);  
-  gap: rem(45); 
+  display: flex;
+  flex-direction: column;
+  gap: rem(45);  
   padding-top: rem(45);
 }
 

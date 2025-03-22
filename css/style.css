@@ -1983,9 +1983,15 @@ body.no-scroll {
     opacity: 1;
   }
 }
+.tab__content-wrap {
+  display: flex;
+  align-items: start;
+  gap: 2.8125rem;
+}
+
 .works__list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 2.8125rem;
   padding-top: 2.8125rem;
 }
@@ -2522,7 +2528,8 @@ body.no-scroll {
   width: 16.125rem;
   height: 5rem;
 }
-.print__btn a {
+.print__btn button {
+  font-family: "Noto Sans JP", serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2534,18 +2541,20 @@ body.no-scroll {
   background-color: #000;
   border: 0.125rem solid #000;
   border-radius: 2.5rem;
+  font-weight: 700;
 }
-.print__btn a span {
+.print__btn button span {
   display: block;
   font-size: 1.125rem;
 }
 
-.--english a {
+.--english button {
+  font-family: "Noto Sans JP", serif;
   color: #000;
   background-color: #FFF;
   text-transform: uppercase;
 }
-.--english a span {
+.--english button span {
   text-transform: unset;
 }
 

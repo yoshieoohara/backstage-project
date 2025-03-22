@@ -44,12 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // artist-accordion
 $(function () {
-  $(".js-accordion-ttl")
-    .first()
-    .addClass("is-open")
-    .next(".js-accordion-txt")
-    .show();
-
   $(".js-accordion-ttl").click(function () {
     $(".js-accordion-ttl")
       .not(this)

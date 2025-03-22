@@ -102,7 +102,8 @@
 .print__btn {
   width: rem(258);
   height: rem(80);
-  a {
+  button {
+    font-family: $font-family-ja;
     @include flex(center);
     flex-direction: column;
     width: 100%;
@@ -112,6 +113,7 @@
     background-color: $black;
     border: rem(2) solid $black;
     border-radius: rem(40);
+    font-weight: 700;
     span {
       display: block;
       font-size: rem(18);
@@ -123,7 +125,8 @@
 }
 
 .--english {
-  a {
+  button {
+    font-family: $font-family-ja;
     color: $black;
     background-color: $white;
     text-transform: uppercase;
