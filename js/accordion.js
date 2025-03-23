@@ -1,12 +1,29 @@
 // drawer-accordion
-jQuery(function ($) {
-  $(".js-drawer-accordion").on("click", function () {
-    $(this).next().slideToggle();
-    $(this).toggleClass("is-open");
+$(".js-drawer-accordion").on("click", function () {
+  const item = $(this).closest(".works__list-item");
+  const bottom = item.find(".works__list-bottom");
+
+  $(".works__list-item").each(function () {
+    const otherItem = $(this);
+    if (otherItem[0] !== item[0]) {
+      otherItem.removeClass("is-open");
+      const otherBottom = otherItem.find(".works__list-bottom");
+      if (otherBottom.length) {
+        otherBottom.css({ "max-height": 0, "opacity": 0 });
+      }
+    }
   });
-  $(".accordion p").on("click", function () {
-    $(this).toggleClass("is-open");
-  });
+
+  item.toggleClass("is-open");
+  if (item.hasClass("is-open")) {
+    bottom.css({ "max-height": bottom[0].scrollHeight + "px", "opacity": 1 });
+  } else {
+    bottom.css({ "max-height": 0, "opacity": 0 });
+  }
+});
+
+$(".accordion p").on("click", function () {
+  $(this).toggleClass("is-open");
 });
 
 // works-accordion

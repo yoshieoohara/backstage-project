@@ -22,55 +22,108 @@
   </head>
 
   <body>
-    <!-- header -->
-    <header class="header" id="header">
-      <div class="header__inner">
-        <div class="header__logo">
-          <a href="/">
-            <img src="img/logo-black.png" alt="" />
-          </a>
+      <!-- header -->
+      <header class="header top-header" id="header">
+        <div class="header__inner">
+          <div class="header__logo">
+            <a href="/">
+              <img src="img/logo-white.png" class="logo-img" alt="" />
+            </a>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a href="/page-service.html">service</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/page-works.html">works</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="/archive-artist.html">artist</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#">recruit</a>
+              </li>
+              <li class="header__nav-item dropdown">
+                <p>about</p>
+                <ul class="dropdown-menu">
+                  <li class="dropdown__menu-item">
+                    <a href="/page-about.html">日本語</a>
+                  </li>
+                  <li class="dropdown__menu-item"><a href="#">English</a></li>
+                </ul>
+              </li>
+              <li class="header__nav-item dropdown">
+                <p>group</p>
+                <ul class="dropdown-menu">
+                  <li class="dropdown__menu-item">
+                    <a href="/page-group.html">日本語</a>
+                  </li>
+                  <li class="dropdown__menu-item"><a href="#">English</a></li>
+                </ul>
+              </li>
+              <li class="header__nav-item dropdown">
+                <p>contact</p>
+                <ul class="dropdown-menu">
+                  <li class="dropdown__menu-item">
+                    <a href="/page-contact.html" target="_blank" rel="noopener"
+                      >バックステージプロジェクト</a
+                    >
+                  </li>
+                  <li class="dropdown__menu-item">
+                    <a href="#" target="_blank" rel="noopener"
+                      >アーティストマネジメント<i
+                        class="fa-solid fa-up-right-from-square"
+                      ></i
+                    ></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <button class="hamburger js-hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-item">
+        <nav class="drawer__nav js-drawer">
+          <ul class="drawer__nav-list">
+            <li class="drawer__nav-item">
               <a href="/page-service.html">service</a>
             </li>
-            <li class="header__nav-item">
+            <li class="drawer__nav-item">
               <a href="/page-works.html">works</a>
             </li>
-            <li class="header__nav-item">
+            <li class="drawer__nav-item">
               <a href="/archive-artist.html">artist</a>
             </li>
-            <li class="header__nav-item">
+            <li class="drawer__nav-item">
               <a href="#">recruit</a>
             </li>
-            <li class="header__nav-item dropdown">
-              <p>about</p>
-              <ul class="dropdown-menu">
-                <li class="dropdown__menu-item">
-                  <a href="/page-about.html">日本語</a>
-                </li>
-                <li class="dropdown__menu-item"><a href="#">English</a></li>
+            <li class="drawer__nav-item accordion">
+              <p class="js-drawer-accordion">about</p>
+              <ul class="accordion-menu">
+                <li><a href="/page-about.html">日本語</a></li>
+                <li><a href="#">English</a></li>
               </ul>
             </li>
-            <li class="header__nav-item dropdown">
-              <p>group</p>
-              <ul class="dropdown-menu">
-                <li class="dropdown__menu-item">
-                  <a href="/page-group.html">日本語</a>
-                </li>
-                <li class="dropdown__menu-item"><a href="#">English</a></li>
+            <li class="drawer__nav-item accordion">
+              <p class="js-drawer-accordion">group</p>
+              <ul class="accordion-menu">
+                <li><a href="/page-group.html">日本語</a></li>
+                <li><a href="#">English</a></li>
               </ul>
             </li>
-            <li class="header__nav-item dropdown">
-              <p>contact</p>
-              <ul class="dropdown-menu">
-                <li class="dropdown__menu-item">
+            <li class="drawer__nav-item accordion">
+              <p class="js-drawer-accordion">contact</p>
+              <ul class="accordion-menu">
+                <li>
                   <a href="/page-contact.html" target="_blank" rel="noopener"
                     >バックステージプロジェクト</a
                   >
                 </li>
-                <li class="dropdown__menu-item">
+                <li>
                   <a href="#" target="_blank" rel="noopener"
                     >アーティストマネジメント<i
                       class="fa-solid fa-up-right-from-square"
@@ -81,60 +134,7 @@
             </li>
           </ul>
         </nav>
-        <button class="hamburger js-hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <nav class="drawer__nav js-drawer">
-        <ul class="drawer__nav-list">
-          <li class="drawer__nav-item">
-            <a href="/page-service.html">service</a>
-          </li>
-          <li class="drawer__nav-item">
-            <a href="/page-works.html">works</a>
-          </li>
-          <li class="drawer__nav-item">
-            <a href="/archive-artist.html">artist</a>
-          </li>
-          <li class="drawer__nav-item">
-            <a href="#">recruit</a>
-          </li>
-          <li class="drawer__nav-item accordion">
-            <p class="js-drawer-accordion">about</p>
-            <ul class="accordion-menu">
-              <li><a href="/page-about.html">日本語</a></li>
-              <li><a href="#">English</a></li>
-            </ul>
-          </li>
-          <li class="drawer__nav-item accordion">
-            <p class="js-drawer-accordion">group</p>
-            <ul class="accordion-menu">
-              <li><a href="/page-group.html">日本語</a></li>
-              <li><a href="#">English</a></li>
-            </ul>
-          </li>
-          <li class="drawer__nav-item accordion">
-            <p class="js-drawer-accordion">contact</p>
-            <ul class="accordion-menu">
-              <li>
-                <a href="/page-contact.html" target="_blank" rel="noopener"
-                  >バックステージプロジェクト</a
-                >
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener"
-                  >アーティストマネジメント<i
-                    class="fa-solid fa-up-right-from-square"
-                  ></i
-                ></a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      </header>
 
     <main>
       <!-- page-ttl -->
@@ -174,7 +174,7 @@
               </li>
             </ul>
             <div class="tab__content" id="merchandise">
-              <div class="tab__content-wrap">
+              <!-- <div class="tab__content-wrap"> -->
               <ul class="works__list">
                 <li class="works__list-item">
                   <div class="works__list-top">
@@ -299,9 +299,7 @@
                     </ul>
                   </div>
                 </li>
-                </ul>
-                <ul class="works__list">
-                <li class="works__list-item">
+  <li class="works__list-item">
                   <div class="works__list-top">
                     <div class="work__list-img">
                       <img src="img/works-img_2.png" alt="" />
@@ -425,7 +423,7 @@
                   </div>
                 </li>
               </ul>
-              </div>
+              <!-- </div> -->
               <ul class="pagination">
                 <li class="pagination__num --arrow-left">
                   <a href="#">&#12298; prev</a>
@@ -448,7 +446,6 @@
               </ul>
             </div>
             <div class="tab__content" id="event">
-              <div class="tab__content-wrap">
                 <ul class="works__list">
                   <li class="works__list-item">
                     <div class="works__list-top">
@@ -532,8 +529,6 @@
                       </ul>
                     </div>
                   </li>
-                  </ul>
-                  <ul class="works__list">
                   <li class="works__list-item">
                     <div class="works__list-top">
                       <div class="work__list-img">
@@ -576,7 +571,6 @@
                     </div>
                   </li>
                 </ul>
-                </div>
               <ul class="pagination">
                 <li class="pagination__num --arrow-left">
                   <a href="#">&#12298; prev</a>

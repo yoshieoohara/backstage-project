@@ -111,7 +111,7 @@ li {
 // btn--border
 .btn--border {
   width: rem(260);
-  height: rem(80);
+  height: rem(72);
   a {
     position: relative;
     @include flex(center);
@@ -175,7 +175,6 @@ li {
   height: inherit;
   transition: transform 0.3s ease;
   pointer-events: auto;
-}
 a {
   display: flex;
   align-items: center;
@@ -184,6 +183,7 @@ a {
     @include img;
     object-fit: contain;
   }
+}
 }
 
 .header__logo.scrolled {
@@ -429,7 +429,7 @@ body.no-scroll {
 // accordion
 .accordion {
   border-bottom: rem(2) dashed $white;
-  transition: max-height 0.3s ease, transform 0.3s ease;
+  transition: max-height 0.5s ease, transform 0.5s ease;
   &:hover .accordion-menu {
     max-height: rem(300);
     transform: translateY(0);
@@ -455,7 +455,7 @@ body.no-scroll {
     height: rem(8);
     border-top: rem(2) solid $white;
     border-right: rem(2) solid $white;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
   }
 }
 
@@ -464,8 +464,8 @@ body.no-scroll {
   overflow: hidden;
   transform: translateY(rem(5));
   padding-bottom: 0;
-  transition: max-height 0.3s ease, transform 0.3s ease,
-    padding-bottom 0.3s ease;
+  transition: max-height 0.5s ease, transform 0.5s ease,
+    padding-bottom 0.5s ease;
   display: flex;
   flex-direction: column;
   gap: rem(12);
@@ -648,10 +648,10 @@ body.no-scroll {
 }
 
 .footer__policy {
-  text-align: right;
-  margin-right: rem(80);
+  display: block;
+text-align: right;
+margin-right: rem(80);
   a {
-    display: block;
     font-size: rem(14);
     text-decoration: underline;
   }

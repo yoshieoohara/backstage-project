@@ -291,7 +291,7 @@ li {
 
 .btn--border {
   width: 16.25rem;
-  height: 5rem;
+  height: 4.5rem;
 }
 .btn--border a {
   position: relative;
@@ -359,13 +359,12 @@ li {
   transition: transform 0.3s ease;
   pointer-events: auto;
 }
-
-a {
+.header__logo a {
   display: flex;
   align-items: center;
   height: inherit;
 }
-a img {
+.header__logo a img {
   display: block;
   width: 100%;
   height: 100%;
@@ -617,7 +616,7 @@ body.no-scroll {
 
 .accordion {
   border-bottom: 0.125rem dashed #FFF;
-  transition: max-height 0.3s ease, transform 0.3s ease;
+  transition: max-height 0.5s ease, transform 0.5s ease;
 }
 .accordion:hover .accordion-menu {
   max-height: 18.75rem;
@@ -643,7 +642,7 @@ body.no-scroll {
   height: 0.5rem;
   border-top: 0.125rem solid #FFF;
   border-right: 0.125rem solid #FFF;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .accordion-menu {
@@ -651,7 +650,7 @@ body.no-scroll {
   overflow: hidden;
   transform: translateY(0.3125rem);
   padding-bottom: 0;
-  transition: max-height 0.3s ease, transform 0.3s ease, padding-bottom 0.3s ease;
+  transition: max-height 0.5s ease, transform 0.5s ease, padding-bottom 0.5s ease;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -821,11 +820,11 @@ body.no-scroll {
 }
 
 .footer__policy {
+  display: block;
   text-align: right;
   margin-right: 5rem;
 }
 .footer__policy a {
-  display: block;
   font-size: 0.875rem;
   text-decoration: underline;
 }
@@ -1008,9 +1007,21 @@ body.no-scroll {
     visibility: hidden;
   }
 }
-.top-fv__movie {
+.top-fv {
+  position: relative;
   width: 100%;
   height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.top-fv__movie {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
 }
 .top-fv__movie video {
   display: block;
@@ -1019,9 +1030,21 @@ body.no-scroll {
   object-fit: cover;
 }
 
+.bg-container {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+}
+
+.top-message {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
 .scroll-down {
   position: absolute;
-  bottom: 0;
+  top: -6.25rem;
   left: 3rem;
   display: flex;
   flex-direction: column;
@@ -1075,8 +1098,11 @@ body.no-scroll {
   padding: 3.75rem 0;
 }
 
-.top-message__ttl--en h1 {
-  display: block;
+.top-message__ttl--en {
+  position: relative;
+  display: inline-block;
+}
+.top-message__ttl--en p {
   font-family: "Jost", sans-serif;
   font-size: 3.125rem;
   font-weight: 800;
@@ -1090,13 +1116,13 @@ body.no-scroll {
 
 .line {
   position: absolute;
-  left: -1.25rem;
-  bottom: 1rem;
-  height: 1.5625rem;
-  width: calc(100% + 2.5rem);
-  border-radius: 0.8125rem;
-  background: #00AEEF;
+  bottom: 0.5rem;
+  left: -0.5rem;
   transform: scaleX(0);
+  height: 1.5625rem;
+  width: 108%;
+  border-radius: 1.5625rem;
+  background-color: #00AEEF;
   transform-origin: left center;
   z-index: -1;
 }
@@ -1104,7 +1130,7 @@ body.no-scroll {
 .top-message__ttl--ja {
   margin-top: 3.125rem;
 }
-.top-message__ttl--ja p {
+.top-message__ttl--ja h1 {
   font-size: 1.875rem;
   text-align: right;
   line-height: 1;
@@ -1596,11 +1622,14 @@ body.no-scroll {
 }
 
 .service__list-category {
-  margin-bottom: 8.75rem;
   position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translatex(-50%);
   color: #00AEEF;
   font-size: 1.75rem;
   font-family: "Caveat", cursive;
+  white-space: nowrap;
 }
 
 .service__list-ttl {
@@ -1616,6 +1645,7 @@ body.no-scroll {
 }
 
 .service__list-wrap {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1719,7 +1749,7 @@ body.no-scroll {
   padding-bottom: 3.125rem;
 }
 .contact__txt p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .contact__form {
@@ -1750,7 +1780,7 @@ body.no-scroll {
   align-items: center;
   gap: 1.125rem;
   width: 28.125rem;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 .form__label span {
   font-size: 0.75rem;
@@ -1983,20 +2013,16 @@ body.no-scroll {
     opacity: 1;
   }
 }
-.tab__content-wrap {
-  display: flex;
-  align-items: start;
-  gap: 2.8125rem;
-}
-
 .works__list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: start;
   gap: 2.8125rem;
   padding-top: 2.8125rem;
 }
 
 .works__list-item {
+  width: 44%;
   background-color: #EBEEF1;
   padding: 1.25rem;
   border-radius: 0.625rem;

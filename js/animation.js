@@ -1,43 +1,17 @@
 // loading
-// document.addEventListener("DOMContentLoaded", () => {
-//   const topContainer = document.querySelector(".top-container");
+document.addEventListener("DOMContentLoaded", () => {
+  if (!localStorage.getItem("loaded")) {
+    localStorage.setItem("loaded", "true");
 
-//   if (!localStorage.getItem("visited")) {
-//     // 初回のみ3秒後に表示
-//     setTimeout(() => {
-//       topContainer.style.opacity = "1";
-//       topContainer.style.transform = "translateX(0)";
-//       localStorage.setItem("visited", "true");
-//     }, 3000);
-//   } else {
-//     // 2回目以降は即表示
-//     topContainer.style.opacity = "1";
-//     topContainer.style.transform = "translateX(0)";
-//   }
-// });
-
-// // bfcache（戻るキャッシュ）対応
-// window.addEventListener("pageshow", (event) => {
-//   if (event.persisted) {
-//     const topContainer = document.querySelector(".top-container");
-//     topContainer.style.opacity = "1";
-//     topContainer.style.transform = "translateX(0)";
-//   }
-// });
-
-$(window).on('load', function () {
-  // 初回アクセス時のみ実行
-  if (!sessionStorage.getItem('splashShown')) {
-    $("#splash-logo").delay(1200).fadeOut('slow'); // ロゴを1.2秒でフェードアウト
-    $("#splash").delay(1500).fadeOut('slow', function () { // splashエリアを1.5秒でフェードアウト
-      $('body').addClass('appear'); // フェードアウト後bodyにappearクラス付与
-    });
-
-    // sessionStorageに「splashShown」を設定して、2回目以降は実行されないようにする
-    sessionStorage.setItem('splashShown', 'true');
+    setTimeout(() => {
+      document.querySelector(".loading-screen").style.opacity = 0;
+      setTimeout(() => {
+        document.querySelector(".loading-screen").style.display = "none";
+      }, 500); 
+    }, 2000); 
   } else {
-    // 2回目以降は即座にappearクラスを付与
-    $('body').addClass('appear');
+
+    document.querySelector(".loading-screen").style.display = "none";
   }
 });
 
@@ -57,24 +31,6 @@ jQuery(function ($) {
     } else {
       $(".logo-img").attr("src", "img/logo-white.png");
     }
-  });
-});
-
-// top-line-animation
-jQuery(function ($) {
-  gsap.registerPlugin(ScrollTrigger);
-
-  const line = document.querySelector(".line");
-
-  gsap.to(line, {
-    scaleX: 1,
-    ease: "power2.out",
-    duration: 1,
-    scrollTrigger: {
-      trigger: ".line-wrap",
-      start: "top 80%",
-      toggleActions: "play none none none",
-    },
   });
 });
 
@@ -171,3 +127,34 @@ $(window).scroll(function () {
 $(document).ready(function () {
   fadeIn();
 });
+
+// top-line-animation
+$(window).scroll(function () {
+  var scroll = $(window).scrollTop(); 
+  var line = $('.line'); 
+
+  
+  if (scroll > 200) {
+    line.css({
+      transform: 'scaleX(1)', 
+      transition: 'transform 0.5s ease-out', 
+    });
+  } else {
+    line.css({
+      transform: 'scaleX(0)', 
+    });
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+

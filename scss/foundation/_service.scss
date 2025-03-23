@@ -135,11 +135,14 @@
 }
 
 .service__list-category {
-  margin-bottom: rem(140);
   position: absolute;
+  top: rem(-24);
+  left: 50%;
+  transform: translatex(-50%);
   color: $main;
   font-size: rem(28);
   font-family: $font-family-en2;
+  white-space: nowrap;
 }
 
 .service__list-ttl {
@@ -155,6 +158,7 @@ gap: rem(20);
 }
 
 .service__list-wrap {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

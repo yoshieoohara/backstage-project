@@ -72,21 +72,16 @@
   }
 }
 
-.tab__content-wrap {
-  display: flex;
-  align-items: start;
-  gap: rem(45);
-}
-
-// works-list
 .works__list {
   display: flex;
-  flex-direction: column;
-  gap: rem(45);  
+  flex-wrap: wrap;
+  align-items: start;
+  gap: rem(45);
   padding-top: rem(45);
 }
 
 .works__list-item {
+  width: 44%;
   background-color: $gray;
   padding: rem(20);
   border-radius: rem(10);
