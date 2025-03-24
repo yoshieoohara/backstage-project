@@ -189,17 +189,24 @@
   padding: rem(60) 0;
 }
 
-.animation__text {
-}
-
 .top-message__ttl--en {
   position: relative;
   display: inline-block;
-  p {
+  span {
     font-family: $font-family-en1;
     font-size: rem(50);
     font-weight: 800;
+    line-height: 1.3;
     text-transform: uppercase;
+  }
+}
+
+// title-animation
+.title__anime {
+display: flex;
+  .char {
+    //初期の状態
+    opacity: 0;
   }
 }
 
@@ -208,7 +215,7 @@
   display: inline-block;
 }
 
-.line {
+.top__line {
   position: absolute;
   bottom: rem(8);
   left: rem(-8);

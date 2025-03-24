@@ -7,17 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".loading-screen").style.opacity = 0;
       setTimeout(() => {
         document.querySelector(".loading-screen").style.display = "none";
-      }, 500); 
-    }, 2000); 
+      }, 500);
+    }, 2000);
   } else {
-
     document.querySelector(".loading-screen").style.display = "none";
   }
 });
 
 // body-animation
-$(function() {
-	$('body').fadeIn(1000); 
+$(function () {
+  $("body").fadeIn(1000);
 });
 
 // header-color
@@ -26,10 +25,11 @@ jQuery(function ($) {
     const fvHeight = $("#top-fv").outerHeight();
     const scroll = $(window).scrollTop();
 
+    // .top-header 内の .logo-img のみ対象
     if (scroll > fvHeight - 100) {
-      $(".logo-img").attr("src", "img/logo-black.png");
+      $(".top-header .logo-img").attr("src", "img/logo-black.png");
     } else {
-      $(".logo-img").attr("src", "img/logo-white.png");
+      $(".top-header .logo-img").attr("src", "img/logo-white.png");
     }
   });
 });
@@ -72,89 +72,63 @@ jQuery(function ($) {
   });
 });
 
-// fade-animation
-function fadeIn() {
-  $(".fadeUpTrigger").each(function () {
-    let scroll = $(window).scrollTop();
-    let triTop = $(this).offset().top + 200;
-    let winHeight = $(window).height();
-    if (scroll >= triTop - winHeight) {
-      $(this).addClass("fadeUp");
-    } else {
-      $(this).removeClass("fadeUp");
-    }
-  });
-
-  $(".fadeInTrigger").each(function () {
-    let scroll = $(window).scrollTop();
-    let triTop = $(this).offset().top + 200;
-    let winHeight = $(window).height();
-    if (scroll >= triTop - winHeight) {
-      $(this).addClass("fadeIn");
-    } else {
-      $(this).removeClass("fadeIn");
-    }
-  });
-}
-
-
-$('.fadeLeftTrigger').each(function () {
-  let scroll = $(window).scrollTop();
-  let triTop = $(this).offset().top + 100;
-  let winHeight = $(window).height();
-  if (scroll >= triTop - winHeight) {
-    $(this).addClass('fadeLeft');
-  } else {
-    $(this).removeClass('fadeLeft');
-  }
-});
-
-$('.fadeRightTrigger').each(function () {
-  let scroll = $(window).scrollTop();
-  let triTop = $(this).offset().top + 100;
-  let winHeight = $(window).height();
-  if (scroll >= triTop - winHeight) {
-    $(this).addClass('fadeRight');
-  } else {
-    $(this).removeClass('fadeRight');
-  }
-});
-
-$(window).scroll(function () {
-  fadeIn();
-});
-
-$(document).ready(function () {
-  fadeIn();
-});
 
 // top-line-animation
 $(window).scroll(function () {
-  var scroll = $(window).scrollTop(); 
-  var line = $('.line'); 
+  var scroll = $(window).scrollTop();
+  var line = $(".top__line");
 
-  
   if (scroll > 200) {
     line.css({
-      transform: 'scaleX(1)', 
-      transition: 'transform 0.5s ease-out', 
+      transform: "scaleX(1)",
+      transition: "transform 0.5s ease-out",
     });
   } else {
     line.css({
-      transform: 'scaleX(0)', 
+      transform: "scaleX(0)",
     });
   }
 });
 
+// p-ttl-animation
+document.addEventListener("DOMContentLoaded", () => {
+  const pTtl = document.querySelector(".p-ttl");
+
+  // スクロールまたは遅延後にアクティブクラスを追加してアニメーションを開始
+  setTimeout(() => {
+    pTtl.classList.add("active");
+  }, 300); // 0.3秒後にアニメーションを開始
+});
 
 
+// scroll-anime
+$(window).on("scroll", function () {
+  $(".rotate-in, .slide-in, .rotate-in-reverse, .slide-in-reverse, .slide-up").each(function () {
+    const offset = $(this).offset().top;
+    const scroll = $(window).scrollTop();
+    const wHeight = $(window).height();
+
+    if (scroll > offset - wHeight + wHeight / 3) {
+      $(this).addClass("show");
+    }
+  });
+});
 
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   gsap.registerPlugin(ScrollTrigger);
 
-
-
-
-
-
-
+//   window.addEventListener("load", function () {
+//     const slideUpText = document.querySelectorAll(".title__anime");
+//     new SplitType(slideUpText);
+//     slideUpText.forEach((element) => {
+//       const chars = element.querySelectorAll(".char");
+//       gsap.to(chars, {
+//         opacity: 1,
+//         stagger: 0.06,
+//         delay: 1,
+//       });
+//     });
+//   });
+// });
 

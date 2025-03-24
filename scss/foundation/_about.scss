@@ -28,24 +28,44 @@
 }
 
 .outline__list-item {
-    display: flex;
-    align-items: start;
-    background-color: $white;
-    border-radius: rem(15);
+  display: flex;
+  align-items: start;
+  background-color: $white;
+  border-radius: rem(15);
   padding: rem(30);
 }
 
 .outline__ttl {
-    width: rem(120);
-    flex-shrink: 0;
-    h3 {
-        font-size: rem(20);
-        color: $gray2;
-    }
+  width: rem(120);
+  flex-shrink: 0;
+  h3 {
+    font-size: rem(20);
+    color: $gray2;
+  }
 }
 
 .outline__txt {
-    p {
-        font-size: rem(23);
-    }
+  p {
+    font-size: rem(20);
+  }
+}
+
+// outline-en
+.outline-en {
+  background-color: $black2;
+  padding: rem(80) 0;
+}
+  #outline-en .p-ttl {
+    position: static;
+    width: rem(400);
+    color: $white;
+  }
+
+#outline-en .outline__list-item {
+  flex-direction: column;
+  gap: rem(8);
+}
+
+#outline-en .outline__ttl {
+  width: fit-content;
 }

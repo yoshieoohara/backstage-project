@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: center;
     height: inherit;
-    font-size: rem(20);
+    font-size: rem(18);
     line-height: 1;
     color: $white;
     background-color: $black2;
@@ -104,7 +104,7 @@
   text-align: center;
   margin-top: rem(36);
   h3 {
-    font-size: rem(25);
+    font-size: rem(22);
     color: $main;
   }
 }
@@ -115,7 +115,7 @@
 }
 
 .works__list-date {
-  font-size: rem(20);
+  font-size: rem(16);
   color: $gray9;
   font-weight: 500;
 }
@@ -220,14 +220,14 @@ color: $gray3;
 }
 
 .pagination__num {
-  width: rem(50);
-  height: rem(50);
+  width: rem(40);
+  height: rem(40);
   a {
     display: flex;
     align-items: center;
     justify-content: center;
     height: inherit;
-    font-size: rem(25);
+    font-size: rem(20);
     background-color: $white;
     border-radius: 50%;
   }

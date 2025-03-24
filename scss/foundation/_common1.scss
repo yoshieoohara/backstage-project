@@ -289,7 +289,7 @@ a {
 
 // hamburger
 .hamburger {
-  position: absolute;
+  position: fixed;
   top: rem(40);
   right: rem(30);
   width: rem(60);
@@ -299,9 +299,6 @@ a {
   border-radius: rem(30);
   padding: 0;
   cursor: pointer;
-  transition: opacity 0.3s visibility 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
   z-index: 9999;
   pointer-events: auto;
   @include mq("md") {
@@ -371,6 +368,7 @@ body.no-scroll {
   overflow: auto;
   pointer-events: auto;
 }
+
 .drawer__nav.is-open {
   right: 0;
 }

@@ -77,21 +77,12 @@ jQuery(function ($) {
     autoplay: true,
     autoplaySpeed: 2000,
     speed: 2000,
-    centerMode: true,
+    fade: true,
     adaptiveHeight: true,
     pauseOnFocus: false,
     pauseOnHover: false,
-    centerPadding: "0",
     slidesToShow: 1,
     dots: true,
     arrows: false,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-    ],
   });
 });

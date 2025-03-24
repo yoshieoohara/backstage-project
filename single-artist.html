@@ -23,11 +23,12 @@
 
   <body>
     <!-- header -->
+    <!-- header -->
     <header class="header" id="header">
       <div class="header__inner">
         <div class="header__logo">
           <a href="/">
-            <img src="img/logo-black.png" alt="" />
+            <img src="img/logo-black.png" class="logo-img" alt="" />
           </a>
         </div>
         <nav class="header__nav">
@@ -42,7 +43,7 @@
               <a href="/archive-artist.html">artist</a>
             </li>
             <li class="header__nav-item">
-              <a href="#">recruit</a>
+              <a href="https://tenshoku.mynavi.jp/company/392332/" target="_blank">recruit</a>
             </li>
             <li class="header__nav-item dropdown">
               <p>about</p>
@@ -50,7 +51,7 @@
                 <li class="dropdown__menu-item">
                   <a href="/page-about.html">日本語</a>
                 </li>
-                <li class="dropdown__menu-item"><a href="#">English</a></li>
+                <li class="dropdown__menu-item"><a href="/page-about-en.html">English</a></li>
               </ul>
             </li>
             <li class="header__nav-item dropdown">
@@ -59,7 +60,7 @@
                 <li class="dropdown__menu-item">
                   <a href="/page-group.html">日本語</a>
                 </li>
-                <li class="dropdown__menu-item"><a href="#">English</a></li>
+                <li class="dropdown__menu-item"><a href="/page-group-en.html">English</a></li>
               </ul>
             </li>
             <li class="header__nav-item dropdown">
@@ -99,20 +100,20 @@
             <a href="/archive-artist.html">artist</a>
           </li>
           <li class="drawer__nav-item">
-            <a href="#">recruit</a>
+            <a href="https://tenshoku.mynavi.jp/company/392332/" target="_blank">recruit</a>
           </li>
           <li class="drawer__nav-item accordion">
             <p class="js-drawer-accordion">about</p>
             <ul class="accordion-menu">
               <li><a href="/page-about.html">日本語</a></li>
-              <li><a href="#">English</a></li>
+              <li><a href="/page-about-en.html">English</a></li>
             </ul>
           </li>
           <li class="drawer__nav-item accordion">
             <p class="js-drawer-accordion">group</p>
             <ul class="accordion-menu">
               <li><a href="/page-group.html">日本語</a></li>
-              <li><a href="#">English</a></li>
+              <li><a href="/page-group-en.html">English</a></li>
             </ul>
           </li>
           <li class="drawer__nav-item accordion">
@@ -176,15 +177,21 @@
               </div>
               <div class="artist__btn-wrap">
                 <div class="print__btn">
-                  <button  onclick="window.print(); return false;">印刷する<span>(日本語)</span></button >
+                  <button onclick="window.print(); return false;">
+                    印刷する<span>(日本語)</span>
+                  </button>
                 </div>
                 <div class="print__btn --english">
-                  <button  onclick="window.print(); return false;">print<span>(English )</span></button >
+                  <button onclick="window.print(); return false;">
+                    print<span>(English )</span>
+                  </button>
                 </div>
               </div>
               <div class="artist__link">
                 <p>official hp</p>
-                <a href="https://emikosuzuki.fanpla.jp/" target="_blank">https://emikosuzuki.fanpla.jp/</a>
+                <a href="https://emikosuzuki.fanpla.jp/" target="_blank"
+                  >https://emikosuzuki.fanpla.jp/</a
+                >
               </div>
               <div class="artist__career">
                 <p>
@@ -291,7 +298,7 @@
           </div>
         </div>
       </section>
-      
+
       <!-- cta -->
       <section class="cta" id="cta">
         <div class="cta__inner">
@@ -299,16 +306,18 @@
             <h2><span>ご相談・お問い合わせはこちら</span>Contact Us</h2>
           </div>
           <div class="cta__btn-wrap">
-          <div class="cta__btn btn--border --black">
-            <a href="/page-contact.html"
-              >バックステージプロジェクト<i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-          <div class="cta__btn btn--border">
-            <a href="/page-contact.html"
-              >アーティストマネジメント<i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
+            <div class="cta__btn btn--border --black">
+              <a href="/page-contact.html"
+                >バックステージプロジェクト<i
+                  class="fa-solid fa-arrow-right"
+                ></i
+              ></a>
+            </div>
+            <div class="cta__btn btn--border">
+              <a href="/page-contact.html"
+                >アーティストマネジメント<i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
           </div>
         </div>
       </section>
