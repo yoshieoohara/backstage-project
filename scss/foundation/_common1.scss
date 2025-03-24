@@ -112,6 +112,9 @@ li {
 .btn--border {
   width: rem(260);
   height: rem(72);
+  @include mq("md") {
+    height: rem(55);
+    }
   a {
     position: relative;
     @include flex(center);
@@ -123,13 +126,18 @@ li {
     font-size: rem(20);
     color: $main;
     transition: color 0.3s ease, background-color 0.3s ease;
-
+@include mq("md") {
+  font-size: rem(15);
+  }
     i {
       position: absolute;
       top: 50%;
       right: rem(34);
       transform: translateY(-50%);
       font-size: rem(20);
+      @include mq("md") {
+        font-size: rem(15);
+        }
     }
   }
 }
@@ -151,6 +159,9 @@ li {
   z-index: 100;
   transition: all 0.3s ease;
   pointer-events: none;
+  @include mq("md") {
+    height: rem(64);
+    }
 }
 
 .header.scrolled .header__nav {
@@ -167,6 +178,9 @@ li {
   height: inherit;
   @include flex(space-between);
   padding: 0 rem(140) 0 rem(50);
+  @include mq("md") {
+    padding: 0 rem(15);
+    }
 }
 
 .header__logo {
@@ -175,6 +189,9 @@ li {
   height: inherit;
   transition: transform 0.3s ease;
   pointer-events: auto;
+  @include mq("md") {
+    max-width: rem(160);
+    }
 a {
   display: flex;
   align-items: center;
@@ -188,6 +205,9 @@ a {
 
 .header__logo.scrolled {
   transform: translateX(rem(-20));
+  @include mq("md") {
+    transform: translateX(0);
+    }
 }
 
 .header__nav {
@@ -295,13 +315,17 @@ a {
   height: rem(60);
   background-color: $main;
   border: none;
-  border-radius: rem(30);
+  border-radius:50%;
   padding: 0;
   cursor: pointer;
   z-index: 200;
   pointer-events: auto;
   @include mq("md") {
     display: block;
+    top: rem(15);
+    right: rem(15);
+    width: rem(45);
+    height: rem(45);
   }
 }
 
@@ -314,6 +338,9 @@ a {
   height: rem(2);
   background-color: $white;
   transition: transform 0.3s ease;
+  @include mq("md") {
+    width: rem(22);
+    }
 }
 
 .hamburger span:nth-of-type(1) {
@@ -366,6 +393,9 @@ body.no-scroll {
   z-index: 150;
   overflow: auto;
   pointer-events: auto;
+  @include mq("md") {
+    width: 75%;
+    }
 }
 
 .drawer__nav.is-open {
@@ -386,6 +416,9 @@ body.no-scroll {
   left: 50%;
   transform: translateX(-50%);
   width: 65%;
+  @include mq("md") {
+    width: 78%;
+    }
 }
 
 .drawer__nav.is-open .drawer__nav-item {
@@ -410,7 +443,11 @@ body.no-scroll {
   color: $white;
   border-bottom: rem(2) dashed $white;
   text-transform: uppercase;
-  padding: rem(16);
+  padding: rem(16) rem(26);
+  @include mq("md") {
+    font-size: rem(20);
+    padding: rem(10) rem(26);
+    }
   &:before {
     content: "";
     position: absolute;
@@ -427,16 +464,20 @@ body.no-scroll {
 .accordion {
   border-bottom: rem(2) dashed $white;
   transition: max-height 0.5s ease, transform 0.5s ease;
-  &:hover .accordion-menu {
+
+  &:hover .accordion-menu,
+  &.is-open .accordion-menu {
     max-height: rem(300);
     transform: translateY(0);
     padding-bottom: rem(16);
   }
 
-  &:hover p::after {
+  &:hover p::after,
+  &.is-open p::after {
     transform: rotate(-45deg);
   }
 }
+
 
 .accordion p {
   position: relative;
@@ -470,12 +511,18 @@ body.no-scroll {
   li a {
     display: block;
     font-size: rem(20);
-    padding: 0 rem(24);
+    padding: 0 rem(30);
     border-bottom: none;
+    @include mq("md") {
+      font-size: rem(15);
+      }
 
     i {
       font-size: rem(14);
       margin-left: rem(12);
+      @include mq("md") {
+        font-size: rem(12);
+        }
     }
 
     &:before {
@@ -486,24 +533,36 @@ body.no-scroll {
 
 // cta
 .cta {
-  padding: rem(80) 0;
+  padding: rem(60) 0;
   background-image: url(../img/contact-bg.png);
   background-position: 50%;
   background-size: cover;
+  @include mq("md") {
+    padding: rem(40) 0;
+    }
 }
 
 .cta__ttl {
   text-align: center;
   margin-top: rem(20);
+  @include mq("md") {
+    margin-top: rem(10);
+    }
   h2 {
     color: $white;
     font-size: rem(60);
     line-height: 1.2;
     font-family: $font-family-en1;
+    @include mq("md") {
+      font-size: rem(45);
+      }
     span {
       font-family: $font-family-ja;
       display: block;
       font-size: rem(20);
+      @include mq("md") {
+        font-size: rem(15);
+        }
     }
   }
 }
@@ -512,47 +571,32 @@ body.no-scroll {
   @include flex(center);
   gap: rem(60);
   margin-top: rem(40);
+  @include mq("md") {
+    flex-direction: column;
+    }
 }
 
 .cta__btn {
   width: rem(360);
+  @include mq("md") {
+    width: rem(260);
+    }
   a {
     color: $black;
     background-color: $white;
     border: none;
     i {
       right: rem(20);
+      @include mq("md") {
+        right: rem(10);
+        }
     }
-  }
-}
-
-.cta__btn.--blue {
-  a {
-    color: $white;
-    background-color: $main;
-  }
-}
-
-.cta__btn.--purple {
-  a {
-    color: $white;
-    background-color: $main2;
   }
 }
 
 .btn--border.cta__btn a:hover {
   color: $white;
   background-color: $black;
-}
-
-.btn--border.cta__btn.--blue a:hover {
-  background-color: $white;
-  color: $main;
-}
-
-.btn--border.cta__btn.--purple a:hover {
-  background-color: $white;
-  color: $main2;
 }
 
 // footer

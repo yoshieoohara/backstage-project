@@ -8,6 +8,9 @@
 
 .page-ttl__inner {
   height: rem(480);
+  @include mq("md") {
+    height: rem(400);
+    }
 }
 
 .p-ttl {
@@ -20,6 +23,9 @@
     font-weight: 900;
     line-height: 1;
     text-transform: uppercase;
+    @include mq("md") {
+      font-size: rem(40);
+      }
     span {
       position: relative;
       display: block;
@@ -30,6 +36,10 @@
       padding-left: rem(28);
       color: $gray8;
       margin-top: rem(20);
+      @include mq("md") {
+        font-size: rem(20);
+        margin-top: rem(8);
+        }
       &::before {
         content: "";
         position: absolute;
@@ -39,6 +49,9 @@
         width: rem(16);
         height: rem(3);
         background-color: $gray8;
+        @include mq("md") {
+          width: rem(12);
+          }
       }
     }
   }
@@ -53,6 +66,12 @@
   background-color: $main;
   border-radius: 50%;
   z-index: -1;
+  @include mq("md") {
+    top: rem(-10);
+    left: rem(-20);
+    width: rem(40);
+    height: rem(40);
+    }
 }
 
 .p-ttl.--section {

@@ -25,21 +25,17 @@ jQuery(function ($) {
 
     $(".accordion p").on("click", function (e) {
       e.preventDefault();
-      const $this = $(this);
-
-      // クリックしたアコーディオンがすでに開いている場合の処理
-      if (!$this.hasClass("is-open")) {
-        // 開いている他のアコーディオンを閉じる
-        $(".accordion p").removeClass("is-open");
-        $(".accordion-menu").stop(true, true).slideUp(300); // 他を閉じる
-
-        // クリックしたアコーディオンを開く
-        $this.addClass("is-open");
-        $this.next(".accordion-menu").stop(true, true).slideDown(300); // クリックしたのを開く
+      const $parent = $(this).closest(".accordion");
+    
+      if (!$parent.hasClass("is-open")) {
+        $(".accordion").removeClass("is-open");
+        $(".accordion-menu").stop(true, true).slideUp(300);
+    
+        $parent.addClass("is-open");
+        $parent.find(".accordion-menu").stop(true, true).slideDown(300);
       } else {
-        // クリックしたアコーディオンを閉じる
-        $this.removeClass("is-open");
-        $this.next(".accordion-menu").stop(true, true).slideUp(300); // 閉じる
+        $parent.removeClass("is-open");
+        $parent.find(".accordion-menu").stop(true, true).slideUp(300);
       }
     });
   });
