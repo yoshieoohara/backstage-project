@@ -18,7 +18,7 @@
 }
 
 .artist__img-wrap {
-  width: 46%;
+  width: 40%;
 }
 
 .artist__img-grid {
@@ -78,7 +78,7 @@
 }
 
 .artist__content-wrap {
-  width: 50%;
+  width: 55%;
 }
 
 .artist__name {
@@ -170,9 +170,11 @@
 }
 
 .artist__accordion-list {
+  max-width: rem(1080);
   display: flex;
   flex-direction: column;
   gap: rem(20);
+  margin: 0 auto;
 }
 
 .artist__accordion-item {

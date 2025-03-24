@@ -1,16 +1,23 @@
 // loading
 document.addEventListener("DOMContentLoaded", () => {
-  if (!localStorage.getItem("loaded")) {
-    localStorage.setItem("loaded", "true");
+  if (!sessionStorage.getItem("loaded")) {
+    sessionStorage.setItem("loaded", "true");
 
     setTimeout(() => {
-      document.querySelector(".loading-screen").style.opacity = 0;
-      setTimeout(() => {
-        document.querySelector(".loading-screen").style.display = "none";
-      }, 500);
-    }, 2000);
+      const loadingScreen = document.querySelector(".loading-screen");
+      if (loadingScreen) {
+        loadingScreen.style.opacity = 0;
+        setTimeout(() => {
+          loadingScreen.style.display = "none";
+        }, 500); 
+      }
+    }, 2000); 
   } else {
-    document.querySelector(".loading-screen").style.display = "none";
+  
+    const loadingScreen = document.querySelector(".loading-screen");
+    if (loadingScreen) {
+      loadingScreen.style.display = "none";
+    }
   }
 });
 
