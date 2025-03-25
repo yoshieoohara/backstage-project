@@ -1544,7 +1544,7 @@ body.no-scroll {
 }
 
 .works__slick-img {
-  width: 26.25rem;
+  width: 25rem;
   aspect-ratio: 450/260;
 }
 .works__slick-img img {
@@ -1589,7 +1589,7 @@ body.no-scroll {
 }
 
 .works__slick-img {
-  transform: scale(0.7);
+  transform: scale(0.8);
   transition: 1s;
 }
 

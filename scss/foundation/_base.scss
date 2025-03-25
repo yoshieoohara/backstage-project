@@ -405,7 +405,7 @@
 }
 
 .works__slick-img {
-  width: rem(420);
+  width: rem(400);
   aspect-ratio: 450 / 260;
   img {
     @include img;
@@ -449,7 +449,7 @@
 }
 
 .works__slick-img {
-  transform: scale(0.7);
+  transform: scale(0.8);
   transition: 1s;
 }
 
