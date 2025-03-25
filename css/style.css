@@ -189,7 +189,7 @@ select {
 body {
   font-family: "Noto Sans JP", serif;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.5;
   color: #000;
   background-color: #FFF;
   word-break: break-all;
@@ -473,7 +473,7 @@ li {
 
 .dropdown-menu {
   position: absolute;
-  top: 2.625rem;
+  top: 3.75rem;
   left: 1.5rem;
   background-color: #00AEEF;
   border-radius: 0.3125rem;
@@ -518,7 +518,7 @@ li {
 
 .hamburger {
   position: fixed;
-  top: 2.5rem;
+  top: 1.875rem;
   right: 1.875rem;
   width: 3.75rem;
   height: 3.75rem;
@@ -627,7 +627,7 @@ body.no-scroll {
   opacity: 0;
   position: absolute;
   z-index: 160;
-  top: 10%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   width: 65%;
@@ -1000,16 +1000,16 @@ body.no-scroll {
 
 .page-top {
   position: fixed;
-  bottom: 1.875rem;
-  right: 1.875rem;
+  bottom: 1.25rem;
+  right: 1.25rem;
   opacity: 0;
   z-index: 2;
   transition: opacity 0.3s ease;
 }
 @media screen and (max-width: 767px) {
   .page-top {
-    bottom: 0.25rem;
-    right: 1.25rem;
+    bottom: 0.625rem;
+    right: 0.625rem;
   }
 }
 
@@ -1322,7 +1322,7 @@ body.no-scroll {
   position: relative;
   display: inline-block;
 }
-.top-message__ttl--en span {
+.top-message__ttl--en p {
   font-family: "Jost", sans-serif;
   font-size: 3.125rem;
   font-weight: 800;
@@ -1351,7 +1351,7 @@ body.no-scroll {
   left: -0.5rem;
   transform: scaleX(0);
   height: 1.5625rem;
-  width: 108%;
+  width: 104%;
   border-radius: 1.5625rem;
   background-color: #00AEEF;
   transform-origin: left center;
@@ -1510,7 +1510,7 @@ body.no-scroll {
 
 .top-works {
   background-color: #1D1D1D;
-  padding: 4.625rem 0 4.875rem;
+  padding: 5rem 0;
   overflow-x: hidden;
 }
 
@@ -1544,7 +1544,7 @@ body.no-scroll {
 }
 
 .works__slick-img {
-  width: 22.5rem;
+  width: 26.25rem;
   aspect-ratio: 450/260;
 }
 .works__slick-img img {
@@ -1620,8 +1620,8 @@ body.no-scroll {
   left: 50%;
   width: 0.625rem;
   height: 0.625rem;
-  border-top: 0.1875rem solid #333;
-  border-right: 0.1875rem solid #333;
+  border-top: 0.1875rem solid #000;
+  border-right: 0.1875rem solid #000;
 }
 
 .works__slick-arrow.--prev::before {
@@ -1833,7 +1833,7 @@ body.no-scroll {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 3.75rem;
+  gap: 2.5rem;
 }
 
 .service__list-item:nth-of-type(odd) {
@@ -1942,7 +1942,7 @@ body.no-scroll {
 .service__list-img-wrap {
   display: flex;
   align-items: end;
-  justify-content: center;
+  justify-content: end;
   gap: 0.5rem;
 }
 
@@ -2278,7 +2278,7 @@ body.no-scroll {
 .works__list-item {
   width: 44%;
   background-color: #EBEEF1;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 0;
   border-radius: 0.625rem;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
@@ -2299,7 +2299,7 @@ body.no-scroll {
 
 .work__list-ttl {
   text-align: center;
-  margin-top: 2.25rem;
+  margin-top: 1.25rem;
 }
 .work__list-ttl h3 {
   font-size: 1.25rem;
@@ -2368,6 +2368,10 @@ body.no-scroll {
   overflow: hidden;
   transition: all 0.5s ease;
   margin-top: 1rem;
+}
+
+.works__list-item.is-open {
+  padding-bottom: 1.25rem;
 }
 
 .works__list-item.is-open .works__list-bottom {
@@ -2790,7 +2794,7 @@ body.no-scroll {
   margin-top: 2.5rem;
 }
 .artist___sns a i {
-  font-size: 3.125rem;
+  font-size: 2.5rem;
 }
 
 .artist__content-wrap {
@@ -2798,11 +2802,11 @@ body.no-scroll {
 }
 
 .artist__name h2 {
-  font-size: 2.8125rem;
+  font-size: 2.25rem;
 }
 .artist__name h2 span {
   display: block;
-  font-size: 1.6875rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
 }
 
@@ -2825,17 +2829,23 @@ body.no-scroll {
   flex-direction: column;
   width: 100%;
   height: inherit;
-  font-size: 1.5625rem;
+  font-size: 1.5rem;
   color: #FFF;
   background-color: #000;
   border: 0.125rem solid #000;
   border-radius: 2.5rem;
   font-weight: 700;
   cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 .print__btn button span {
   display: block;
-  font-size: 1.125rem;
+  font-size: 1rem;
+}
+
+.print__btn button:hover {
+  background-color: #FFF;
+  color: #000;
 }
 
 .--english button {
@@ -2848,10 +2858,15 @@ body.no-scroll {
   text-transform: unset;
 }
 
+.print__btn.--english button:hover {
+  background-color: #000;
+  color: #FFF;
+}
+
 .artist__link {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 3.5rem;
   padding: 1.25rem 0;
   border-top: 0.125rem solid #000;
@@ -2859,7 +2874,7 @@ body.no-scroll {
   margin-top: 2.5rem;
 }
 .artist__link p {
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
   text-transform: uppercase;
 }
 .artist__link a {
@@ -2872,7 +2887,7 @@ body.no-scroll {
   margin-top: 2.5rem;
 }
 .artist__career p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 .artist__career p + p {
   margin-top: 1.25rem;
@@ -2906,7 +2921,7 @@ body.no-scroll {
 }
 .artist__accordion-ttl h3 {
   position: relative;
-  font-size: 1.875rem;
+  font-size: 1.5rem;
 }
 .artist__accordion-ttl h3:after {
   content: "";
@@ -2914,8 +2929,8 @@ body.no-scroll {
   top: 50%;
   left: -2.5rem;
   transform: translateY(-50%);
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 3.125rem;
   background-color: #00AEEF;
 }
@@ -2928,7 +2943,7 @@ body.no-scroll {
   padding: 1.25rem 3.75rem;
 }
 .artist__accordion-txt p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .artist__accordion-item:first-of-type .artist__accordion-ttl {
@@ -3033,11 +3048,11 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .policy__con {
-    padding: 1.125rem;
+    padding: 1.25rem;
   }
 }
 .policy__con p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.5;
 }
 @media screen and (max-width: 767px) {

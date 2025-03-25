@@ -52,11 +52,10 @@ jQuery(function ($) {
     centerMode: true,
     pauseOnFocus: false,
     pauseOnHover: false,
-    slidesToShow: 5,
     infinite: true,
-    variableWidth: true,
     dots: true,
     arrows: true,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 768,

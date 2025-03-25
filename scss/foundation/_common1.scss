@@ -4,7 +4,7 @@
 body {
   font-family: $font-family-ja;
   font-weight: 700;
-  line-height: 1.7;
+  line-height: 1.5;
   color: $black;
   background-color: $white;
   word-break: break-all;
@@ -269,7 +269,7 @@ li {
 
 .dropdown-menu {
   position: absolute;
-  top: rem(42);
+  top: rem(60);
   left: rem(24);
   background-color: $main;
   border-radius: rem(5);
@@ -314,7 +314,7 @@ li {
 
 .hamburger {
   position: fixed;
-  top: rem(40);
+  top: rem(30);
   right: rem(30);
   width: rem(60);
   height: rem(60);
@@ -417,7 +417,7 @@ body.no-scroll {
   opacity: 0;
   position: absolute;
   z-index: 160;
-  top: 10%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   width: 65%;
@@ -761,14 +761,14 @@ body.no-scroll {
 // page-top
 .page-top {
   position: fixed;
-  bottom: rem(30);
-  right: rem(30);
+  bottom: rem(20);
+  right: rem(20);
   opacity: 0;
   z-index: 2;
   transition: opacity 0.3s ease;
   @include mq("md") {
-    bottom: rem(4);
-    right: rem(20);
+    bottom: rem(10);
+    right: rem(10);
   }
 }
 

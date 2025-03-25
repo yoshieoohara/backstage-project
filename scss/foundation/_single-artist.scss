@@ -72,7 +72,7 @@
   margin-top: rem(40);
  a {
   i {
-    font-size: rem(50);
+    font-size: rem(40);
   }
  }
 }
@@ -83,10 +83,10 @@
 
 .artist__name {
   h2 {
-    font-size: rem(45);
+    font-size: rem(36);
     span {
       display: block;
-      font-size: rem(27);
+      font-size: rem(20);
       text-transform: uppercase;
     }
   }
@@ -108,18 +108,24 @@
     flex-direction: column;
     width: 100%;
     height: inherit;
-    font-size: rem(25);
+    font-size: rem(24);
     color: $white;
     background-color: $black;
     border: rem(2) solid $black;
     border-radius: rem(40);
     font-weight: 700;
     cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
     span {
       display: block;
-      font-size: rem(18);
+      font-size: rem(16);
     }
   }
+}
+
+.print__btn button:hover {
+  background-color: $white;
+  color: $black;
 }
 
 .--japanese {
@@ -137,15 +143,22 @@
   }
 }
 
+.print__btn.--english button:hover {
+  background-color: $black;
+  color: $white;
+}
+
 .artist__link {
-  @include flex(space-between);
+display: flex;
+align-items: center;
+justify-content: flex-start;
   gap: rem(56);
   padding: rem(20) 0;
   border-top: rem(2) solid $black;
   border-bottom: rem(2) solid $black;
   margin-top: rem(40);
   p {
-    font-size: rem(25);
+    font-size: rem(20);
     text-transform: uppercase;
   }
   a {
@@ -158,7 +171,7 @@
 .artist__career {
   margin-top: rem(40);
   p {
-    font-size: rem(20);
+    font-size: 1.15rem;
   }
   p + p {
     margin-top: rem(20);
@@ -192,15 +205,15 @@
   cursor: pointer;
   h3 {
     position: relative;
-    font-size: rem(30);
+    font-size: rem(24);
     &:after {
       content: "";
       position: absolute;
       top: 50%;
       left: rem(-40);
       transform: translateY(-50%);
-      width: rem(20);
-      height: rem(20);
+      width: rem(16);
+      height: rem(16);
       border-radius: rem(50);
       background-color: $main;
     }
@@ -214,7 +227,7 @@
   margin-right: rem(20);
   padding: rem(20) rem(60);
   p {
-    font-size: rem(20);
+    font-size: 1.15rem;
   }
 }
 

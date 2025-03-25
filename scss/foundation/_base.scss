@@ -192,7 +192,7 @@
 .top-message__ttl--en {
   position: relative;
   display: inline-block;
-  span {
+  p {
     font-family: $font-family-en1;
     font-size: rem(50);
     font-weight: 800;
@@ -224,7 +224,7 @@
   left: rem(-8);
   transform: scaleX(0);
   height: rem(25);
-  width: 108%;
+  width: 104%;
   border-radius: rem(25);
   background-color: $main;
   transform-origin: left center;
@@ -373,7 +373,7 @@
 // top-works
 .top-works {
   background-color: $black2;
-  padding: rem(74) 0 rem(78);
+  padding: rem(80) 0;
   overflow-x: hidden;
 }
 
@@ -405,7 +405,7 @@
 }
 
 .works__slick-img {
-  width: rem(360);
+  width: rem(420);
   aspect-ratio: 450 / 260;
   img {
     @include img;
@@ -480,8 +480,8 @@
   left: 50%;
   width: rem(10);
   height: rem(10);
-  border-top: rem(3) solid #333;
-  border-right: rem(3) solid #333;
+  border-top: rem(3) solid $black;
+  border-right: rem(3) solid $black;
 }
 
 .works__slick-arrow.--prev::before {
