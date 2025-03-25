@@ -20,7 +20,6 @@ a {
   color: inherit;
   transition: opacity 0.3s ease;
   cursor: pointer;
-
   &:hover {
     opacity: 0.7;
   }
@@ -36,7 +35,14 @@ li {
   margin: 0 auto;
   padding: 0 rem(40);
   @include mq("md") {
-    padding: 0 rem(20);
+    padding: 0 rem(24);
+  }
+}
+
+.--sp {
+  display: none;
+  @include mq("md") {
+    display: block;
   }
 }
 
@@ -114,7 +120,7 @@ li {
   height: rem(72);
   @include mq("md") {
     height: rem(55);
-    }
+  }
   a {
     position: relative;
     @include flex(center);
@@ -126,9 +132,9 @@ li {
     font-size: rem(20);
     color: $main;
     transition: color 0.3s ease, background-color 0.3s ease;
-@include mq("md") {
-  font-size: rem(15);
-  }
+    @include mq("md") {
+      font-size: rem(15);
+    }
     i {
       position: absolute;
       top: 50%;
@@ -137,7 +143,7 @@ li {
       font-size: rem(20);
       @include mq("md") {
         font-size: rem(15);
-        }
+      }
     }
   }
 }
@@ -161,7 +167,7 @@ li {
   pointer-events: none;
   @include mq("md") {
     height: rem(64);
-    }
+  }
 }
 
 .header.scrolled .header__nav {
@@ -180,34 +186,33 @@ li {
   padding: 0 rem(140) 0 rem(50);
   @include mq("md") {
     padding: 0 rem(15);
-    }
+  }
 }
 
 .header__logo {
-  max-width: rem(280);
-  width: 100%;
+  width: rem(280);
   height: inherit;
   transition: transform 0.3s ease;
   pointer-events: auto;
   @include mq("md") {
-    max-width: rem(160);
-    }
-a {
-  display: flex;
-  align-items: center;
-  height: inherit;
-  img {
-    @include img;
-    object-fit: contain;
+    width: rem(160);
   }
-}
+  a {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    img {
+      @include img;
+      object-fit: contain;
+    }
+  }
 }
 
 .header__logo.scrolled {
   transform: translateX(rem(-20));
   @include mq("md") {
     transform: translateX(0);
-    }
+  }
 }
 
 .header__nav {
@@ -315,15 +320,15 @@ a {
   height: rem(60);
   background-color: $main;
   border: none;
-  border-radius:50%;
+  border-radius: 50%;
   padding: 0;
   cursor: pointer;
   z-index: 200;
   pointer-events: auto;
   @include mq("md") {
     display: block;
-    top: rem(15);
-    right: rem(15);
+    top: rem(12);
+    right: rem(12);
     width: rem(45);
     height: rem(45);
   }
@@ -339,12 +344,12 @@ a {
   background-color: $white;
   transition: transform 0.3s ease;
   @include mq("md") {
-    width: rem(22);
-    }
+    width: rem(18);
+  }
 }
 
 .hamburger span:nth-of-type(1) {
-  top: rem(-6);
+  top: rem(-5);
 }
 
 .hamburger span:nth-of-type(2) {
@@ -352,7 +357,7 @@ a {
 }
 
 .hamburger span:nth-of-type(3) {
-  top: rem(6);
+  top: rem(5);
 }
 
 .hamburger.is-open span:nth-of-type(1) {
@@ -395,7 +400,7 @@ body.no-scroll {
   pointer-events: auto;
   @include mq("md") {
     width: 75%;
-    }
+  }
 }
 
 .drawer__nav.is-open {
@@ -418,7 +423,7 @@ body.no-scroll {
   width: 65%;
   @include mq("md") {
     width: 78%;
-    }
+  }
 }
 
 .drawer__nav.is-open .drawer__nav-item {
@@ -447,7 +452,7 @@ body.no-scroll {
   @include mq("md") {
     font-size: rem(20);
     padding: rem(10) rem(26);
-    }
+  }
   &:before {
     content: "";
     position: absolute;
@@ -477,7 +482,6 @@ body.no-scroll {
     transform: rotate(-45deg);
   }
 }
-
 
 .accordion p {
   position: relative;
@@ -515,14 +519,15 @@ body.no-scroll {
     border-bottom: none;
     @include mq("md") {
       font-size: rem(15);
-      }
+      padding: 0 0 0 rem(30);
+    }
 
     i {
       font-size: rem(14);
       margin-left: rem(12);
       @include mq("md") {
         font-size: rem(12);
-        }
+      }
     }
 
     &:before {
@@ -539,15 +544,12 @@ body.no-scroll {
   background-size: cover;
   @include mq("md") {
     padding: rem(40) 0;
-    }
+  }
 }
 
 .cta__ttl {
   text-align: center;
   margin-top: rem(20);
-  @include mq("md") {
-    margin-top: rem(10);
-    }
   h2 {
     color: $white;
     font-size: rem(60);
@@ -555,14 +557,14 @@ body.no-scroll {
     font-family: $font-family-en1;
     @include mq("md") {
       font-size: rem(45);
-      }
+    }
     span {
       font-family: $font-family-ja;
       display: block;
       font-size: rem(20);
       @include mq("md") {
         font-size: rem(15);
-        }
+      }
     }
   }
 }
@@ -573,14 +575,16 @@ body.no-scroll {
   margin-top: rem(40);
   @include mq("md") {
     flex-direction: column;
-    }
+    margin-top: rem(20);
+    gap: rem(20);
+  }
 }
 
 .cta__btn {
   width: rem(360);
   @include mq("md") {
     width: rem(260);
-    }
+  }
   a {
     color: $black;
     background-color: $white;
@@ -589,7 +593,7 @@ body.no-scroll {
       right: rem(20);
       @include mq("md") {
         right: rem(10);
-        }
+      }
     }
   }
 }
@@ -601,7 +605,10 @@ body.no-scroll {
 
 // footer
 .footer {
-  padding: rem(60) 0 rem(40);
+  padding: rem(32) 0 rem(16);
+  @include mq("md") {
+    padding: rem(40) 0 rem(20);
+  }
 }
 .footer__inner {
 }
@@ -610,22 +617,39 @@ body.no-scroll {
   display: flex;
   justify-content: space-between;
   padding: 0 rem(70) rem(58);
+  @include mq("md") {
+    flex-direction: column;
+    padding: 0;
+    max-width: rem(400);
+    margin: 0 auto;
+  }
 }
 
 .footer__logo {
   width: rem(280);
+  @include mq("md") {
+    width: rem(180);
+  }
   img {
-    @include img;
+    width: 100%;
+    display: block;
     object-fit: contain;
   }
 }
 
 .footer__nav {
+  @include mq("md") {
+    padding: rem(16) rem(12);
+  }
 }
 
 .footer__nav-list {
   display: flex;
   gap: rem(150);
+  @include mq("md") {
+    justify-content: space-between;
+    gap: 0;
+  }
 }
 
 .footer__nav-item {
@@ -633,7 +657,9 @@ body.no-scroll {
   font-family: $font-family-en1;
   font-size: rem(20);
   text-transform: uppercase;
-
+  @include mq("md") {
+    font-size: rem(15);
+  }
   &:before {
     content: "";
     position: absolute;
@@ -643,6 +669,12 @@ body.no-scroll {
     height: rem(16);
     background-color: $main;
     border-radius: 50%;
+    @include mq("md") {
+      top: rem(8);
+      left: rem(-12);
+      width: rem(8);
+      height: rem(8);
+    }
   }
 }
 
@@ -662,6 +694,9 @@ body.no-scroll {
       display: flex;
       align-items: center;
       padding: rem(5);
+      @include mq("md") {
+        font-size: rem(12);
+      }
       &:before {
         content: "";
         position: absolute;
@@ -679,6 +714,20 @@ body.no-scroll {
 .footer__bottom {
   border-top: rem(2) solid $gray6;
   padding-top: rem(30);
+  @include mq("md") {
+    padding-top: rem(20);
+  }
+}
+
+.footer__bottom-wrap {
+  @include mq("md") {
+   display: flex;
+   align-items: center;
+   justify-content: start;
+    max-width: rem(400);
+    margin: 0 auto;
+    gap: rem(20);
+    }
 }
 
 .footer__copyright {
@@ -686,15 +735,26 @@ body.no-scroll {
   font-size: rem(14);
   font-weight: 500;
   text-align: center;
+  @include mq("md") {
+    font-size: rem(12);
+  }
 }
 
 .footer__policy {
   display: block;
-text-align: right;
-margin-right: rem(80);
+  margin-right: rem(80);
+  @include mq("md") {
+    margin-right: 0;
+    }
   a {
+    display: flex;
+    align-items: center;
+    justify-content: end;
     font-size: rem(14);
     text-decoration: underline;
+    @include mq("md") {
+      font-size: rem(12);
+    }
   }
 }
 
@@ -706,6 +766,10 @@ margin-right: rem(80);
   opacity: 0;
   z-index: 2;
   transition: opacity 0.3s ease;
+  @include mq("md") {
+    bottom: rem(4);
+    right: rem(20);
+  }
 }
 
 .page-top a {
@@ -716,12 +780,19 @@ margin-right: rem(80);
   width: rem(60);
   height: rem(60);
   text-decoration: none;
+  @include mq("md") {
+    width: rem(40);
+    height: rem(40);
+  }
   i {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: rem(25);
+    @include mq("md") {
+      font-size: rem(15);
+    }
   }
 }
 

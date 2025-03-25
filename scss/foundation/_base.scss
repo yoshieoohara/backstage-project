@@ -203,16 +203,19 @@
 
 // title-animation
 .title__anime {
-display: flex;
+  display: flex;
   .char {
     //初期の状態
     opacity: 0;
   }
 }
 
-.line-wrap {
-  position: relative;
+.line__wrap {
   display: inline-block;
+}
+
+.top__text {
+  position: relative;
 }
 
 .top__line {
@@ -402,10 +405,8 @@ display: flex;
 }
 
 .works__slick-img {
-  max-width: rem(600);
-  width: 100%;
+  width: rem(360);
   aspect-ratio: 450 / 260;
-  // margin: 0 rem(22);
   img {
     @include img;
     border-radius: rem(15);
