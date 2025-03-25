@@ -122,8 +122,8 @@
 .form__privacy input + span::after {
   content: "";
   position: absolute;
-  top: rem(7);
-  left: rem(4);
+  top: rem(4);
+  left: 0;
   transform: rotate(-45deg);
   display: block;
   width: rem(12);

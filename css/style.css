@@ -2083,8 +2083,8 @@ body.no-scroll {
 .form__privacy input + span::after {
   content: "";
   position: absolute;
-  top: 0.4375rem;
-  left: 0.25rem;
+  top: 0.25rem;
+  left: 0;
   transform: rotate(-45deg);
   display: block;
   width: 0.75rem;
