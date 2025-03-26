@@ -175,14 +175,14 @@ select {
     font-size: 1.3333333333vw;
   }
 }
-@media (min-width: 375px) and (max-width: 767px) {
+@media (min-width: 400px) and (max-width: 767px) {
   html {
     font-size: 16px;
   }
 }
-@media (max-width: 374px) {
+@media (max-width: 399px) {
   html {
-    font-size: 4.2666666667vw;
+    font-size: 4vw;
   }
 }
 
@@ -599,7 +599,7 @@ body.no-scroll {
   position: fixed;
   top: 0;
   right: -120%;
-  width: 40%;
+  width: 45%;
   height: 100vh;
   background: #00AEEF;
   transition: right 0.5s ease;
@@ -627,7 +627,7 @@ body.no-scroll {
   opacity: 0;
   position: absolute;
   z-index: 160;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   width: 65%;
@@ -701,14 +701,14 @@ body.no-scroll {
 .accordion p::after {
   content: "";
   position: absolute;
-  top: 48%;
+  top: 44%;
   right: 1rem;
   transform: rotate(135deg);
   width: 0.5rem;
   height: 0.5rem;
   border-top: 0.125rem solid #FFF;
   border-right: 0.125rem solid #FFF;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
 .accordion-menu {
@@ -1907,6 +1907,7 @@ body.no-scroll {
 }
 .service__list-txt p {
   font-size: 1.1rem;
+  line-height: 1.75;
   font-weight: 500;
 }
 
@@ -2160,7 +2161,6 @@ body.no-scroll {
 @media screen and (max-width: 767px) {
   .form__privacy input + span {
     font-size: 0.8125rem;
-    padding-left: 1.25rem;
   }
 }
 
@@ -2327,7 +2327,7 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .outline__txt p {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 }
 
@@ -2621,7 +2621,7 @@ body.no-scroll {
 .accordion__btn {
   position: relative;
   color: #9C9C9C;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 @media screen and (max-width: 767px) {
   .accordion__btn {
@@ -2632,7 +2632,7 @@ body.no-scroll {
 .accordion__btn::before {
   content: "";
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: -1.5rem;
   transform: rotate(135deg);
   width: 0.5rem;
@@ -2659,7 +2659,7 @@ body.no-scroll {
 
 .close__btn {
   display: none;
-  margin-right: 1.875rem;
+  margin-right: 1.5rem;
 }
 
 .works__list-item.is-open .open__btn {
@@ -2771,7 +2771,7 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   #artist-slick .slick-dots {
-    bottom: -2rem;
+    bottom: -2.5rem;
   }
 }
 
@@ -2838,7 +2838,8 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .archive-artist__list {
-    width: 62.5%;
+    max-width: 37.5rem;
+    width: 85%;
     margin: 2.5rem auto 0;
   }
 }
@@ -2858,7 +2859,7 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .archive-artist__img {
-    aspect-ratio: 1/1;
+    aspect-ratio: 2/1;
   }
 }
 .archive-artist__img::after {
@@ -2893,6 +2894,8 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .archive-artist__name {
+    opacity: 1;
+    visibility: visible;
     bottom: 0.5rem;
     left: 0.5rem;
   }
@@ -2938,14 +2941,19 @@ body.no-scroll {
     gap: 0.625rem;
     bottom: 0.5rem;
     right: 0.5rem;
+    opacity: 1;
+    visibility: visible;
   }
-}
-.archive-artist__btn:hover {
-  opacity: 1;
 }
 .archive-artist__btn i {
   color: #FFF;
   font-size: 1.25rem;
+  transition: transform 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .archive-artist__btn i {
+    font-size: 0.9375rem;
+  }
 }
 
 .archive-artist__item a:hover {
@@ -3078,19 +3086,17 @@ body.no-scroll {
 
 .artist__top {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  grid-template-rows: 1fr 1.8fr;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
   grid-template-areas: "areaA areaB" "areaA areaC";
   gap: 3.125rem;
-  max-height: 62.5rem;
 }
 @media screen and (max-width: 767px) {
   .artist__top {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: "areaB" "areaA" "areaC";
     gap: 1.25rem;
-    max-height: unset;
   }
 }
 
@@ -3100,20 +3106,12 @@ body.no-scroll {
 
 .artist__img-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2.75fr 1fr;
-  grid-template-areas: "areaA areaA" "areaB areaC";
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "areaD areaD" "areaE areaF";
   gap: 1.25rem;
 }
-@media screen and (max-width: 767px) {
-  .artist__img-grid {
-    grid-template-rows: 2.85fr 1fr;
-  }
-}
 
-.artist__img {
-  width: 100%;
-}
 .artist__img img {
   display: block;
   width: 100%;
@@ -3122,24 +3120,21 @@ body.no-scroll {
 }
 
 .artist__img:nth-of-type(1) {
-  grid-column: 1/3;
-  grid-row: 1/2;
   aspect-ratio: 3/4;
+  grid-area: areaD;
 }
 .artist__img:nth-of-type(1) img {
   border-radius: 0.9375rem;
 }
 
 .artist__img:nth-of-type(2) {
-  grid-column: 1/2;
-  grid-row: 2/3;
   aspect-ratio: 1/1;
+  grid-area: areaE;
 }
 
 .artist__img:nth-of-type(3) {
-  grid-column: 2/3;
-  grid-row: 2/3;
   aspect-ratio: 1/1;
+  grid-area: areaF;
 }
 
 .artist___sns {
@@ -3174,12 +3169,13 @@ body.no-scroll {
 @media screen and (max-width: 767px) {
   .artist__name h2 {
     font-size: 1.875rem;
+    line-height: 1.25;
   }
 }
 .artist__name h2 span {
   font-family: "Jost", sans-serif;
   display: block;
-  font-size: 1.25rem;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 @media screen and (max-width: 767px) {
@@ -3291,7 +3287,7 @@ body.no-scroll {
   }
 }
 .artist__link a {
-  font-size: 1.5625rem;
+  font-size: 1.25rem;
   color: #00AEEF;
   text-decoration: underline;
 }
@@ -3306,6 +3302,7 @@ body.no-scroll {
 }
 .artist__career p {
   font-size: 1.15rem;
+  line-height: 1.75;
 }
 @media screen and (max-width: 767px) {
   .artist__career p {
@@ -3404,6 +3401,7 @@ body.no-scroll {
 }
 .artist__accordion-txt p {
   font-size: 1.15rem;
+  line-height: 1.75;
 }
 @media screen and (max-width: 767px) {
   .artist__accordion-txt p {

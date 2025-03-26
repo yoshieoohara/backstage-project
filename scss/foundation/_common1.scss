@@ -391,7 +391,7 @@ body.no-scroll {
   position: fixed;
   top: 0;
   right: -120%;
-  width: 40%;
+  width: 45%;
   height: 100vh;
   background: $main;
   transition: right 0.5s ease;
@@ -417,7 +417,7 @@ body.no-scroll {
   opacity: 0;
   position: absolute;
   z-index: 160;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   width: 65%;
@@ -490,14 +490,14 @@ body.no-scroll {
   &::after {
     content: "";
     position: absolute;
-    top: 48%;
+    top: 44%;
     right: rem(16);
     transform: rotate(135deg);
     width: rem(8);
     height: rem(8);
     border-top: rem(2) solid $white;
     border-right: rem(2) solid $white;
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
   }
 }
 

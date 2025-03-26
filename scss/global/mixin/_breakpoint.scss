@@ -21,12 +21,12 @@ html {
     font-size: calc(16 / 1200 * 100vw);
   }
 
-  @media (min-width: 375px) and (max-width: 767px) {
+  @media (min-width: 400px) and (max-width: 767px) {
     font-size: 16px;
   }
 
-  @media (max-width: 374px) {
-    font-size: calc(16 / 375 * 100vw);
+  @media (max-width: 399px) {
+    font-size: calc(16 / 400 * 100vw);
   }
 }
 

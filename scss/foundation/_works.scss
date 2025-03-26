@@ -239,7 +239,7 @@
 .accordion__btn {
 position: relative;
 color: $gray3;
-font-size: rem(18);
+font-size: rem(16);
 @include mq("md") {
   font-size: rem(12);
   }
@@ -248,7 +248,7 @@ font-size: rem(18);
 .accordion__btn::before {
   content: "";
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: rem(-24);
   transform: rotate(135deg);
   width: rem(8);
@@ -273,7 +273,7 @@ font-size: rem(18);
 
 .close__btn {
   display: none;
-  margin-right: rem(30);
+  margin-right: rem(24);
 }
 
 .works__list-item.is-open .open__btn {

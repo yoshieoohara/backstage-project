@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 // archive-artist
-// artist-Slick
+// artist-slick
 .artist-slick {
   padding: rem(200) 0 rem(130);
   background-color: $gray;
@@ -36,7 +36,7 @@
 #artist-slick .slick-dots {
   bottom: rem(-50);
   @include mq("md") {
-    bottom: rem(-32);
+    bottom: rem(-40);
     }
 }
 
@@ -95,7 +95,8 @@
   align-items: end;
   gap: rem(28);
   @include mq("md") {
-    width: 62.5%;
+    max-width: rem(600);
+    width: 85%;
     margin: rem(40) auto 0;
     }
 }
@@ -113,7 +114,7 @@
   border-radius: rem(15);
   overflow: hidden;
   @include mq("md") {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 2 / 1;
     }
 
   &::after {
@@ -146,6 +147,8 @@
   transition: opacity 0.3s, visibility 0.3s;
   z-index: 3;
   @include mq("md") {
+    opacity: 1;
+    visibility: visible;
     bottom: rem(8);
     left: rem(8);
     }
@@ -186,39 +189,19 @@
     gap: rem(10);
     bottom: rem(8);
   right: rem(8);
-    }
-  &:hover {
-    opacity: 1;
+  opacity: 1;
+  visibility: visible;
   }
   i {
     color: $white;
     font-size: rem(20);
+    transition: transform 0.3s;
+    @include mq("md") {
+      font-size: rem(15);
+      }
   }
-}
 
-// .btn {
-//   width: fit-content;
-//   a {
-//     display: flex;
-//     align-items: center;
-//     justify-content: end;
-//     gap: rem(44);
-//     font-size: rem(20);
-//     color: $white;
-//     padding: rem(6);
-//     &:hover {
-//       opacity: 1;
-//     }
-//     i {
-//       color: $white;
-//       font-size: rem(20);
-//       transition: transform 0.3s ease;
-//     }
-//     &:hover i {
-//       transform: translateX(rem(10));
-//     }
-//   }
-// }
+}
 
 .archive-artist__item a:hover {
   opacity: 1;
