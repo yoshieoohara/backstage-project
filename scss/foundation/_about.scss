@@ -5,18 +5,27 @@
 .outline {
   background-color: $black2;
   padding: rem(80) 0;
+  @include mq("md") {
+    padding: rem(40) 0;
+  }
 }
 
 .outline__inner {
   display: flex;
   align-items: start;
   justify-content: space-between;
+  @include mq("md") {
+    flex-direction: column;
+    }
 }
 
 #outline .p-ttl {
   position: static;
   width: rem(400);
   color: $white;
+  @include mq("md") {
+    width: fit-content;
+    }
 }
 
 .outline__list {
@@ -25,6 +34,9 @@
   display: flex;
   flex-direction: column;
   gap: rem(20);
+  @include mq("md") {
+    margin-top: rem(40);
+    }
 }
 
 .outline__list-item {
@@ -33,20 +45,35 @@
   background-color: $white;
   border-radius: rem(15);
   padding: rem(30);
+  @include mq("md") {
+    flex-direction: column;
+    border-radius: rem(8);
+    padding: rem(12);
+    gap: rem(8);
+    }
 }
 
 .outline__ttl {
   width: rem(120);
   flex-shrink: 0;
+  @include mq("md") {
+    width: fit-content;
+    }
   h3 {
     font-size: rem(20);
     color: $gray2;
+    @include mq("md") {
+      font-size: rem(15);
+      }
   }
 }
 
 .outline__txt {
   p {
     font-size: rem(20);
+    @include mq("md") {
+      font-size: rem(18);
+      }
   }
 }
 

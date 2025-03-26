@@ -7,9 +7,11 @@
 }
 
 .page-ttl__inner {
+padding: 0 rem(120);
   height: rem(480);
   @include mq("md") {
     height: rem(300);
+    padding: 0 rem(24);
     }
 }
 
@@ -82,10 +84,17 @@
     font-weight: 900;
     text-transform: uppercase;
     line-height: 1;
+    @include mq("md") {
+      font-size: rem(36);
+      }
     span {
       display: block;
       font-size: rem(24);
       margin-top: rem(20);
+      @include mq("md") {
+        font-size: rem(18);
+        margin-top: rem(8);
+        }
     }
   }
 }

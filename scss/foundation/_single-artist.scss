@@ -3,22 +3,44 @@
 // single-artist
 .artist {
   padding: rem(80) 0;
+  @include mq("md") {
+    padding: rem(40) 0;
+  }
 }
 
 .artist__inner {
+  @include mq("md") {
+    max-width: rem(500);
+    margin: 0 auto;
+    }
 }
 
 .inner {
 }
 
 .artist__top {
-  display: flex;
-  justify-content: space-between;
-
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  grid-template-rows: 1fr 1.8fr;
+  grid-template-areas:
+    "areaA areaB"
+    "areaA areaC";
+  gap: rem(50);
+  max-height: rem(1000);
+  @include mq("md") {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "areaB"
+      "areaA"
+      "areaC";
+    gap: rem(20);
+    max-height: unset;
+  }
 }
 
 .artist__img-wrap {
-  width: 40%;
+  grid-area: areaA;
 }
 
 .artist__img-grid {
@@ -29,6 +51,9 @@
     "areaA areaA"
     "areaB areaC";
   gap: rem(20);
+  @include mq("md") {
+    grid-template-rows: 2.85fr 1fr;
+  }
 }
 
 .artist__img {
@@ -62,7 +87,7 @@
   &:nth-of-type(3) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    aspect-ratio: 1 / 1; 
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -70,24 +95,38 @@
   @include flex(center);
   gap: rem(40);
   margin-top: rem(40);
- a {
-  i {
-    font-size: rem(40);
+  @include mq("md") {
+    gap: rem(30);
+    margin-top: rem(20);
   }
- }
+  a {
+    i {
+      font-size: rem(40);
+      @include mq("md") {
+        font-size: rem(36);
+      }
+    }
+  }
 }
 
 .artist__content-wrap {
-  width: 55%;
+  grid-area: areaB;
 }
 
 .artist__name {
   h2 {
     font-size: rem(36);
+    @include mq("md") {
+      font-size: rem(30);
+    }
     span {
+      font-family: $font-family-en1;
       display: block;
       font-size: rem(20);
       text-transform: uppercase;
+      @include mq("md") {
+        font-size: rem(20);
+      }
     }
   }
 }
@@ -97,11 +136,19 @@
   display: flex;
   align-items: center;
   gap: rem(22);
+  @include mq("md") {
+    gap: rem(14);
+    margin-top: rem(10);
+  }
 }
 
 .print__btn {
   width: rem(258);
   height: rem(80);
+  @include mq("md") {
+    width: rem(168);
+    height: rem(50);
+  }
   button {
     font-family: $font-family-ja;
     @include flex(center);
@@ -116,9 +163,15 @@
     font-weight: 700;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease;
+    @include mq("md") {
+      font-size: rem(15);
+    }
     span {
       display: block;
       font-size: rem(16);
+      @include mq("md") {
+        font-size: rem(12);
+      }
     }
   }
 }
@@ -149,37 +202,56 @@
 }
 
 .artist__link {
-display: flex;
-align-items: center;
-justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: $font-family-en1;
   gap: rem(56);
   padding: rem(20) 0;
   border-top: rem(2) solid $black;
   border-bottom: rem(2) solid $black;
   margin-top: rem(40);
+  @include mq("md") {
+    padding: rem(10) 0;
+    margin-top: rem(20);
+    gap: rem(40);
+  }
   p {
     font-size: rem(20);
     text-transform: uppercase;
+    @include mq("md") {
+      font-size: rem(15);
+    }
   }
   a {
     font-size: rem(25);
     color: $main;
     text-decoration: underline;
+    @include mq("md") {
+      font-size: rem(15);
+    }
   }
 }
 
 .artist__career {
-  margin-top: rem(40);
+  grid-area: areaC;
+
   p {
     font-size: 1.15rem;
+    @include mq("md") {
+      font-size: rem(15);
+    }
   }
   p + p {
-    margin-top: rem(20);
+    margin-top: 1em;
   }
 }
 
 .artist__bottom {
   margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(20);
+  }
 }
 
 .artist__accordion-list {
@@ -188,11 +260,17 @@ justify-content: flex-start;
   flex-direction: column;
   gap: rem(20);
   margin: 0 auto;
+  @include mq("md") {
+    gap: rem(15);
+  }
 }
 
 .artist__accordion-item {
   border: rem(2) solid $black;
   border-radius: rem(15);
+  @include mq("md") {
+    border-radius: rem(8);
+  }
 }
 
 .artist__accordion-ttl,
@@ -203,9 +281,15 @@ justify-content: flex-start;
 .artist__accordion-ttl {
   padding: rem(20) rem(80);
   cursor: pointer;
+  @include mq("md") {
+    padding: rem(14) rem(30);
+  }
   h3 {
     position: relative;
     font-size: rem(24);
+    @include mq("md") {
+      font-size: rem(18);
+    }
     &:after {
       content: "";
       position: absolute;
@@ -216,6 +300,11 @@ justify-content: flex-start;
       height: rem(16);
       border-radius: rem(50);
       background-color: $main;
+      @include mq("md") {
+        width: rem(12);
+        height: rem(12);
+        left: rem(-20);
+      }
     }
   }
 }
@@ -223,11 +312,17 @@ justify-content: flex-start;
 .artist__accordion-txt {
   display: none;
   border-top: rem(2) solid $gray4;
-  margin-left: rem(20);
-  margin-right: rem(20);
+  margin: 0 rem(20);
   padding: rem(20) rem(60);
+  @include mq("md") {
+    padding: rem(14) 0;
+    margin: 0 rem(14);
+  }
   p {
     font-size: 1.15rem;
+    @include mq("md") {
+      font-size: rem(15);
+    }
   }
 }
 
@@ -245,6 +340,9 @@ justify-content: flex-start;
   height: rem(2);
   background-color: $black;
   transition: all 0.3s;
+  @include mq("md") {
+    width: rem(15);
+  }
 }
 
 .artist__accordion-ttl::after {

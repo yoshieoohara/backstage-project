@@ -12,16 +12,16 @@
 .policy__con {
   display: flex;
   flex-direction: column;
-  gap: rem(20);
+  gap: 1em;
   background-color: $white;
   border-radius: rem(20);
   padding: rem(50);
   @include mq("md") {
-    padding: rem(20);
+    padding: rem(15);
+    border-radius: rem(8);
     }
 p {
   font-size: 1.15rem;
-  line-height: 1.5;
   @include mq("md") {
     font-size: rem(15);
     }

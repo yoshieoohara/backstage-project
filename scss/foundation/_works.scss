@@ -4,10 +4,17 @@
 .works {
   background-color: $black2;
   padding: rem(80) 0;
+  @include mq("md") {
+    padding: rem(40) 0;
+    }
 }
 
 .works__inner {
   max-width: rem(1100);
+  @include mq("md") {
+    max-width: rem(500);
+    margin: 0 auto;
+    }
 }
 
 .tab__link {
@@ -17,6 +24,10 @@
   gap: rem(20);
   border-bottom: rem(2) solid $main;
   padding-bottom: rem(42);
+  @include mq("md") {
+    gap: rem(10);
+    padding-bottom: rem(20);
+    }
 }
 
 .tab__link li {
@@ -33,6 +44,11 @@
     border-radius: rem(10);
     white-space: nowrap;
     padding: rem(16) rem(20);
+    @include mq("md") {
+      font-size: rem(15);
+      padding: rem(8) rem(12);
+      border-radius: rem(8);
+      }
   }
 }
 
@@ -78,6 +94,10 @@
   align-items: start;
   gap: rem(45);
   padding-top: rem(45);
+  @include mq("md") {
+    gap: rem(20);
+
+    }
 }
 
 .works__list-item {
@@ -90,6 +110,10 @@
   display: block;
   position: relative;
   cursor: pointer;
+  @include mq("md") {
+    width: 100%;
+    padding: rem(14) rem(14) 0;
+    }
 }
 
 .work__list-img {
@@ -103,34 +127,52 @@
 .work__list-ttl {
   text-align: center;
   margin-top: rem(20);
+  @include mq("md") {
+    margin-top: rem(10);
+    };
   h3 {
     font-size: rem(20);
     color: $main;
+    @include mq("md") {
+      font-size: rem(18);
+      }
   }
 }
 
 .works__list-wrap {
   @include flex(space-between);
   margin-top: rem(20);
+  @include mq("md") {
+    margin-top: rem(10);
+    }
 }
 
 .works__list-date {
   font-size: rem(16);
   color: $gray9;
   font-weight: 500;
+  @include mq("md") {
+    font-size: rem(12);
+    }
 }
 
 .work__list-txt {
-  text-align: center;
   p {
     font-size: rem(15);
     color: $gray3;
     font-weight: 500;
+    @include mq("md") {
+      font-size: rem(12);
+      }
+      span {
+        color: $main;
+        text-decoration: underline;
+      }
   }
 }
 
 .works__list-category {
-  margin-top: rem(11);
+  margin-top: rem(10);
   display: flex;
   flex-wrap: wrap;
   gap: rem(8);
@@ -142,6 +184,10 @@
   background-color: $white;
   border-radius: rem(18);
   padding: rem(4) rem(16);
+  @include mq("md") {
+    font-size: rem(12);
+    padding: rem(4) rem(13)
+    }
 }
 
 
@@ -150,10 +196,17 @@
   flex-wrap: wrap;
   gap: rem(18);
   margin-top: rem(20);
+  @include mq("md") {
+    gap: rem(10);
+    margin-top: rem(10);
+    }
 }
 
 .works__list-sub-img {
   width: 30%;
+  @include mq("md") {
+  width: 31%;
+    }
   img {
     @include img;
   }
@@ -166,10 +219,16 @@
   overflow: hidden;
   transition: all 0.5s ease; 
   margin-top: rem(16);
+  @include mq("md") {
+    margin-top: rem(10);
+    }
 }
 
 .works__list-item.is-open {
   padding-bottom: rem(20);
+  @include mq("md") {
+    padding-bottom: rem(14);
+    }
 }
 
 .works__list-item.is-open .works__list-bottom {
@@ -180,6 +239,10 @@
 .accordion__btn {
 position: relative;
 color: $gray3;
+font-size: rem(18);
+@include mq("md") {
+  font-size: rem(12);
+  }
 }
 
 .accordion__btn::before {
@@ -193,6 +256,11 @@ color: $gray3;
   border-top: rem(2) solid $gray3;
   border-right: rem(2) solid $gray3;
   transition: transform 0.3s ease;
+  @include mq("md") {
+    width: rem(6);
+    height: rem(6);
+    left: rem(-18);
+    }
 }
 
 .works__list-item.is-open .works__list-top .accordion__btn::before {
@@ -221,11 +289,19 @@ color: $gray3;
  @include flex(center);
   margin-top: rem(56);
   gap: rem(20);
+  @include mq("md") {
+    gap: rem(10);
+    margin-top: rem(30);
+    }
 }
 
 .pagination__num {
   width: rem(40);
   height: rem(40);
+  @include mq("md") {
+    width: rem(28);
+    height: rem(28);
+    }
   a {
     display: flex;
     align-items: center;
@@ -234,6 +310,7 @@ color: $gray3;
     font-size: rem(20);
     background-color: $white;
     border-radius: 50%;
+    font-size: rem(15);
   }
 }
 

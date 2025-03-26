@@ -5,36 +5,47 @@
 .artist-slick {
   padding: rem(200) 0 rem(130);
   background-color: $gray;
+  @include mq("md") {
+    padding: rem(90) 0 rem(45);
+  }
 }
+
 .artist-slick__inner {
-  max-width: rem(900);
-  width: 100%;
-  margin: 0 auto;
+
 }
 
 .slick-list {
   position: relative;
+  margin: 0 auto;
+  width: 85%;
 }
 
 .artist__slick-img {
-  width: 100%;
   aspect-ratio: 900 / 500;
-  
   img {
     @include img;
     object-fit: cover;
     border-radius: rem(15);
+    @include mq("md") {
+      border-radius: rem(8);
+      }
   }
 }
 
 // slick-dots
 #artist-slick .slick-dots {
-  bottom: rem(-50); 
+  bottom: rem(-50);
+  @include mq("md") {
+    bottom: rem(-32);
+    }
 }
 
 .slick-dots li {
   display: inline-block;
   margin: 0 rem(12);
+  @include mq("md") {
+    margin: 0 rem(6);
+    }
 }
 
 .slick-dots button {
@@ -48,6 +59,10 @@
   border: none;
   padding: rem(4);
   cursor: pointer;
+  @include mq("md") {
+    width: rem(8);
+    height: rem(8);
+    }
 }
 
 #artist-slick .slick-dots .slick-active button {
@@ -57,6 +72,9 @@
 // archive-artist
 .archive-artist {
   padding: rem(80) 0;
+  @include mq("md") {
+    padding: rem(40) 0;
+    }
 }
 
 .archive-artist__inner {
@@ -76,6 +94,10 @@
   flex-direction: column;
   align-items: end;
   gap: rem(28);
+  @include mq("md") {
+    width: 62.5%;
+    margin: rem(40) auto 0;
+    }
 }
 
 .archive-artist__item a {
@@ -90,6 +112,9 @@
   aspect-ratio: 910 / 420;
   border-radius: rem(15);
   overflow: hidden;
+  @include mq("md") {
+    aspect-ratio: 1 / 1;
+    }
 
   &::after {
     content: "";
@@ -120,13 +145,23 @@
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
   z-index: 3;
+  @include mq("md") {
+    bottom: rem(8);
+    left: rem(8);
+    }
 
   h2 {
     font-size: rem(30);
     color: $white;
+    @include mq("md") {
+      font-size: rem(18);
+      }
     span {
       display: block;
       font-size: rem(20);
+      @include mq("md") {
+        font-size: rem(12);
+        }
     }
   }
 }
@@ -146,6 +181,12 @@
   color: $white;
   padding: rem(6);
   transition: opacity 0.3s, visibility 0.3s;
+  @include mq("md") {
+    font-size: rem(12);
+    gap: rem(10);
+    bottom: rem(8);
+  right: rem(8);
+    }
   &:hover {
     opacity: 1;
   }

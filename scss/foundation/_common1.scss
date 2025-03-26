@@ -218,7 +218,7 @@ li {
 .header__nav {
   display: flex;
   align-items: center;
-  @include mq("md") {
+  @media (max-width: 1240px) {
     display: none;
   }
 }
@@ -518,7 +518,7 @@ body.no-scroll {
     padding: 0 rem(30);
     border-bottom: none;
     @include mq("md") {
-      font-size: rem(15);
+      font-size: rem(13);
       padding: 0 0 0 rem(30);
     }
 
@@ -529,7 +529,6 @@ body.no-scroll {
         font-size: rem(12);
       }
     }
-
     &:before {
       display: none;
     }
@@ -605,10 +604,7 @@ body.no-scroll {
 
 // footer
 .footer {
-  padding: rem(32) 0 rem(16);
-  @include mq("md") {
-    padding: rem(40) 0 rem(20);
-  }
+  padding: rem(40) 0 rem(20);
 }
 .footer__inner {
 }
@@ -663,8 +659,8 @@ body.no-scroll {
   &:before {
     content: "";
     position: absolute;
-    top: rem(10);
-    left: rem(-30);
+    top: rem(6);
+    left: rem(-24);
     width: rem(16);
     height: rem(16);
     background-color: $main;
@@ -721,13 +717,13 @@ body.no-scroll {
 
 .footer__bottom-wrap {
   @include mq("md") {
-   display: flex;
-   align-items: center;
-   justify-content: start;
-    max-width: rem(400);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0 auto;
+    max-width: rem(400);
     gap: rem(20);
-    }
+  }
 }
 
 .footer__copyright {
@@ -736,6 +732,7 @@ body.no-scroll {
   font-weight: 500;
   text-align: center;
   @include mq("md") {
+    text-align: left;
     font-size: rem(12);
   }
 }
@@ -744,8 +741,8 @@ body.no-scroll {
   display: block;
   margin-right: rem(80);
   @include mq("md") {
-    margin-right: 0;
-    }
+    margin-right: rem(30);
+  }
   a {
     display: flex;
     align-items: center;
