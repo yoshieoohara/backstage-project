@@ -10,6 +10,7 @@
 }
 
 .group__inner {
+  max-width: rem(1080);
   @include mq("md") {
     max-width: rem(600);
   }

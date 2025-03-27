@@ -8,7 +8,9 @@
     padding-bottom: rem(40);
     }
 }
-
+.policy__inner {
+  max-width: rem(1080);
+}
 .policy__con {
   display: flex;
   flex-direction: column;

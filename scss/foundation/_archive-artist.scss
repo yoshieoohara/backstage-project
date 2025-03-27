@@ -11,13 +11,12 @@
 }
 
 .artist-slick__inner {
-
+max-width: rem(900);
 }
 
 .artist-slick.slick-list {
   position: relative;
   margin: 0 auto;
-  width: 85%;
 }
 
 .artist__slick-img {

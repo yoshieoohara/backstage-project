@@ -85,7 +85,7 @@ $(window).scroll(function () {
   var scroll = $(window).scrollTop();
   var line = $(".top__line");
 
-  if (scroll > 400) {
+  if (scroll > 200) {
     line.css({
       transform: "scaleX(1)",
       transition: "transform 0.5s ease-out",
@@ -105,7 +105,7 @@ $(window).on("scroll", function () {
     const scroll = $(window).scrollTop();
     const wHeight = $(window).height();
 
-    if (scroll > offset - wHeight + wHeight / 3) {
+    if (scroll > offset - wHeight + wHeight / 2) {
       $(this).addClass("show");
     }
   });
