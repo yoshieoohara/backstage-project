@@ -140,6 +140,13 @@
     }
 }
 
+.top-message__inner {
+  padding: 0 rem(40); 
+  @include mq("md") {
+    padding: 0 rem(24);
+    }
+}
+
 // scroll-down
 .scroll-down {
   position: absolute;

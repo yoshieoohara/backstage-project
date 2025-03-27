@@ -186,6 +186,11 @@ select {
   }
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: "Noto Sans JP", serif;
   font-weight: 700;
@@ -1336,6 +1341,15 @@ body.no-scroll {
 @media screen and (max-width: 767px) {
   .top-message {
     height: 60vh;
+  }
+}
+
+.top-message__inner {
+  padding: 0 2.5rem;
+}
+@media screen and (max-width: 767px) {
+  .top-message__inner {
+    padding: 0 1.5rem;
   }
 }
 
