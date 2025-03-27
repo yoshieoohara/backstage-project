@@ -59,7 +59,7 @@ jQuery(function ($) {
       delay: i * 0.8, // 上下で時間差
       scrollTrigger: {
         trigger: line,
-        start: "top 80%",
+        start: "top 70%",
         toggleActions: "play none none none",
       },
     });
@@ -85,7 +85,7 @@ $(window).scroll(function () {
   var scroll = $(window).scrollTop();
   var line = $(".top__line");
 
-  if (scroll > 200) {
+  if (scroll > 400) {
     line.css({
       transform: "scaleX(1)",
       transition: "transform 0.5s ease-out",
@@ -95,16 +95,6 @@ $(window).scroll(function () {
       transform: "scaleX(0)",
     });
   }
-});
-
-// p-ttl-animation
-document.addEventListener("DOMContentLoaded", () => {
-  const pTtl = document.querySelector(".p-ttl");
-
-  // スクロールまたは遅延後にアクティブクラスを追加してアニメーションを開始
-  setTimeout(() => {
-    pTtl.classList.add("active");
-  }, 300); // 0.3秒後にアニメーションを開始
 });
 
 
@@ -122,20 +112,4 @@ $(window).on("scroll", function () {
 });
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   gsap.registerPlugin(ScrollTrigger);
-
-//   window.addEventListener("load", function () {
-//     const slideUpText = document.querySelectorAll(".title__anime");
-//     new SplitType(slideUpText);
-//     slideUpText.forEach((element) => {
-//       const chars = element.querySelectorAll(".char");
-//       gsap.to(chars, {
-//         opacity: 1,
-//         stagger: 0.06,
-//         delay: 1,
-//       });
-//     });
-//   });
-// });
 

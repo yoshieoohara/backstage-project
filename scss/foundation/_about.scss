@@ -16,6 +16,7 @@
   justify-content: space-between;
   @include mq("md") {
     flex-direction: column;
+    max-width: rem(600);
     }
 }
 

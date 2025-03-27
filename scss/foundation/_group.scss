@@ -6,10 +6,13 @@
   padding: rem(80) 0;
   @include mq("md") {
     padding: rem(40) 0;
-    }
+  }
 }
 
 .group__inner {
+  @include mq("md") {
+    max-width: rem(600);
+  }
 }
 
 .inner {
@@ -21,7 +24,7 @@
   gap: rem(20);
   @include mq("md") {
     gap: rem(14);
-    }
+  }
 }
 
 .group__list-item {
@@ -44,12 +47,12 @@
   @include mq("md") {
     width: 100%;
     align-items: start;
-    }
+  }
   h2 {
     font-size: 1.35rem;
     @include mq("md") {
       font-size: rem(18);
-      }
+    }
   }
 }
 
@@ -64,13 +67,13 @@
       width: rem(20);
       height: rem(20);
       margin-top: rem(4);
-      }
+    }
     i {
       font-size: rem(16);
       color: $white;
       @include mq("md") {
         font-size: rem(10);
-        }
+      }
     }
   }
 }
@@ -82,7 +85,7 @@
     font-weight: 500;
     @include mq("md") {
       font-size: rem(12);
-      }
+    }
     a {
       color: $main;
       text-decoration: underline;

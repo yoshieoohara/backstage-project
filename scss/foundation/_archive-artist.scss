@@ -14,7 +14,7 @@
 
 }
 
-.slick-list {
+.artist-slick.slick-list {
   position: relative;
   margin: 0 auto;
   width: 85%;
@@ -33,7 +33,7 @@
 }
 
 // slick-dots
-#artist-slick .slick-dots {
+.artist-slick .slick-dots {
   bottom: rem(-50);
   @include mq("md") {
     bottom: rem(-40);

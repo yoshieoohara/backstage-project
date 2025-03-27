@@ -67,6 +67,27 @@ jQuery(function ($) {
     prevArrow: $(".js-works-slick-arrow-prev"),
     nextArrow: $(".js-works-slick-arrow-next"),
   });
+})
+
+$('.js-works-slick').on('afterChange', function(event, slick, currentSlide) {
+  $('.works__slick-img').removeClass('slick-current'); 
+  $('.works__slick-img').eq(currentSlide).addClass('slick-current'); 
+});
+
+// service-slick
+jQuery(function ($) {
+  $(".js-service-slick").slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 2000,
+    fade: true,
+    adaptiveHeight: true,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    slidesToShow: 1,
+    dots: false,
+    arrows: false,
+  });
 });
 
 // artist-slick

@@ -23,7 +23,7 @@
 
   <body>
      <!-- header -->
-    <header class="header" id="header">
+     <header class="header" id="header">
       <div class="header__inner">
         <div class="header__logo">
           <a href="/">
@@ -41,16 +41,15 @@
             <li class="header__nav-item">
               <a href="/archive-artist.html">artist</a>
             </li>
-            <li class="header__nav-item">
-              <a href="https://tenshoku.mynavi.jp/company/392332/" target="_blank">recruit</a>
-            </li>
             <li class="header__nav-item dropdown">
               <p>about</p>
               <ul class="dropdown-menu">
                 <li class="dropdown__menu-item">
                   <a href="/page-about.html">日本語</a>
                 </li>
-                <li class="dropdown__menu-item"><a href="/page-about-en.html">English</a></li>
+                <li class="dropdown__menu-item">
+                  <a href="/page-about-en.html">English</a>
+                </li>
               </ul>
             </li>
             <li class="header__nav-item dropdown">
@@ -59,19 +58,28 @@
                 <li class="dropdown__menu-item">
                   <a href="/page-group.html">日本語</a>
                 </li>
-                <li class="dropdown__menu-item"><a href="/page-group-en.html">English</a></li>
+                <li class="dropdown__menu-item">
+                  <a href="/page-group-en.html">English</a>
+                </li>
               </ul>
+            </li>
+            <li class="header__nav-item">
+              <a
+                href="https://tenshoku.mynavi.jp/company/392332/"
+                target="_blank"
+                >recruit</a
+              >
             </li>
             <li class="header__nav-item dropdown">
               <p>contact</p>
               <ul class="dropdown-menu">
                 <li class="dropdown__menu-item">
-                  <a href="/page-contact.html" target="_blank" rel="noopener"
+                  <a href="/page-contact.html" 
                     >バックステージプロジェクト</a
                   >
                 </li>
                 <li class="dropdown__menu-item">
-                  <a href="#" target="_blank" rel="noopener"
+                  <a href="#"
                     >アーティストマネジメント<i
                       class="fa-solid fa-up-right-from-square"
                     ></i
@@ -98,9 +106,6 @@
           <li class="drawer__nav-item">
             <a href="/archive-artist.html">artist</a>
           </li>
-          <li class="drawer__nav-item">
-            <a href="https://tenshoku.mynavi.jp/company/392332/" target="_blank">recruit</a>
-          </li>
           <li class="drawer__nav-item accordion">
             <p class="js-drawer-accordion">about</p>
             <ul class="accordion-menu">
@@ -115,16 +120,21 @@
               <li><a href="/page-group-en.html">English</a></li>
             </ul>
           </li>
+          <li class="drawer__nav-item">
+            <a href="https://tenshoku.mynavi.jp/company/392332/" target="_blank"
+              >recruit</a
+            >
+          </li>
           <li class="drawer__nav-item accordion">
             <p class="js-drawer-accordion">contact</p>
             <ul class="accordion-menu">
               <li>
-                <a href="/page-contact.html" target="_blank" rel="noopener"
+                <a href="/page-contact.html" 
                   >バックステージプロジェクト</a
                 >
               </li>
               <li>
-                <a href="#" target="_blank" rel="noopener"
+                <a href="#"
                   >アーティストマネジメント<i
                     class="fa-solid fa-up-right-from-square"
                   ></i
@@ -217,48 +227,48 @@
   </section>
 </main>
 
-<!-- footer -->
-<footer class="footer" id="footer">
-<div class="footer__inner inner">
-  <div class="footer__top">
-    <div class="footer__logo">
-      <a href="#">
-        <img src="img/logo-black.png" alt="" />
-      </a>
+ <!-- footer -->
+ <footer class="footer" id="footer">
+  <div class="footer__inner inner">
+    <div class="footer__top">
+      <div class="footer__logo">
+        <a href="#">
+          <img src="img/logo-black.png" alt="" />
+        </a>
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item">
+            <a href="/page-works.html">works</a>
+          </li>
+          <li class="footer__nav-item">
+            <p>about</p>
+            <ul class="footer__nav-item-wrap">
+              <li><a href="/page-about.html">日本語</a></li>
+              <li><a href="/page-about-en.html">English</a></li>
+            </ul>
+          </li>
+          <li class="footer__nav-item">
+            <p>group</p>
+            <ul class="footer__nav-item-wrap">
+              <li><a href="/page-group.html">日本語</a></li>
+              <li><a href="/page-group-en.html">English</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="footer__nav">
-      <ul class="footer__nav-list">
-        <li class="footer__nav-item">
-          <a href="/page-works.html">works</a>
-        </li>
-        <li class="footer__nav-item">
-          <p>about</p>
-          <ul class="footer__nav-item-wrap">
-            <li><a href="/page-about.html">日本語</a></li>
-            <li><a href="#">English</a></li>
-          </ul>
-        </li>
-        <li class="footer__nav-item">
-          <p>group</p>
-          <ul class="footer__nav-item-wrap">
-            <li><a href="/page-group.html">日本語</a></li>
-            <li><a href="#">English</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div class="footer__bottom">
-    <div class="footer__bottom-wrap">
-      <small class="footer__copyright"
-        >&copy;2025 All Rights Reserved.</small
-      >
+    <div class="footer__bottom">
       <div class="footer__policy">
-        <a href="/page-policy.html">プライバシーポリシー</a>
+        <a href="/page-policy.html">プライバシーポリシー</a> / <a href="/page-policy-en.html"><span>Privacy Policy</span></a>
+      </div>
+      <div class="footer__bottom-wrap">
+        <small class="footer__copyright"
+          >&copy;2025 All Rights Reserved.</small
+        >
       </div>
     </div>
   </div>
-</div>
 <!-- page-top -->
 <div class="page-top js-page-top">
   <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
