@@ -22,63 +22,122 @@
   </head>
 
   <body>
-   <!-- header -->
-   <header class="header" id="header">
-    <div class="header__inner">
-      <div class="header__logo">
-        <a href="/">
-          <img src="img/logo-black.png" class="logo-img" alt="" />
-        </a>
+    <!-- header -->
+    <header class="header" id="header">
+      <div class="header__inner">
+        <div class="header__logo">
+          <a href="/">
+            <img src="img/logo-black.png" class="logo-img" alt="" />
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="/page-service.html">service</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/page-works.html">works</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="/archive-artist.html">artist</a>
+            </li>
+            <li class="header__nav-item dropdown">
+              <p>about</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-about.html">日本語</a>
+                </li>
+                <li class="dropdown__menu-item">
+                  <a href="/page-about-en.html">English</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item dropdown">
+              <p>group</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-group.html">日本語</a>
+                </li>
+                <li class="dropdown__menu-item">
+                  <a href="/page-group-en.html">English</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a
+                href="https://tenshoku.mynavi.jp/company/392332/"
+                target="_blank"
+                >recruit</a
+              >
+            </li>
+            <li class="header__nav-item dropdown">
+              <p>contact</p>
+              <ul class="dropdown-menu">
+                <li class="dropdown__menu-item">
+                  <a href="/page-contact.html">バックステージプロジェクト</a>
+                </li>
+                <li class="dropdown__menu-item">
+                  <a href="#"
+                    >アーティストマネジメント<i
+                      class="fa-solid fa-up-right-from-square"
+                    ></i
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <button class="hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
+      <nav class="drawer__nav js-drawer">
+        <div class="drawer__logo">
+          <a href="/">
+            <img src="img/logo-white.png" alt="" />
+          </a>
+        </div>
+        <ul class="drawer__nav-list">
+          <li class="drawer__nav-item">
+            <a href="/">top</a>
+          </li>
+          <li class="drawer__nav-item">
             <a href="/page-service.html">service</a>
           </li>
-          <li class="header__nav-item">
+          <li class="drawer__nav-item">
             <a href="/page-works.html">works</a>
           </li>
-          <li class="header__nav-item">
+          <li class="drawer__nav-item">
             <a href="/archive-artist.html">artist</a>
           </li>
-          <li class="header__nav-item dropdown">
+          <li class="drawer__nav-item accordion">
             <p>about</p>
-            <ul class="dropdown-menu">
-              <li class="dropdown__menu-item">
-                <a href="/page-about.html">日本語</a>
-              </li>
-              <li class="dropdown__menu-item">
-                <a href="/page-about-en.html">English</a>
-              </li>
+            <ul class="accordion-menu">
+              <li><a href="/page-about.html">日本語</a></li>
+              <li><a href="/page-about-en.html">English</a></li>
             </ul>
           </li>
-          <li class="header__nav-item dropdown">
+          <li class="drawer__nav-item accordion">
             <p>group</p>
-            <ul class="dropdown-menu">
-              <li class="dropdown__menu-item">
-                <a href="/page-group.html">日本語</a>
-              </li>
-              <li class="dropdown__menu-item">
-                <a href="/page-group-en.html">English</a>
-              </li>
+            <ul class="accordion-menu">
+              <li><a href="/page-group.html">日本語</a></li>
+              <li><a href="/page-group-en.html">English</a></li>
             </ul>
           </li>
-          <li class="header__nav-item">
-            <a
-              href="https://tenshoku.mynavi.jp/company/392332/"
-              target="_blank"
+          <li class="drawer__nav-item">
+            <a href="https://tenshoku.mynavi.jp/company/392332/" target="_blank"
               >recruit</a
             >
           </li>
-          <li class="header__nav-item dropdown">
+          <li class="drawer__nav-item accordion">
             <p>contact</p>
-            <ul class="dropdown-menu">
-              <li class="dropdown__menu-item">
-                <a href="/page-contact.html" 
-                  >バックステージプロジェクト</a
-                >
+            <ul class="accordion-menu">
+              <li>
+                <a href="/page-contact.html">バックステージプロジェクト</a>
               </li>
-              <li class="dropdown__menu-item">
+              <li>
                 <a href="#"
                   >アーティストマネジメント<i
                     class="fa-solid fa-up-right-from-square"
@@ -89,62 +148,7 @@
           </li>
         </ul>
       </nav>
-      <button class="hamburger js-hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-    <nav class="drawer__nav js-drawer">
-      <ul class="drawer__nav-list">
-        <li class="drawer__nav-item">
-          <a href="/page-service.html">service</a>
-        </li>
-        <li class="drawer__nav-item">
-          <a href="/page-works.html">works</a>
-        </li>
-        <li class="drawer__nav-item">
-          <a href="/archive-artist.html">artist</a>
-        </li>
-        <li class="drawer__nav-item accordion">
-          <p class="js-drawer-accordion">about</p>
-          <ul class="accordion-menu">
-            <li><a href="/page-about.html">日本語</a></li>
-            <li><a href="/page-about-en.html">English</a></li>
-          </ul>
-        </li>
-        <li class="drawer__nav-item accordion">
-          <p class="js-drawer-accordion">group</p>
-          <ul class="accordion-menu">
-            <li><a href="/page-group.html">日本語</a></li>
-            <li><a href="/page-group-en.html">English</a></li>
-          </ul>
-        </li>
-        <li class="drawer__nav-item">
-          <a href="https://tenshoku.mynavi.jp/company/392332/" target="_blank"
-            >recruit</a
-          >
-        </li>
-        <li class="drawer__nav-item accordion">
-          <p class="js-drawer-accordion">contact</p>
-          <ul class="accordion-menu">
-            <li>
-              <a href="/page-contact.html" 
-                >バックステージプロジェクト</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                >アーティストマネジメント<i
-                  class="fa-solid fa-up-right-from-square"
-                ></i
-              ></a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    </header>
 
     <main>
       <!-- page-ttl -->
@@ -158,116 +162,164 @@
       </section>
 
       <!--outline -->
-      <section class="outline" id="outline">
-        <div class="outline__inner inner">
-          <div class="p-ttl --section">
-            <h2>outline<span>企業情報</span></h2>
+      <section class="about" id="about">
+        <div class="about__inner inner">
+          <div class="about__con" id="outline">
+            <div class="p-ttl --section">
+              <h2>outline<span>企業情報</span></h2>
+            </div>
+            <div class="about__list">
+              <div class="about__list-item">
+                <div class="about__ttl">
+                  <h3>社名</h3>
+                </div>
+                <div class="about__txt">
+                  <p>株式会社バックステージプロジェクト</p>
+                </div>
+              </div>
+              <!-- <div class="about__list-item">
+                <div class="about__ttl">
+                  <h3>所在地</h3>
+                </div>
+                <div class="about__txt">
+                  <p>
+                    〒151-0051 <br class="--sp" />東京都渋谷区千駄ヶ谷1-19-8
+                    <br class="--sp" />
+                    HIRO BLDG. 2F
+                  </p>
+                </div>
+              </div> -->
+              <div class="about__list-item">
+                <div class="about__ttl">
+                  <h3>設立</h3>
+                </div>
+                <div class="about__txt">
+                  <p>1986（昭和61）年11月26日</p>
+                </div>
+              </div>
+              <div class="about__list-item">
+                <div class="about__ttl">
+                  <h3>資本金</h3>
+                </div>
+                <div class="about__txt">
+                  <p>￥33,000,000</p>
+                </div>
+              </div>
+              <div class="about__list-item">
+                <div class="about__ttl">
+                  <h3>従業員数</h3>
+                </div>
+                <div class="about__txt">
+                  <p>11名（単独） / 111名（関係会社）</p>
+                </div>
+              </div>
+              <div class="about__list-item">
+                <div class="about__ttl">
+                  <h3>代表者</h3>
+                </div>
+                <div class="about__txt">
+                  <p>代表取締役 杉本圭司</p>
+                </div>
+              </div>
+              <div class="about__list-item">
+                <div class="about__ttl">
+                  <h3>取引銀行</h3>
+                </div>
+                <div class="about__txt">
+                  <p>三井住友銀行 新宿西口支店<br />UBS銀行 東京支店</p>
+                </div>
+              </div>
+              <div class="about__list-item">
+                <div class="about__ttl">
+                  <h3>年商</h3>
+                </div>
+                <div class="about__txt">
+                  <p>2022年度 14,771,932千円（関係会社）</p>
+                </div>
+              </div>
+              <div class="about__list-item">
+                <div class="about__ttl">
+                  <h3>主要取引先</h3>
+                </div>
+                <div class="about__txt">
+                  <p>
+                    レコード会社各社 / 広告代理店各社 / 全国プロモーター各社 /
+                    全国テレビ局 / ラジオ局各社 / 全国新聞各社 / 主要出版各社
+                    etc.
+                  </p>
+                </div>
+              </div>
+              <div class="about__list-item">
+                <div class="about__ttl">
+                  <h3>事業内容</h3>
+                </div>
+                <div class="about__txt">
+                  <p>
+                    ・ミュージックパブリッシング（著作権管理）<br />・音楽プロダクション<br />・アーティストマネジメント会社経営<br />・ファンクラブ企画運営<br />・グループ会社経営のヘッドクオーター業務
+                  </p>
+                </div>
+              </div>
+              <div class="about__list-item">
+                <div class="about__ttl">
+                  <h3>関連会社</h3>
+                </div>
+                <div class="about__txt">
+                  <p>
+                    ・株式会社ライブエグザム<br />・株式会社クリエイティブマン
+                    プロダクション<br />・株式会社FYD<br />・株式会社BIRTH
+                    ENTERTAINMENT<br />・トレジャーズ株式会社<br />・株式会社SC鳥取<br />・株式会社イントロ
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="outline__list">
-            <div class="outline__list-item">
-              <div class="outline__ttl">
-                <h3>社名</h3>
-              </div>
-              <div class="outline__txt">
-                <p>株式会社バックステージプロジェクト</p>
-              </div>
+          <div class="about__con" id="access">
+            <div class="p-ttl --section">
+              <h2>access<span>本社アクセス</span></h2>
             </div>
-            <div class="outline__list-item">
-              <div class="outline__ttl">
-                <h3>所在地</h3>
-              </div>
-              <div class="outline__txt">
-                <p>
-                  〒151-0051 <br class="--sp" />東京都渋谷区千駄ヶ谷1-19-8
-                  <br class="--sp" />
-                  HIRO BLDG. 2F
-                </p>
-              </div>
-            </div>
-            <div class="outline__list-item">
-              <div class="outline__ttl">
-                <h3>設立</h3>
-              </div>
-              <div class="outline__txt">
-                <p>1986（昭和61）年11月26日</p>
-              </div>
-            </div>
-            <div class="outline__list-item">
-              <div class="outline__ttl">
-                <h3>資本金</h3>
-              </div>
-              <div class="outline__txt">
-                <p>￥33,000,000</p>
-              </div>
-            </div>
-            <div class="outline__list-item">
-              <div class="outline__ttl">
-                <h3>従業員数</h3>
-              </div>
-              <div class="outline__txt">
-                <p>11名（単独） / 111名（関係会社）</p>
-              </div>
-            </div>
-            <div class="outline__list-item">
-              <div class="outline__ttl">
-                <h3>代表者</h3>
-              </div>
-              <div class="outline__txt">
-                <p>代表取締役 杉本圭司</p>
-              </div>
-            </div>
-            <div class="outline__list-item">
-              <div class="outline__ttl">
-                <h3>取引銀行</h3>
-              </div>
-              <div class="outline__txt">
-                <p>三井住友銀行 新宿西口支店<br />UBS銀行 東京支店</p>
-              </div>
-            </div>
-            <div class="outline__list-item">
-              <div class="outline__ttl">
-                <h3>年商</h3>
-              </div>
-              <div class="outline__txt">
-                <p>2022年度 14,771,932千円（関係会社）</p>
-              </div>
-            </div>
-            <div class="outline__list-item">
-              <div class="outline__ttl">
-                <h3>主要取引先</h3>
-              </div>
-              <div class="outline__txt">
-                <p>
-                  レコード会社各社 / 広告代理店各社 / 全国プロモーター各社 /
-                  全国テレビ局 / ラジオ局各社 / 全国新聞各社 / 主要出版各社 etc.
-                </p>
-              </div>
-            </div>
-            <div class="outline__list-item">
-              <div class="outline__ttl">
-                <h3>事業内容</h3>
-              </div>
-              <div class="outline__txt">
-                <p>
-                  ・ミュージックパブリッシング（著作権管理）<br />・音楽プロダクション<br />・アーティストマネジメント会社経営<br />・ファンクラブ企画運営<br />・グループ会社経営のヘッドクオーター業務
-                </p>
-              </div>
-            </div>
-            <div class="outline__list-item">
-              <div class="outline__ttl">
-                <h3>関連会社</h3>
-              </div>
-              <div class="outline__txt">
-                <p>
-                  ・株式会社ライブエグザム<br />・株式会社クリエイティブマン
-                  プロダクション<br />・株式会社FYD<br />・株式会社BIRTH
-                  ENTERTAINMENT<br />・トレジャーズ株式会社<br />・株式会社SC鳥取<br />・株式会社イントロ
-                </p>
+            <div class="about__list">
+              <div class="about__list-item">
+                <div class="about__ttl-wrap">
+                <div class="about__ttl">
+                  <h3>所在地</h3>
+                </div>
+                <div class="about__txt">
+                  <p>
+                    〒151-0051 <br class="--sp" />東京都渋谷区千駄ヶ谷1-19-8
+                    <br class="--sp" />
+                    HIRO BLDG. 2F
+                  </p>
+                </div>
+                </div>
+                <div class="about__ttl-wrap">
+                  <div class="about__ttl">
+                    <h3>最寄駅</h3>
+                    </div>
+                    <div class="about__txt">
+                      <p>
+                        ・JR 中央・総武線「千駄ヶ谷駅」より徒歩4分<br />・都営地下鉄
+                        大江戸線「国立競技場」より徒歩5分<br />・東京メトロ
+                        副都心線線「北参道駅」より徒歩7分
+                      </p>
+                    </div>
+                  </div>
+                <div class="about__map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6481.803553401014!2d139.7071295763685!3d35.67942047258795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cbe4d4c4fcb%3A0xfa38e32564fa93ba!2z44CSMTUxLTAwNTEg5p2x5Lqs6YO95riL6LC35Yy65Y2D6aeE44Kx6LC377yR5LiB55uu77yR77yZ4oiS77yYIOOCreODo-ODg-ODiA!5e0!3m2!1sja!2sjp!4v1743116296770!5m2!1sja!2sjp"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <!-- cta -->
       <section class="cta" id="cta">
         <div class="cta__inner">
@@ -292,48 +344,49 @@
       </section>
     </main>
 
-     <!-- footer -->
- <footer class="footer" id="footer">
-  <div class="footer__inner inner">
-    <div class="footer__top">
-      <div class="footer__logo">
-        <a href="#">
-          <img src="img/logo-black.png" alt="" />
-        </a>
-      </div>
-      <nav class="footer__nav">
-        <ul class="footer__nav-list">
-          <li class="footer__nav-item">
-            <a href="/page-works.html">works</a>
-          </li>
-          <li class="footer__nav-item">
-            <p>about</p>
-            <ul class="footer__nav-item-wrap">
-              <li><a href="/page-about.html">日本語</a></li>
-              <li><a href="/page-about-en.html">English</a></li>
+    <!-- footer -->
+    <footer class="footer" id="footer">
+      <div class="footer__inner inner">
+        <div class="footer__top">
+          <div class="footer__logo">
+            <a href="#">
+              <img src="img/logo-black.png" alt="" />
+            </a>
+          </div>
+          <nav class="footer__nav">
+            <ul class="footer__nav-list">
+              <li class="footer__nav-item">
+                <a href="/page-works.html">works</a>
+              </li>
+              <li class="footer__nav-item">
+                <p>about</p>
+                <ul class="footer__nav-item-wrap">
+                  <li><a href="/page-about.html">日本語</a></li>
+                  <li><a href="/page-about-en.html">English</a></li>
+                </ul>
+              </li>
+              <li class="footer__nav-item">
+                <p>group</p>
+                <ul class="footer__nav-item-wrap">
+                  <li><a href="/page-group.html">日本語</a></li>
+                  <li><a href="/page-group-en.html">English</a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-          <li class="footer__nav-item">
-            <p>group</p>
-            <ul class="footer__nav-item-wrap">
-              <li><a href="/page-group.html">日本語</a></li>
-              <li><a href="/page-group-en.html">English</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="footer__bottom">
-      <div class="footer__policy">
-        <a href="/page-policy.html">プライバシーポリシー</a> / <a href="/page-policy-en.html"><span>Privacy Policy</span></a>
+          </nav>
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__policy">
+            <a href="/page-policy.html">プライバシーポリシー</a> /
+            <a href="/page-policy-en.html"><span>Privacy Policy</span></a>
+          </div>
+          <div class="footer__bottom-wrap">
+            <small class="footer__copyright"
+              >&copy;2025 All Rights Reserved.</small
+            >
+          </div>
+        </div>
       </div>
-      <div class="footer__bottom-wrap">
-        <small class="footer__copyright"
-          >&copy;2025 All Rights Reserved.</small
-        >
-      </div>
-    </div>
-  </div>
       <!-- page-top -->
       <div class="page-top js-page-top">
         <a href="#"><i class="fa-solid fa-arrow-up"></i></a>

@@ -30,7 +30,7 @@
       "areaB"
       "areaA"
       "areaC";
-    gap: rem(20);
+    gap: rem(40);
   }
 }
 
@@ -81,18 +81,11 @@
 
 .artist___sns {
   @include flex(center);
-  gap: rem(40);
+  gap: rem(36);
   margin-top: rem(40);
-  @include mq("md") {
-    gap: rem(30);
-    margin-top: rem(20);
-  }
   a {
     i {
-      font-size: rem(40);
-      @include mq("md") {
-        font-size: rem(36);
-      }
+      font-size: rem(36);
     }
   }
 }
@@ -224,7 +217,6 @@
 
 .artist__career {
   grid-area: areaC;
-
   p {
     font-size: 1.15rem;
     line-height: 1.75;
@@ -239,19 +231,16 @@
 
 .artist__bottom {
   margin-top: rem(40);
-  @include mq("md") {
-    margin-top: rem(20);
-  }
 }
 
 .artist__accordion-list {
-  max-width: rem(1080);
+  max-width: rem(980);
   display: flex;
   flex-direction: column;
-  gap: rem(20);
+  gap: rem(30);
   margin: 0 auto;
   @include mq("md") {
-    gap: rem(15);
+    gap: rem(20);
   }
 }
 

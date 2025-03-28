@@ -105,7 +105,7 @@ $(window).on("scroll", function () {
     const scroll = $(window).scrollTop();
     const wHeight = $(window).height();
 
-    if (scroll > offset - wHeight + wHeight / 2) {
+    if (scroll > offset - wHeight + wHeight / 4) {
       $(this).addClass("show");
     }
   });

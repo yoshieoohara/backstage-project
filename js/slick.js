@@ -79,7 +79,7 @@ jQuery(function ($) {
   $(".js-service-slick").slick({
     autoplay: true,
     autoplaySpeed: 2000,
-    speed: 2000,
+    speed: 6000,
     fade: true,
     adaptiveHeight: true,
     pauseOnFocus: false,

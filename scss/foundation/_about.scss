@@ -1,8 +1,7 @@
 @use "../global" as *;
 
 // about
-// outline
-.outline {
+.about {
   background-color: $black2;
   padding: rem(80) 0;
   @include mq("md") {
@@ -10,37 +9,52 @@
   }
 }
 
-.outline__inner {
+.about__inner {
+  display: flex;
+  flex-direction: column;
+  gap: rem(80);
+  @include mq("md") {
+    gap: rem(60);
+    }
+}
+
+.about__con {
   display: flex;
   align-items: start;
   justify-content: space-between;
   @include mq("md") {
     flex-direction: column;
     max-width: rem(600);
+    margin: 0 auto;
+    width: 100%;
     }
 }
 
-#outline .p-ttl {
+#about .p-ttl {
   position: static;
-  width: rem(400);
+  h2 {
+    width: rem(400);
+  }
   color: $white;
   @include mq("md") {
     width: fit-content;
     }
 }
 
-.outline__list {
-  max-width: rem(800);
+.about__list {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: rem(20);
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(20);
     }
 }
 
-.outline__list-item {
+#access .about__list {
+}
+
+.about__list-item {
   display: flex;
   align-items: start;
   background-color: $white;
@@ -54,7 +68,21 @@
     }
 }
 
-.outline__ttl {
+#access .about__list-item {
+  flex-direction: column;
+  @include mq("md") {
+    padding: rem(20);
+    }
+}
+
+#access .about__ttl-wrap {
+  @include mq("md") {
+    flex-direction: column;
+    gap: rem(8);
+    }
+}
+
+.about__ttl {
   width: rem(120);
   flex-shrink: 0;
   @include mq("md") {
@@ -69,7 +97,7 @@
   }
 }
 
-.outline__txt {
+.about__txt {
   p {
     font-size: rem(20);
     @include mq("md") {
@@ -78,22 +106,55 @@
   }
 }
 
+.about__ttl-wrap {
+  display: flex;
+}
+
+#about .about__ttl-wrap + .about__ttl-wrap {
+margin-top: rem(20);
+}
+
+
+.about__map {
+  width: 100%;
+  margin-top: rem(20);
+  aspect-ratio: 5 / 3;
+  iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
 // outline-en
-.outline-en {
+.about-en {
   background-color: $black2;
   padding: rem(80) 0;
 }
-  #outline-en .p-ttl {
-    position: static;
-    width: rem(400);
-    color: $white;
-  }
 
-#outline-en .outline__list-item {
+#about-en .p-ttl {
+  position: static;
+  h2 {
+    width: rem(400);
+  }
+  color: $white;
+  @include mq("md") {
+    width: fit-content;
+    }
+}
+
+#about-en .about__list-item {
   flex-direction: column;
   gap: rem(8);
 }
 
-#outline-en .outline__ttl {
+#about-en .about__ttl {
   width: fit-content;
 }
+
+#about-en .about__ttl-wrap {
+  flex-direction: column;
+}
+
+
+
