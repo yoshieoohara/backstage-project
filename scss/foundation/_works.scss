@@ -6,7 +6,7 @@
   padding: rem(80) 0;
   @include mq("md") {
     padding: rem(40) 0;
-    }
+  }
 }
 
 .works__inner {
@@ -14,7 +14,7 @@
   @include mq("md") {
     max-width: rem(500);
     margin: 0 auto;
-    }
+  }
 }
 
 .tab__link {
@@ -27,28 +27,26 @@
   @include mq("md") {
     gap: rem(10);
     padding-bottom: rem(20);
-    }
+  }
 }
 
 .tab__link li {
   a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(center);
     height: inherit;
     font-size: rem(18);
     line-height: 1;
     color: $white;
+    white-space: nowrap;
     background-color: $black2;
     border: rem(1) solid $white;
     border-radius: rem(10);
-    white-space: nowrap;
     padding: rem(16) rem(20);
     @include mq("md") {
       font-size: rem(15);
-      padding: rem(8) rem(12);
       border-radius: rem(8);
-      }
+      padding: rem(8) rem(12);
+    }
   }
 }
 
@@ -90,26 +88,26 @@
 
 .works__list {
   display: flex;
-  flex-wrap: wrap;
   align-items: start;
+  flex-wrap: wrap;
   gap: rem(40);
   padding-top: rem(40);
 }
 
 .works__list-item {
+  position: relative;
+  display: block;
   width: 44%;
   background-color: $gray;
-  padding: rem(20) rem(20) 0;
   border-radius: rem(10);
   box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  display: block;
-  position: relative;
+  padding: rem(20) rem(20) 0;
   cursor: pointer;
+  transition: all 0.3s ease;
   @include mq("md") {
     width: 100%;
     padding: rem(14) rem(14) 0;
-    }
+  }
 }
 
 .work__list-img {
@@ -125,13 +123,13 @@
   margin-top: rem(20);
   @include mq("md") {
     margin-top: rem(10);
-    };
+  }
   h3 {
     font-size: rem(20);
     color: $main;
     @include mq("md") {
       font-size: rem(18);
-      }
+    }
   }
 }
 
@@ -140,38 +138,38 @@
   margin-top: rem(20);
   @include mq("md") {
     margin-top: rem(10);
-    }
+  }
 }
 
 .works__list-date {
   font-size: rem(16);
-  color: $gray9;
   font-weight: 500;
+  color: $gray9;
   @include mq("md") {
     font-size: rem(12);
-    }
+  }
 }
 
 .work__list-txt {
   p {
     font-size: rem(15);
-    color: $gray3;
     font-weight: 500;
+    color: $gray3;
     @include mq("md") {
       font-size: rem(12);
-      }
-      span {
-        color: $main;
-        text-decoration: underline;
-      }
+    }
+    span {
+      color: $main;
+      text-decoration: underline;
+    }
   }
 }
 
 .works__list-category {
-  margin-top: rem(10);
   display: flex;
   flex-wrap: wrap;
   gap: rem(8);
+  margin-top: rem(10);
 }
 
 .works__category-item p {
@@ -182,10 +180,9 @@
   padding: rem(4) rem(16);
   @include mq("md") {
     font-size: rem(12);
-    padding: rem(4) rem(13)
-    }
+    padding: rem(4) rem(13);
+  }
 }
-
 
 .works__list-sub-img__wrap {
   @include flex(center);
@@ -195,49 +192,49 @@
   @include mq("md") {
     gap: rem(10);
     margin-top: rem(10);
-    }
+  }
 }
 
 .works__list-sub-img {
   width: 30%;
   @include mq("md") {
-  width: 31%;
-    }
+    width: 31%;
+  }
   img {
     @include img;
   }
 }
 
 .works__list-bottom {
-  display: block; 
+  display: block;
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: all 0.5s ease; 
   margin-top: rem(16);
+  transition: all 0.5s ease;
   @include mq("md") {
     margin-top: rem(10);
-    }
+  }
 }
 
 .works__list-item.is-open {
   padding-bottom: rem(20);
   @include mq("md") {
     padding-bottom: rem(14);
-    }
+  }
 }
 
 .works__list-item.is-open .works__list-bottom {
-  max-height: rem(1000); 
+  max-height: rem(1000);
   opacity: 1;
 }
 
 .accordion__btn {
-position: relative;
-color: $gray3;
-font-size: rem(16);
-@include mq("md") {
-  font-size: rem(12);
+  position: relative;
+  color: $gray3;
+  font-size: rem(16);
+  @include mq("md") {
+    font-size: rem(12);
   }
 }
 
@@ -256,7 +253,7 @@ font-size: rem(16);
     width: rem(6);
     height: rem(6);
     left: rem(-18);
-    }
+  }
 }
 
 .works__list-item.is-open .works__list-top .accordion__btn::before {
@@ -282,13 +279,13 @@ font-size: rem(16);
 
 // pagination
 .pagination {
- @include flex(center);
-  margin-top: rem(56);
+  @include flex(center);
   gap: rem(20);
+  margin-top: rem(56);
   @include mq("md") {
     gap: rem(16);
     margin-top: rem(30);
-    }
+  }
 }
 
 .pagination__num {
@@ -297,16 +294,16 @@ font-size: rem(16);
   @include mq("md") {
     width: rem(36);
     height: rem(36);
-    }
+  }
   a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(center);
     height: inherit;
     font-size: rem(20);
     background-color: $white;
     border-radius: 50%;
-    font-size: rem(15);
+    @include mq("md") {
+      font-size: rem(15);
+    }
   }
 }
 

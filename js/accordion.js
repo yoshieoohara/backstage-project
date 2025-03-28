@@ -48,13 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // artist-accordion
 $(function () {
-  $(".js-accordion-ttl").click(function () {
-    $(".js-accordion-ttl")
+  $(".artist__accordion-ttl").click(function () {
+    $(".artist__accordion-ttl")
       .not(this)
       .removeClass("is-open")
-      .next(".js-accordion-txt")
+      .next(".artist__accordion-txt")
       .slideUp();
 
-    $(this).toggleClass("is-open").next(".js-accordion-txt").slideToggle();
+    $(this).toggleClass("is-open").next(".artist__accordion-txt").slideToggle();
   });
 });

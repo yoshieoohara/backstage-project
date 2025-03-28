@@ -19,8 +19,8 @@
   border-radius: rem(20);
   padding: rem(50);
   @include mq("md") {
-    padding: rem(15);
     border-radius: rem(8);
+    padding: rem(15);
     }
 p {
   font-size: 1.15rem;

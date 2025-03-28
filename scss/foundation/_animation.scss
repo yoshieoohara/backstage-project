@@ -1,68 +1,61 @@
 @use "../global" as *;
 
-// 画像：Y軸で回転登場
+// rotate-in
 .rotate-in {
   position: relative;
   opacity: 0;
   transform: perspective(1000px) rotateY(90deg);
   transition: all 0.8s ease-out;
-
   &.show {
     opacity: 1;
     transform: perspective(1000px) rotateY(0deg);
   }
 }
 
-// テキスト：左からスライドイン
+.rotate-in-reverse {
+  position: relative;
+  opacity: 0;
+  transform: perspective(1000px) rotateY(-90deg);
+  transition: all 0.8s ease-out;
+  &.show {
+    opacity: 1;
+    transform: perspective(1000px) rotateY(0deg);
+  }
+}
+
+// slide-in
 .slide-in {
   position: relative;
   opacity: 0;
   transform: translateX(rem(-40));
   transition: all 0.6s ease-out;
   transition-delay: 0.3s;
-
   &.show {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-// 画像：Y軸 逆回転
-.rotate-in-reverse {
-  position: relative;
-  opacity: 0;
-  transform: perspective(1000px) rotateY(-90deg);
-  transition: all 0.8s ease-out;
-
-  &.show {
-    opacity: 1;
-    transform: perspective(1000px) rotateY(0deg);
-  }
-}
-
-// テキスト：右からスライドイン
 .slide-in-reverse {
   position: relative;
   opacity: 0;
   transform: translateX(rem(40));
   transition: all 0.6s ease-out;
   transition-delay: 0.3s;
-
   &.show {
     opacity: 1;
     transform: translateX(0);
   }
 }
 
-// テキスト：下から上にスライドイン
+// slide-up
 .slide-up {
   position: relative;
   opacity: 0;
-  transform: translateY(rem(40)); 
+  transform: translateY(rem(40));
   transition: all 0.6s ease-out;
   transition-delay: 0.3s;
   overflow: hidden;
-
   &.show {
     opacity: 1;
     transform: translateY(0);
@@ -71,36 +64,34 @@
 
 // fade-in
 .fade-in {
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.6s ease-out;
   transition-delay: 0.3s;
-}
-
-.fade-in.show {
-  opacity: 1;
+  &.show {
+    opacity: 1;
+  }
 }
 
 .delay-0 {
-  transition-delay: 0s 
+  transition-delay: 0s;
 }
 
 .delay-04 {
-  transition-delay: 0.4s 
+  transition-delay: 0.4s;
 }
 
 .delay-08 {
-  transition-delay: 0.8s 
+  transition-delay: 0.8s;
 }
 
 .delay-12 {
-  transition-delay: 1.2s 
+  transition-delay: 1.2s;
 }
 
 .delay-16 {
-  transition-delay: 1.6s 
+  transition-delay: 1.6s;
 }
 
 .delay-20 {
-  transition-delay: 2.0s 
+  transition-delay: 2s;
 }
-

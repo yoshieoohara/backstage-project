@@ -1,9 +1,10 @@
 @use "../global" as *;
 
 // base
-html, body {
-  overflow-x: hidden;
+html,
+body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -27,6 +28,13 @@ a {
   cursor: pointer;
   &:hover {
     opacity: 0.7;
+  }
+}
+
+// tel
+a[href^="tel:"] {
+  @media (min-width: 768px) {
+    pointer-events: none;
   }
 }
 
@@ -60,8 +68,8 @@ li {
 
 // s-ttl
 .s-ttl {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   z-index: 0;
   h2 {
     font-family: $font-family-en1;
@@ -70,20 +78,19 @@ li {
     line-height: 1;
     text-transform: uppercase;
     @include mq("md") {
-     font-size: rem(30);
-      }
-
+      font-size: rem(30);
+    }
     span {
       display: block;
       font-family: $font-family-ja;
-      line-height: 1;
       font-size: rem(25);
       font-weight: 700;
+      line-height: 1;
       margin-top: rem(20);
       @include mq("md") {
-        margin-top: rem(10);
         font-size: rem(18);
-        }
+        margin-top: rem(10);
+      }
     }
   }
 }
@@ -98,11 +105,11 @@ li {
   border-radius: 50%;
   z-index: -1;
   @include mq("md") {
-    width: rem(28);
-    height: rem(28);
     top: rem(-8);
     left: rem(-12);
-    }
+    width: rem(28);
+    height: rem(28);
+  }
 }
 
 .s-ttl.--center {
@@ -110,14 +117,14 @@ li {
   text-align: center;
   @include mq("md") {
     display: inline-block;
-    }
+  }
 }
 
 .s-ttl.--center .s-ttl__circle {
   left: 40%;
   @include mq("md") {
     left: 0;
-    }
+  }
 }
 
 // btn
@@ -134,7 +141,7 @@ li {
     @include mq("md") {
       font-size: rem(16);
       gap: rem(20);
-      }
+    }
     &:hover {
       opacity: 1;
     }
@@ -144,7 +151,7 @@ li {
       transition: transform 0.3s ease;
       @include mq("md") {
         font-size: rem(16);
-        }
+      }
     }
     &:hover i {
       transform: translateX(rem(10));
@@ -165,11 +172,11 @@ li {
     @include flex(center);
     width: 100%;
     height: 100%;
+    font-size: rem(20);
+    color: $main;
     border-radius: rem(100);
     background-color: $white;
     border: rem(3) solid $main;
-    font-size: rem(20);
-    color: $main;
     transition: color 0.3s ease, background-color 0.3s ease;
     @include mq("md") {
       font-size: rem(15);
@@ -213,6 +220,7 @@ li {
   opacity: 0;
   visibility: hidden;
 }
+
 .header.scrolled .hamburger {
   opacity: 1;
   visibility: visible;
@@ -220,8 +228,8 @@ li {
 
 .header__inner {
   position: relative;
-  height: inherit;
   @include flex(space-between);
+  height: inherit;
   padding: 0 rem(140) 0 rem(50);
   @include mq("md") {
     padding: 0 rem(15);
@@ -231,8 +239,8 @@ li {
 .header__logo {
   width: rem(280);
   height: inherit;
-  transition: transform 0.3s ease;
   pointer-events: auto;
+  transition: transform 0.3s ease;
   @include mq("md") {
     width: rem(160);
   }
@@ -257,7 +265,7 @@ li {
 .header__nav {
   display: flex;
   align-items: center;
-  @media (max-width: 1240px) {
+  @media (max-width: 1239px) {
     display: none;
   }
 }
@@ -269,12 +277,12 @@ li {
 
 .header__nav-item a,
 .header__nav-item p {
-  height: inherit;
   display: flex;
   align-items: center;
+  height: inherit;
   font-family: $font-family-en1;
-  text-transform: uppercase;
   font-size: rem(18);
+  text-transform: uppercase;
   padding: rem(14);
   pointer-events: auto;
 }
@@ -305,7 +313,7 @@ li {
     height: rem(6);
     border-top: rem(2) solid $black;
     border-right: rem(2) solid $black;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
   }
 }
 
@@ -313,9 +321,9 @@ li {
   position: absolute;
   top: rem(60);
   left: rem(24);
+  width: max-content;
   background-color: $main;
   border-radius: rem(5);
-  width: max-content;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s ease, visibility 0.5s ease;
@@ -334,11 +342,11 @@ li {
 
 .dropdown__menu-item a {
   display: block;
-  padding: rem(8) rem(20);
   font-family: $font-family-ja;
   font-size: rem(15);
   color: $white;
   text-transform: none;
+  padding: rem(8) rem(20);
 }
 
 .top-header .dropdown__menu-item a {
@@ -457,13 +465,13 @@ body.no-scroll {
 
 .drawer__logo {
   position: absolute;
-  width: rem(240);
-  transition: transform 0.3s ease;
   top: rem(20);
   left: rem(20);
+  width: rem(240);
+  transition: transform 0.3s ease;
   @include mq("md") {
-   width: rem(160);
-    }
+    width: rem(160);
+  }
   a {
     display: flex;
     align-items: center;
@@ -475,30 +483,25 @@ body.no-scroll {
 }
 
 .drawer__nav-list {
-  opacity: 0;
   position: absolute;
   z-index: 160;
   top: 17%;
   left: 50%;
   transform: translateX(-50%);
   width: 65%;
+  opacity: 0;
   @include mq("md") {
     width: 78%;
   }
 }
 
-.drawer__nav.is-open .drawer__nav-item {
-  animation: gnaviAnime 1s 0.2s forwards;
+.drawer__nav-item {
   opacity: 0;
+  transition: opacity 0.3 ease;
 }
 
-@keyframes gnaviAnime {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.drawer__nav.is-open .drawer__nav-item {
+  opacity: 1;
 }
 
 .drawer__nav-item a,
@@ -517,24 +520,24 @@ body.no-scroll {
   &:before {
     content: "";
     position: absolute;
-    width: rem(10);
-    height: rem(10);
-    background-color: $white;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    width: rem(10);
+    height: rem(10);
+    background-color: $white;
   }
 }
 
 // accordion
 .accordion {
   border-bottom: rem(2) dashed $white;
-  transition: max-height 0.5s ease, transform 0.5s ease;
   cursor: pointer;
+  transition: max-height 0.5s ease, transform 0.5s ease padding-bottom 0.5s ease;
   &:hover,
   &.is-open {
     .accordion-menu {
-      max-height: rem(300);
+      max-height: rem(500);
       transform: translateY(0);
       padding-bottom: rem(16);
     }
@@ -563,24 +566,23 @@ body.no-scroll {
 }
 
 .accordion-menu {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
   max-height: 0;
   overflow: hidden;
   transform: translateY(rem(5));
   padding-bottom: 0;
   transition: max-height 0.5s ease, transform 0.5s ease,
     padding-bottom 0.5s ease;
-  display: flex;
-  flex-direction: column;
-  gap: rem(12);
 
   li a {
     display: block;
     font-size: rem(20);
-    padding: 0 rem(30);
     border-bottom: none;
+    padding: rem(8) 0 rem(8) rem(30);
     @include mq("md") {
       font-size: rem(13);
-      padding: 0 0 0 rem(30);
     }
 
     i {
@@ -598,10 +600,10 @@ body.no-scroll {
 
 // cta
 .cta {
-  padding: rem(60) 0;
   background-image: url(../img/contact-bg.png);
-  background-position: 50%;
+  background-position: right 30% center 50%;
   background-size: cover;
+  padding: rem(60) 0;
   @include mq("md") {
     padding: rem(40) 0;
   }
@@ -611,16 +613,16 @@ body.no-scroll {
   text-align: center;
   margin-top: rem(20);
   h2 {
-    color: $white;
+    font-family: $font-family-en1;
     font-size: rem(60);
     line-height: 1.2;
-    font-family: $font-family-en1;
+    color: $white;
     @include mq("md") {
       font-size: rem(45);
     }
     span {
-      font-family: $font-family-ja;
       display: block;
+      font-family: $font-family-ja;
       font-size: rem(20);
       @include mq("md") {
         font-size: rem(15);
@@ -635,8 +637,8 @@ body.no-scroll {
   margin-top: rem(40);
   @include mq("md") {
     flex-direction: column;
-    margin-top: rem(20);
     gap: rem(20);
+    margin-top: rem(20);
   }
 }
 
@@ -667,17 +669,15 @@ body.no-scroll {
 .footer {
   padding: rem(40) 0 rem(20);
 }
-.footer__inner {
-}
 
 .footer__top {
   display: flex;
   justify-content: space-between;
   padding: 0 rem(70) rem(58);
   @include mq("md") {
+    max-width: rem(400);
     flex-direction: column;
     padding: 0;
-    max-width: rem(400);
     margin: 0 auto;
   }
 }
@@ -688,8 +688,7 @@ body.no-scroll {
     width: rem(180);
   }
   img {
-    width: 100%;
-    display: block;
+    @include img;
     object-fit: contain;
   }
 }
@@ -744,13 +743,13 @@ body.no-scroll {
   flex-direction: column;
   li {
     a {
-      font-family: $font-family-ja;
       position: relative;
-      font-size: rem(15);
-      font-weight: 500;
       display: flex;
       align-items: center;
-      padding: rem(5);
+      font-family: $font-family-ja;
+      font-size: rem(15);
+      font-weight: 500;
+      padding: rem(8) rem(4);
       @include mq("md") {
         font-size: rem(12);
       }
@@ -778,32 +777,28 @@ body.no-scroll {
 
 .footer__bottom-wrap {
   @include mq("md") {
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-between;
     margin: 0 auto;
-    // gap: rem(20);
   }
 }
 
 .footer__copyright {
-  margin-top: rem(10);
   display: block;
   font-size: rem(14);
   font-weight: 500;
   text-align: center;
+  margin-top: rem(10);
   @include mq("md") {
     font-size: rem(12);
   }
 }
 
 .footer__policy {
-  margin-left: auto;
-  margin-right: rem(80);
   display: flex;
   align-items: center;
   justify-content: end;
   gap: rem(10);
+  margin-left: auto;
+  margin-right: rem(80);
   @include mq("md") {
     margin-right: rem(30);
   }
@@ -815,11 +810,11 @@ body.no-scroll {
     text-decoration: underline;
     @include mq("md") {
       font-size: rem(12);
-  }
+    }
     span {
       text-transform: uppercase;
     }
-    }
+  }
 }
 
 // page-top
@@ -839,11 +834,11 @@ body.no-scroll {
 .page-top a {
   position: relative;
   display: inline-block;
-  background-color: $gray;
-  border-radius: 50%;
   width: rem(60);
   height: rem(60);
+  background-color: $gray;
   text-decoration: none;
+  border-radius: 50%;
   @include mq("md") {
     width: rem(40);
     height: rem(40);

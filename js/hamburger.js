@@ -26,11 +26,11 @@ jQuery(function ($) {
     $(".accordion p").on("click", function (e) {
       e.preventDefault();
       const $parent = $(this).closest(".accordion");
-    
+
       if (!$parent.hasClass("is-open")) {
         $(".accordion").removeClass("is-open");
         $(".accordion-menu").stop(true, true).slideUp(300);
-    
+
         $parent.addClass("is-open");
         $parent.find(".accordion-menu").stop(true, true).slideDown(300);
       } else {
@@ -40,6 +40,3 @@ jQuery(function ($) {
     });
   });
 });
-
-
-

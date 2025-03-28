@@ -1,17 +1,16 @@
 @use "../global" as *;
 
-// archive-artist
 // artist-slick
 .artist-slick {
-  padding: rem(200) 0 rem(130);
   background-color: $gray;
+  padding: rem(200) 0 rem(130);
   @include mq("md") {
     padding: rem(90) 0 rem(45);
   }
 }
 
 .artist-slick__inner {
-max-width: rem(900);
+  max-width: rem(900);
 }
 
 .artist-slick.slick-list {
@@ -27,7 +26,7 @@ max-width: rem(900);
     border-radius: rem(15);
     @include mq("md") {
       border-radius: rem(8);
-      }
+    }
   }
 }
 
@@ -36,7 +35,7 @@ max-width: rem(900);
   bottom: rem(-50);
   @include mq("md") {
     bottom: rem(-40);
-    }
+  }
 }
 
 .slick-dots li {
@@ -44,7 +43,7 @@ max-width: rem(900);
   margin: 0 rem(12);
   @include mq("md") {
     margin: 0 rem(6);
-    }
+  }
 }
 
 .slick-dots button {
@@ -61,7 +60,7 @@ max-width: rem(900);
   @include mq("md") {
     width: rem(8);
     height: rem(8);
-    }
+  }
 }
 
 #artist-slick .slick-dots .slick-active button {
@@ -73,12 +72,13 @@ max-width: rem(900);
   padding: rem(80) 0;
   @include mq("md") {
     padding: rem(40) 0;
-    }
+  }
 }
 
 .archive-artist__inner {
   position: relative;
 }
+
 #archive-artist .p-ttl {
   position: static;
 }
@@ -88,16 +88,16 @@ max-width: rem(900);
 }
 
 .archive-artist__list {
-  margin-top: rem(60);
   display: flex;
   flex-direction: column;
   align-items: end;
   gap: rem(28);
+  margin-top: rem(60);
   @include mq("md") {
     max-width: rem(600);
     width: 85%;
     margin: rem(40) auto 0;
-    }
+  }
 }
 
 .archive-artist__item a {
@@ -114,7 +114,7 @@ max-width: rem(900);
   overflow: hidden;
   @include mq("md") {
     aspect-ratio: 2 / 1;
-    }
+  }
 
   &::after {
     content: "";
@@ -133,7 +133,6 @@ max-width: rem(900);
     @include img;
     object-fit: cover;
     border-radius: rem(15);
-    display: block;
   }
 }
 
@@ -146,24 +145,24 @@ max-width: rem(900);
   transition: opacity 0.3s, visibility 0.3s;
   z-index: 3;
   @include mq("md") {
-    opacity: 1;
-    visibility: visible;
     bottom: rem(8);
     left: rem(8);
-    }
+    opacity: 1;
+    visibility: visible;
+  }
 
   h2 {
     font-size: rem(30);
     color: $white;
     @include mq("md") {
       font-size: rem(18);
-      }
+    }
     span {
       display: block;
       font-size: rem(20);
       @include mq("md") {
         font-size: rem(12);
-        }
+      }
     }
   }
 }
@@ -172,9 +171,6 @@ max-width: rem(900);
   position: absolute;
   bottom: rem(40);
   right: rem(40);
-  opacity: 0;
-  visibility: hidden;
-  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -182,24 +178,26 @@ max-width: rem(900);
   font-size: rem(20);
   color: $white;
   padding: rem(6);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 3;
   transition: opacity 0.3s, visibility 0.3s;
   @include mq("md") {
+    bottom: rem(8);
+    right: rem(8);
     font-size: rem(12);
     gap: rem(10);
-    bottom: rem(8);
-  right: rem(8);
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
   }
   i {
-    color: $white;
     font-size: rem(20);
+    color: $white;
     transition: transform 0.3s;
     @include mq("md") {
       font-size: rem(15);
-      }
+    }
   }
-
 }
 
 .archive-artist__item a:hover {

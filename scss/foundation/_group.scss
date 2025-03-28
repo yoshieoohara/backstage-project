@@ -16,9 +16,6 @@
   }
 }
 
-.inner {
-}
-
 .group__list {
   display: flex;
   flex-direction: column;
@@ -33,16 +30,16 @@
   border-radius: rem(15);
   padding: rem(30);
   @include mq("md") {
-    padding: rem(12);
     border-radius: rem(8);
+    padding: rem(12);
   }
 }
 
 .group__ttl {
-  width: fit-content;
   display: flex;
   align-items: center;
   gap: rem(15);
+  width: fit-content;
   border-bottom: rem(2) solid $gray2;
   padding-bottom: rem(10);
   @include mq("md") {

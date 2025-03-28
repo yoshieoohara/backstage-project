@@ -15,37 +15,6 @@ jQuery(function ($) {
 });
 
 // top-works-slick
-// jQuery(function ($) {
-//   $(".js-works-slick-top").slick({
-//     autoplay: true,
-//     autoplaySpeed: 0,
-//     speed: 30000,
-//     cssEase: "linear",
-//     pauseOnFocus: false,
-//     pauseOnHover: false,
-//     slidesToScroll: 3,
-//     arrows: false,
-//     infinite: true,
-//     variableWidth: true,
-//     rtl: true,
-//   });
-// });
-
-// jQuery(function ($) {
-//   $(".js-works-slick-bottom").slick({
-//     autoplay: true,
-//     autoplaySpeed: 0,
-//     speed: 30000,
-//     cssEase: "linear",
-//     pauseOnFocus: false,
-//     pauseOnHover: false,
-//     slidesToScroll: 3,
-//     arrows: false,
-//     infinite: true,
-//     variableWidth: true,
-//   });
-// });
-
 jQuery(function ($) {
   $(".js-works-slick").slick({
     autoplay: false,
