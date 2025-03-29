@@ -2243,12 +2243,13 @@ body.no-scroll {
   position: relative;
   max-width: 50rem;
   margin: 0 auto;
-  padding: 3.75rem 0;
+  padding: 6.25rem 0;
   overflow: visible;
 }
 @media screen and (max-width: 767px) {
   .service-message__link-wrap {
     max-width: 21.25rem;
+    padding: 3.75rem 0;
   }
 }
 
@@ -2354,7 +2355,7 @@ body.no-scroll {
 
 .service-message__link-line {
   position: absolute;
-  top: 23%;
+  top: 32%;
   left: -12%;
   transform-origin: left center;
   transform: scaleX(0);
@@ -2379,7 +2380,7 @@ body.no-scroll {
 
 .service-message__link-line.--under {
   top: unset;
-  bottom: 23%;
+  bottom: 32%;
   left: 0;
   width: 100%;
 }

@@ -42,10 +42,11 @@
   position: relative;
   max-width: rem(800);
   margin: 0 auto;
-  padding: rem(60) 0;
+  padding: rem(100) 0;
   overflow: visible;
   @include mq("md") {
     max-width: rem(340);
+    padding: rem(60) 0;
   }
 }
 
@@ -136,7 +137,7 @@
 // line-animation
 .service-message__link-line {
   position: absolute;
-  top: 23%;
+  top: 32%;
   left: -12%;
   transform-origin: left center;
   transform: scaleX(0);
@@ -162,7 +163,7 @@
 
 .service-message__link-line.--under {
   top: unset;
-  bottom: 23%;
+  bottom: 32%;
   left: 0;
   width: 100%;
 }
