@@ -1336,7 +1336,7 @@ body.no-scroll {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-color: #000;
   z-index: 100;
   animation: screenFadeOut 1s ease-in-out 3s forwards;
@@ -1345,25 +1345,25 @@ body.no-scroll {
 .logo-container {
   position: relative;
   width: 100%;
-  height: 30vh;
+  height: 30dvh;
 }
 @media screen and (max-width: 767px) {
   .logo-container {
-    height: 20vh;
+    height: 20dvh;
   }
 }
 .logo-container .loading-logo {
   position: relative;
   top: 0;
   left: 50%;
-  width: 40vh;
+  width: 40dvh;
   opacity: 0;
   transform: translateX(-50%);
   animation: logoFadeIn 1s ease-in-out 0.5s forwards, logoFadeOut 0.5s ease-in-out 2.5s forwards;
 }
 @media screen and (max-width: 767px) {
   .logo-container .loading-logo {
-    width: 20vh;
+    width: 20dvh;
   }
 }
 .logo-container .loading-logo img {
@@ -1426,7 +1426,7 @@ body.no-scroll {
 .top-fv {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   z-index: 1;
 }
@@ -1436,7 +1436,7 @@ body.no-scroll {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-color: #000;
   z-index: -1;
 }
@@ -1456,7 +1456,7 @@ body.no-scroll {
 .top-message {
   position: relative;
   width: 100%;
-  height: 100vh;
+  max-height: 200dvh;
   overflow: hidden;
 }
 
@@ -1475,7 +1475,7 @@ body.no-scroll {
 
 .scroll-down {
   position: absolute;
-  top: -7.625rem;
+  top: -6.375rem;
   left: 3rem;
   display: flex;
   flex-direction: column;
@@ -1485,7 +1485,7 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .scroll-down {
-    top: -6.625rem;
+    top: -5.375rem;
     left: 0.9375rem;
   }
 }
@@ -1503,7 +1503,7 @@ body.no-scroll {
 .scroll-down .scroll-down__line {
   position: relative;
   width: 0.125rem;
-  height: 3.75rem;
+  height: 2.5rem;
   background-color: #FFF;
 }
 .scroll-down .scroll-down__line .scroll-down__dot {
@@ -1532,10 +1532,12 @@ body.no-scroll {
 .top-message__body {
   width: 68%;
   flex-shrink: 0;
+  padding: 5rem 0;
 }
 @media screen and (max-width: 767px) {
   .top-message__body {
     width: 57%;
+    padding: 2.5rem 0;
   }
 }
 
@@ -1638,8 +1640,7 @@ body.no-scroll {
 
 .top-message__slick.slick-slider {
   width: 30%;
-  height: 100vh;
-  pointer-events: auto;
+  height: 100dvh;
 }
 @media screen and (max-width: 767px) {
   .top-message__slick.slick-slider {
@@ -1649,7 +1650,7 @@ body.no-scroll {
 
 .top-message__slick .slick-list {
   transform: rotate(180deg) !important;
-  height: 100vh !important;
+  height: 100dvh !important;
   overflow: visible;
 }
 
@@ -2078,7 +2079,7 @@ body.no-scroll {
 @media screen and (max-width: 767px) {
   .top-artist__name-wrap {
     justify-content: start;
-    gap: 0.625rem;
+    gap: 2.5rem;
   }
 }
 

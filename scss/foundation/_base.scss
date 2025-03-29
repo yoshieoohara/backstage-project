@@ -7,7 +7,7 @@
   left: 0;
   @include flex(center);
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-color: $black;
   z-index: 100;
   animation: screenFadeOut 1s ease-in-out 3s forwards;
@@ -16,22 +16,22 @@
 .logo-container {
   position: relative;
   width: 100%;
-  height: 30vh;
+  height: 30dvh;
   @include mq("md") {
-    height: 20vh;
+    height: 20dvh;
   }
 
   .loading-logo {
     position: relative;
     top: 0;
     left: 50%;
-    width: 40vh;
+    width: 40dvh;
     opacity: 0;
     transform: translateX(-50%);
     animation: logoFadeIn 1s ease-in-out 0.5s forwards,
       logoFadeOut 0.5s ease-in-out 2.5s forwards;
     @include mq("md") {
-      width: 20vh;
+      width: 20dvh;
     }
     img {
       @include img;
@@ -101,7 +101,7 @@
 .top-fv {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   z-index: 1;
 }
@@ -111,7 +111,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   background-color: $black;
   z-index: -1;
   video {
@@ -132,7 +132,7 @@
 .top-message {
   position: relative;
   width: 100%;
-  height: 100vh;
+ max-height: 200dvh;
   overflow: hidden;
 }
 
@@ -148,7 +148,7 @@
 // scroll-down
 .scroll-down {
   position: absolute;
-  top: rem(-122);
+  top: rem(-102);
   left: rem(48);
   display: flex;
   flex-direction: column;
@@ -156,7 +156,7 @@
   gap: rem(12);
   z-index: 50;
   @include mq("md") {
-    top: rem(-106);
+    top: rem(-86);
     left: rem(15);
   }
 
@@ -173,7 +173,7 @@
   .scroll-down__line {
     position: relative;
     width: rem(2);
-    height: rem(60);
+    height: rem(40);
     background-color: $white;
 
     .scroll-down__dot {
@@ -205,8 +205,10 @@
 .top-message__body {
   width: 68%;
   flex-shrink: 0;
+  padding: rem(80) 0;
   @include mq("md") {
     width: 57%;
+    padding: rem(40) 0;
   }
 }
 
@@ -293,10 +295,10 @@
   }
 }
 
+// top-message-slick
 .top-message__slick.slick-slider {
   width: 30%;
-  height: 100vh;
-  pointer-events: auto;
+  height: 100dvh;
   @include mq("md") {
     margin-left: rem(60);
   }
@@ -304,7 +306,7 @@
 
 .top-message__slick .slick-list {
   transform: rotate(180deg) !important;
-  height: 100vh !important;
+  height: 100dvh !important;
   overflow: visible;
 }
 
@@ -683,7 +685,7 @@
   justify-content: space-between;
   @include mq("md") {
     justify-content: start;
-    gap: rem(10);
+    gap: rem(40);
   }
 }
 
