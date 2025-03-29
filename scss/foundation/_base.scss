@@ -132,7 +132,7 @@
 .top-message {
   position: relative;
   width: 100%;
- max-height: 200dvh;
+  max-height: 100vh;
   overflow: hidden;
 }
 
@@ -295,18 +295,25 @@
   }
 }
 
+.top-message {
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 // top-message-slick
 .top-message__slick.slick-slider {
   width: 30%;
-  height: 100dvh;
+  height: 50vh;
   @include mq("md") {
     margin-left: rem(60);
   }
 }
 
 .top-message__slick .slick-list {
-  transform: rotate(180deg) !important;
-  height: 100dvh !important;
+  transform: rotate(180deg);
+  height: 50vh;
   overflow: visible;
 }
 
@@ -715,7 +722,7 @@
     align-items: center;
     i {
       color: $white;
-      font-size: rem(32);
+      font-size: rem(24);
     }
   }
 }

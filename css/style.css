@@ -379,7 +379,7 @@ li {
   color: #00AEEF;
   border-radius: 6.25rem;
   background-color: #FFF;
-  border: 0.1875rem solid #00AEEF;
+  border: 0.1rem solid #00AEEF;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 @media screen and (max-width: 767px) {
@@ -511,12 +511,14 @@ li {
   color: #FFF;
 }
 
-.header__nav-item p {
-  cursor: pointer;
+.header__nav-item a i {
+  font-size: 0.625rem;
+  margin-left: 0.25rem;
 }
 
 .header__nav-item p {
   padding-right: 1rem;
+  cursor: pointer;
 }
 
 .dropdown {
@@ -568,6 +570,8 @@ li {
 }
 
 .top-header .dropdown__menu-item a {
+  display: flex;
+  align-items: center;
   color: #FFF;
 }
 .top-header .dropdown__menu-item a i {
@@ -763,6 +767,15 @@ body.no-scroll {
   background-color: #FFF;
 }
 
+.drawer__nav-item a {
+  display: flex;
+  align-items: center;
+}
+.drawer__nav-item a i {
+  font-size: 0.9375rem;
+  margin-left: 0.75rem;
+}
+
 .accordion {
   border-bottom: 0.125rem dashed #FFF;
   cursor: pointer;
@@ -830,7 +843,7 @@ body.no-scroll {
 
 .cta {
   background-image: url(../img/contact-bg.png);
-  background-position: right 30% center 50%;
+  background-position: 70% center;
   background-size: cover;
   padding: 3.75rem 0;
 }
@@ -1456,7 +1469,7 @@ body.no-scroll {
 .top-message {
   position: relative;
   width: 100%;
-  max-height: 200dvh;
+  max-height: 100vh;
   overflow: hidden;
 }
 
@@ -1638,9 +1651,16 @@ body.no-scroll {
   }
 }
 
+.top-message {
+  position: relative;
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 .top-message__slick.slick-slider {
   width: 30%;
-  height: 100dvh;
+  height: 50vh;
 }
 @media screen and (max-width: 767px) {
   .top-message__slick.slick-slider {
@@ -1649,8 +1669,8 @@ body.no-scroll {
 }
 
 .top-message__slick .slick-list {
-  transform: rotate(180deg) !important;
-  height: 100dvh !important;
+  transform: rotate(180deg);
+  height: 50vh;
   overflow: visible;
 }
 
@@ -2111,7 +2131,7 @@ body.no-scroll {
 }
 .top-artist__link a i {
   color: #FFF;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .top-artist__sns {
@@ -2222,12 +2242,13 @@ body.no-scroll {
 .service-message__link-wrap {
   position: relative;
   max-width: 50rem;
-  margin: 5rem auto 0;
+  margin: 0 auto;
+  padding: 3.75rem 0;
+  overflow: visible;
 }
 @media screen and (max-width: 767px) {
   .service-message__link-wrap {
     max-width: 21.25rem;
-    margin: 2.5rem auto 0;
   }
 }
 
@@ -2416,12 +2437,10 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   gap: 3.75rem;
-  margin-top: 6.25rem;
 }
 @media screen and (max-width: 767px) {
   .service__list {
     max-width: 31.25rem;
-    margin: 5rem auto 0;
   }
 }
 
@@ -3154,7 +3173,15 @@ body.no-scroll {
 
 .archive-artist__item a {
   position: relative;
+  display: block;
   transition: opacity 0.3s, visibility 0.3s;
+}
+.archive-artist__item a:hover .archive-artist__img img {
+  transform: scale(1.1);
+}
+.archive-artist__item a:hover .archive-artist__img:after {
+  opacity: 1;
+  visibility: visible;
 }
 
 .archive-artist__img {
@@ -3170,41 +3197,25 @@ body.no-scroll {
     aspect-ratio: 2/1;
   }
 }
-.archive-artist__img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 0.9375rem;
-  transition: background-color 0.3s;
-  z-index: 2;
-}
 .archive-artist__img img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0.9375rem;
+  transition: transform 0.6s ease;
 }
 
 .archive-artist__name {
   position: absolute;
   bottom: 2.5rem;
   left: 2.5rem;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-  z-index: 3;
+  z-index: 5;
 }
 @media screen and (max-width: 767px) {
   .archive-artist__name {
-    bottom: 0.5rem;
-    left: 0.5rem;
-    opacity: 1;
-    visibility: visible;
+    bottom: 0.625rem;
+    left: 1.25rem;
   }
 }
 .archive-artist__name h2 {
@@ -3228,34 +3239,27 @@ body.no-scroll {
 
 .archive-artist__btn {
   position: absolute;
-  bottom: 2.5rem;
-  right: 2.5rem;
+  bottom: 1.25rem;
+  right: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 2.75rem;
+  gap: 2.5rem;
   font-size: 1.25rem;
   color: #FFF;
-  padding: 0.375rem;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 3;
-  transition: opacity 0.3s, visibility 0.3s;
+  padding: 0.5rem;
 }
 @media screen and (max-width: 767px) {
   .archive-artist__btn {
+    font-size: 0.9375rem;
+    gap: 1.25rem;
     bottom: 0.5rem;
-    right: 0.5rem;
-    font-size: 0.75rem;
-    gap: 0.625rem;
-    opacity: 1;
-    visibility: visible;
+    right: 0.625rem;
   }
 }
 .archive-artist__btn i {
-  font-size: 1.25rem;
   color: #FFF;
-  transition: transform 0.3s;
+  font-size: 1.25rem;
 }
 @media screen and (max-width: 767px) {
   .archive-artist__btn i {
@@ -3265,16 +3269,6 @@ body.no-scroll {
 
 .archive-artist__item a:hover {
   opacity: 1;
-}
-
-.archive-artist__item a:hover .archive-artist__img::after {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.archive-artist__item a:hover .archive-artist__name,
-.archive-artist__item a:hover .archive-artist__btn {
-  opacity: 1;
-  visibility: visible;
 }
 
 .artist {

@@ -102,7 +102,16 @@
 
 .archive-artist__item a {
   position: relative;
+  display: block;
   transition: opacity 0.3s, visibility 0.3s;
+  &:hover .archive-artist__img img {
+    transform: scale(1.1);
+  }
+
+  &:hover .archive-artist__img:after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .archive-artist__img {
@@ -116,23 +125,26 @@
     aspect-ratio: 2 / 1;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: rem(15);
-    transition: background-color 0.3s;
-    z-index: 2;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(0, 0, 0, 0);
+  //   border-radius: rem(15);
+  //   opacity: 0;
+  //   visibility: hidden;
+  //   transition: background-color 0.3s;
+  //   z-index: 3;
+  // }
 
   img {
     @include img;
     object-fit: cover;
     border-radius: rem(15);
+    transition: transform 0.6s ease;
   }
 }
 
@@ -140,17 +152,11 @@
   position: absolute;
   bottom: rem(40);
   left: rem(40);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-  z-index: 3;
+  z-index: 5;
   @include mq("md") {
-    bottom: rem(8);
-    left: rem(8);
-    opacity: 1;
-    visibility: visible;
+    bottom: rem(10);
+    left: rem(20);
   }
-
   h2 {
     font-size: rem(30);
     color: $white;
@@ -169,31 +175,24 @@
 
 .archive-artist__btn {
   position: absolute;
-  bottom: rem(40);
-  right: rem(40);
+  bottom: rem(20);
+  right: rem(20);
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: rem(44);
+  gap: rem(40);
   font-size: rem(20);
   color: $white;
-  padding: rem(6);
-  opacity: 0;
-  visibility: hidden;
-  z-index: 3;
-  transition: opacity 0.3s, visibility 0.3s;
+  padding: rem(8);
   @include mq("md") {
+    font-size: rem(15);
+    gap: rem(20);
     bottom: rem(8);
-    right: rem(8);
-    font-size: rem(12);
-    gap: rem(10);
-    opacity: 1;
-    visibility: visible;
+    right: rem(10);
   }
   i {
-    font-size: rem(20);
     color: $white;
-    transition: transform 0.3s;
+    font-size: rem(20);
     @include mq("md") {
       font-size: rem(15);
     }
@@ -202,14 +201,4 @@
 
 .archive-artist__item a:hover {
   opacity: 1;
-}
-
-.archive-artist__item a:hover .archive-artist__img::after {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.archive-artist__item a:hover .archive-artist__name,
-.archive-artist__item a:hover .archive-artist__btn {
-  opacity: 1;
-  visibility: visible;
 }

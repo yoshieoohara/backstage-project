@@ -176,7 +176,7 @@ li {
     color: $main;
     border-radius: rem(100);
     background-color: $white;
-    border: rem(3) solid $main;
+    border: 0.1rem solid $main;
     transition: color 0.3s ease, background-color 0.3s ease;
     @include mq("md") {
       font-size: rem(15);
@@ -292,12 +292,14 @@ li {
   color: $white;
 }
 
-.header__nav-item p {
-  cursor: pointer;
+.header__nav-item a i {
+  font-size: rem(10);
+  margin-left: rem(4);
 }
 
 .header__nav-item p {
   padding-right: rem(16);
+  cursor: pointer;
 }
 
 // dropdown
@@ -350,6 +352,8 @@ li {
 }
 
 .top-header .dropdown__menu-item a {
+  display: flex;
+  align-items: center;
   color: $white;
   i {
     font-size: rem(10);
@@ -529,6 +533,15 @@ body.no-scroll {
   }
 }
 
+.drawer__nav-item a {
+  display: flex;
+  align-items: center;
+  i {
+    font-size: rem(15);
+    margin-left: rem(12);
+  }
+}
+
 // accordion
 .accordion {
   border-bottom: rem(2) dashed $white;
@@ -601,7 +614,7 @@ body.no-scroll {
 // cta
 .cta {
   background-image: url(../img/contact-bg.png);
-  background-position: right 30% center 50%;
+  background-position: 70% center;
   background-size: cover;
   padding: rem(60) 0;
   @include mq("md") {

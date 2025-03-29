@@ -41,10 +41,11 @@
 .service-message__link-wrap {
   position: relative;
   max-width: rem(800);
-  margin: rem(80) auto 0;
+  margin: 0 auto;
+  padding: rem(60) 0;
+  overflow: visible;
   @include mq("md") {
     max-width: rem(340);
-    margin: rem(40) auto 0;
   }
 }
 
@@ -215,10 +216,8 @@
   display: flex;
   flex-direction: column;
   gap: rem(60);
-  margin-top: rem(100);
   @include mq("md") {
     max-width: rem(500);
-    margin: rem(80) auto 0;
   }
 }
 
