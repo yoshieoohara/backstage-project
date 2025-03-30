@@ -153,20 +153,22 @@
 
     <main>
       <!-- loading -->
-      <div class="loading-screen">
-        <div class="logo-container">
-          <div class="loading-logo">
-            <img src="img/logo-loading.png" alt="" />
+      <div class="loading__screen">
+        <div class="logo__container">
+          <div class="loading__logo-wrap">
+            <div class="loading__logo">
+              <img src="img/logo-loading.png" alt="" />
+            </div>
+            <div class="loading__line"></div>
           </div>
-          <div class="loading-line"></div>
         </div>
       </div>
       <div class="top-container">
         <!-- top-fv -->
         <div class="top-fv" id="top-fv">
-          <div class="top-fv__movie" id="bg-video">
-            <video autoplay muted loop>
-              <source src="video/bsp-fv.mp4" type="video/mp4" />
+          <div class="top-fv__video">
+            <video id="bg-video" autoplay muted loop>
+              <source id="video-source" src="" type="video/mp4" />
             </video>
           </div>
         </div>

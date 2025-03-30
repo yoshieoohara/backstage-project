@@ -21,6 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// top-fv
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("bg-video");
+  const source = document.getElementById("video-source");
+
+  const isMobile = window.innerWidth < 768;
+  source.src = isMobile ? "video/bsp-fv_sp.mp4" : "video/bsp-fv_pc.mp4";
+
+  video.load();
+  video.play().catch(err => console.error("動画の再生に失敗しました:", err));
+});
+
 // body-animation
 $(function () {
   $("body").fadeIn(1000);

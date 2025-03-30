@@ -20,6 +20,7 @@ jQuery(function ($) {
     autoplaySpeed: 0,
     speed: 4000,
     cssEase: "linear",
+    centerMode: true,
     pauseOnFocus: false,
     pauseOnHover: false,
     slidesToShow: 2,

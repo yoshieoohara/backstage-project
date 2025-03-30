@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 // loading
-.loading-screen {
+.loading__screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,40 +13,54 @@
   animation: screenFadeOut 1s ease-in-out 3s forwards;
 }
 
-.logo-container {
-  position: relative;
+.logo__container {
+  position: absolute;
   width: 100%;
-  height: 30dvh;
-  @include mq("md") {
-    height: 20dvh;
-  }
-
-  .loading-logo {
-    position: relative;
-    top: 0;
-    left: 50%;
-    width: 40dvh;
-    opacity: 0;
-    transform: translateX(-50%);
-    animation: logoFadeIn 1s ease-in-out 0.5s forwards,
-      logoFadeOut 0.5s ease-in-out 2.5s forwards;
-    @include mq("md") {
-      width: 20dvh;
-    }
-    img {
-      @include img;
-    }
-  }
-
-  .loading-line {
+  .loading__logo-wrap {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: rem(3);
-    background-color: $main;
-    animation: lineMove 0.5s ease-in-out 1.5s forwards,
-      lineFadeOut 0.5s ease-in-out 2.5s forwards;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 40dvh;
+    @include mq("lg") {
+      height: 30dvh;
+      }
+      @include mq("md") {
+      height: 25dvh;
+      }
+
+    .loading__logo {
+      position: relative;
+      top: 0;
+      left: 50%;
+      max-width: rem(800);
+      width: 50dvh;
+      opacity: 0;
+      transform: translateX(-50%);
+      animation: logoFadeIn 1s ease-in-out 0.5s forwards,
+        logoFadeOut 0.5s ease-in-out 2.5s forwards;
+        @include mq("lg") {
+          width: 40dvh;
+          }
+        @include mq("md") {
+          width: 30dvh;
+          }
+      img {
+        @include img;
+        object-fit: contain;
+      }
+    }
+
+    .loading__line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: rem(3);
+      background-color: $main;
+      animation: lineMove 0.5s ease-in-out 1.5s forwards,
+        lineFadeOut 0.5s ease-in-out 2.5s forwards;
+    }
   }
 }
 
@@ -106,7 +120,7 @@
   z-index: 1;
 }
 
-.top-fv__movie {
+.top-fv__video {
   position: fixed;
   top: 0;
   left: 0;
@@ -132,7 +146,7 @@
 .top-message {
   position: relative;
   width: 100%;
-  max-height: 100vh;
+  max-height: 200vh;
   overflow: hidden;
 }
 
@@ -293,13 +307,6 @@
   @include mq("md") {
     margin: rem(20) auto 0 0;
   }
-}
-
-.top-message {
-  position: relative;
-  width: 100%;
-  max-height: 100vh;
-  overflow: hidden;
 }
 
 // top-message-slick
@@ -481,7 +488,10 @@
 .top-works__btn a {
   color: $white;
   background-color: $black2;
-  border: 0.1rem solid $white;
+  border: rem(3) solid $white;
+  @include mq("md") {
+    border: 0.1rem solid $white;
+  }
 }
 
 .top-works__btn a:hover {
@@ -701,12 +711,12 @@
     color: $white;
     font-size: rem(36);
     @include mq("md") {
-      font-size: rem(24);
+      font-size: rem(20);
     }
     span {
       display: block;
       font-family: $font-family-en1;
-      font-size: rem(20);
+      font-size: rem(16);
       line-height: 1;
       text-transform: uppercase;
       @include mq("md") {
@@ -732,10 +742,17 @@
   align-items: center;
   gap: rem(30);
   margin-top: rem(20);
+  @include mq("md") {
+    gap: rem(20);
+    margin-top: rem(10);
+  }
   a {
     i {
       color: $white;
       font-size: rem(32);
+      @include mq("md") {
+        font-size: rem(28);
+      }
     }
   }
 }

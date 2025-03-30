@@ -364,8 +364,8 @@ li {
 }
 @media screen and (max-width: 767px) {
   .btn--border {
-    height: 3rem;
     width: 11.25rem;
+    height: 3rem;
   }
 }
 .btn--border a {
@@ -379,12 +379,13 @@ li {
   color: #00AEEF;
   border-radius: 6.25rem;
   background-color: #FFF;
-  border: 0.1rem solid #00AEEF;
+  border: 0.1875rem solid #00AEEF;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 @media screen and (max-width: 767px) {
   .btn--border a {
     font-size: 0.9375rem;
+    border: 0.1rem solid #00AEEF;
   }
 }
 .btn--border a i {
@@ -603,8 +604,8 @@ li {
     display: block;
     top: 0.75rem;
     right: 0.75rem;
-    width: 2.8125rem;
-    height: 2.8125rem;
+    width: 3.125rem;
+    height: 3.125rem;
   }
 }
 
@@ -900,6 +901,7 @@ body.no-scroll {
 @media screen and (max-width: 767px) {
   .cta__btn {
     width: 16.25rem;
+    height: 3.75rem;
   }
 }
 .cta__btn a {
@@ -1066,20 +1068,10 @@ body.no-scroll {
 .footer__policy {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   gap: 0.625rem;
-  margin-left: auto;
-  margin-right: 5rem;
-}
-@media screen and (max-width: 767px) {
-  .footer__policy {
-    margin-right: 1.875rem;
-  }
 }
 .footer__policy a {
-  display: flex;
-  align-items: center;
-  justify-content: end;
   font-size: 0.875rem;
   text-decoration: underline;
 }
@@ -1118,8 +1110,8 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .page-top a {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.125rem;
+    height: 3.125rem;
   }
 }
 .page-top a i {
@@ -1341,7 +1333,7 @@ body.no-scroll {
   transition-delay: 2s;
 }
 
-.loading-screen {
+.loading__screen {
   position: fixed;
   top: 0;
   left: 0;
@@ -1355,36 +1347,54 @@ body.no-scroll {
   animation: screenFadeOut 1s ease-in-out 3s forwards;
 }
 
-.logo-container {
-  position: relative;
+.logo__container {
+  position: absolute;
   width: 100%;
-  height: 30dvh;
 }
-@media screen and (max-width: 767px) {
-  .logo-container {
-    height: 20dvh;
+.logo__container .loading__logo-wrap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 40dvh;
+}
+@media screen and (max-width: 1023px) {
+  .logo__container .loading__logo-wrap {
+    height: 30dvh;
   }
 }
-.logo-container .loading-logo {
+@media screen and (max-width: 767px) {
+  .logo__container .loading__logo-wrap {
+    height: 25dvh;
+  }
+}
+.logo__container .loading__logo-wrap .loading__logo {
   position: relative;
   top: 0;
   left: 50%;
-  width: 40dvh;
+  max-width: 50rem;
+  width: 50dvh;
   opacity: 0;
   transform: translateX(-50%);
   animation: logoFadeIn 1s ease-in-out 0.5s forwards, logoFadeOut 0.5s ease-in-out 2.5s forwards;
 }
-@media screen and (max-width: 767px) {
-  .logo-container .loading-logo {
-    width: 20dvh;
+@media screen and (max-width: 1023px) {
+  .logo__container .loading__logo-wrap .loading__logo {
+    width: 40dvh;
   }
 }
-.logo-container .loading-logo img {
+@media screen and (max-width: 767px) {
+  .logo__container .loading__logo-wrap .loading__logo {
+    width: 30dvh;
+  }
+}
+.logo__container .loading__logo-wrap .loading__logo img {
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
-.logo-container .loading-line {
+.logo__container .loading__logo-wrap .loading__line {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1444,7 +1454,7 @@ body.no-scroll {
   z-index: 1;
 }
 
-.top-fv__movie {
+.top-fv__video {
   position: fixed;
   top: 0;
   left: 0;
@@ -1453,7 +1463,7 @@ body.no-scroll {
   background-color: #000;
   z-index: -1;
 }
-.top-fv__movie video {
+.top-fv__video video {
   display: block;
   width: 100%;
   height: 100%;
@@ -1469,7 +1479,7 @@ body.no-scroll {
 .top-message {
   position: relative;
   width: 100%;
-  max-height: 100vh;
+  max-height: 200vh;
   overflow: hidden;
 }
 
@@ -1649,13 +1659,6 @@ body.no-scroll {
   .top-message__btn {
     margin: 1.25rem auto 0 0;
   }
-}
-
-.top-message {
-  position: relative;
-  width: 100%;
-  max-height: 100vh;
-  overflow: hidden;
 }
 
 .top-message__slick.slick-slider {
@@ -1862,7 +1865,12 @@ body.no-scroll {
 .top-works__btn a {
   color: #FFF;
   background-color: #1D1D1D;
-  border: 0.1rem solid #FFF;
+  border: 0.1875rem solid #FFF;
+}
+@media screen and (max-width: 767px) {
+  .top-works__btn a {
+    border: 0.1rem solid #FFF;
+  }
 }
 
 .top-works__btn a:hover {
@@ -2109,13 +2117,13 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .top-artist__name h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 .top-artist__name h3 span {
   display: block;
   font-family: "Jost", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -2140,9 +2148,20 @@ body.no-scroll {
   gap: 1.875rem;
   margin-top: 1.25rem;
 }
+@media screen and (max-width: 767px) {
+  .top-artist__sns {
+    gap: 1.25rem;
+    margin-top: 0.625rem;
+  }
+}
 .top-artist__sns a i {
   color: #FFF;
   font-size: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .top-artist__sns a i {
+    font-size: 1.75rem;
+  }
 }
 
 .top-artist__btn {
@@ -3099,7 +3118,7 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .artist-slick .slick-dots {
-    bottom: -2.5rem;
+    bottom: -2rem;
   }
 }
 
@@ -3166,8 +3185,6 @@ body.no-scroll {
 }
 @media screen and (max-width: 767px) {
   .archive-artist__list {
-    max-width: 37.5rem;
-    width: 85%;
     margin: 2.5rem auto 0;
   }
 }
@@ -3187,11 +3204,16 @@ body.no-scroll {
 
 .archive-artist__img {
   position: relative;
-  max-width: 56.875rem;
+  max-width: 56.25rem;
   width: 100%;
   aspect-ratio: 910/420;
   border-radius: 0.9375rem;
   overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  .archive-artist__img {
+    border-radius: 0.5rem;
+  }
 }
 @media screen and (max-width: 767px) {
   .archive-artist__img {
@@ -3205,6 +3227,11 @@ body.no-scroll {
   object-fit: cover;
   border-radius: 0.9375rem;
   transition: transform 0.6s ease;
+}
+@media screen and (max-width: 767px) {
+  .archive-artist__img img {
+    border-radius: 0.5rem;
+  }
 }
 
 .archive-artist__name {
@@ -3967,7 +3994,7 @@ body.no-scroll {
 @media screen and (max-width: 767px) {
   .contact__form {
     gap: 0.625rem;
-    padding: 1.125rem 0;
+    padding-top: 1.125rem;
   }
 }
 
@@ -4044,7 +4071,7 @@ body.no-scroll {
   .form__input input,
   .form__textarea textarea {
     width: calc(100% - 1.5rem);
-    font-size: 0.875rem;
+    font-size: 1rem;
     border-radius: 0.3125rem;
     padding: 0.875rem;
   }
@@ -4053,7 +4080,7 @@ body.no-scroll {
 ::placeholder {
   font-family: "Noto Sans JP", serif;
   font-size: 0.875rem;
-  color: #ccc;
+  color: #c4c4c4;
 }
 
 .form__textarea textarea {
@@ -4154,7 +4181,7 @@ body.no-scroll {
   font-weight: 700;
   color: #FFF;
   background-color: #000;
-  border: 0.1rem solid #000;
+  border: 0.1875rem solid #000;
   border-radius: 6.25rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -4162,6 +4189,7 @@ body.no-scroll {
 @media screen and (max-width: 767px) {
   .form__btn input {
     font-size: 0.875rem;
+    border: 0.1rem solid #000;
   }
 }
 
