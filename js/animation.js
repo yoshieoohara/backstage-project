@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   source.src = isMobile ? "video/bsp-fv_sp.mp4" : "video/bsp-fv_pc.mp4";
 
   video.load();
-  video.play().catch(err => console.error("動画の再生に失敗しました:", err));
+  video.play().catch((err) => console.error("動画の再生に失敗しました:", err));
 });
 
 // body-animation
@@ -43,7 +43,6 @@ jQuery(function ($) {
   $(window).on("scroll", function () {
     const fvHeight = $("#top-fv").outerHeight();
     const scroll = $(window).scrollTop();
-
 
     if (scroll > fvHeight - 100) {
       $(".top-header .logo-img").attr("src", "img/logo-black.png");
@@ -85,7 +84,7 @@ jQuery(function ($) {
       transformOrigin: "left center",
       ease: "power2.out",
       duration: 1,
-      delay: i * 0.8, 
+      delay: i * 0.8,
       scrollTrigger: {
         trigger: line,
         start: "top 70%",
@@ -109,7 +108,9 @@ jQuery(function ($) {
 
 // scroll-animation
 $(window).on("scroll", function () {
-  $(".rotate-in, .slide-in, .rotate-in-reverse, .slide-in-reverse, .slide-up").each(function () {
+  $(
+    ".rotate-in, .slide-in, .rotate-in-reverse, .slide-in-reverse, .slide-up"
+  ).each(function () {
     const offset = $(this).offset().top;
     const scroll = $(window).scrollTop();
     const wHeight = $(window).height();
@@ -119,6 +120,3 @@ $(window).on("scroll", function () {
     }
   });
 });
-
-
-

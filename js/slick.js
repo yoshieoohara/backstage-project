@@ -1,19 +1,3 @@
-// top-message-slick
-// jQuery(function ($) {
-//   $(".js-top-message-slick").slick({
-//     autoplay: true,
-//     autoplaySpeed: 0,
-//     speed: 4000,
-//     cssEase: "linear",
-//     pauseOnFocus: false,
-//     pauseOnHover: false,
-//     slidesToShow: 2,
-//     arrows: false,
-//     vertical: true,
-//     verticalSwiping: true,
-//   });
-// });
-
 jQuery(function ($) {
   $(".js-top-message-slick").slick({
     autoplay: true, 

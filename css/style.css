@@ -1467,7 +1467,7 @@ body.no-scroll {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .bg-container {
@@ -2461,6 +2461,7 @@ body.no-scroll {
 @media screen and (max-width: 767px) {
   .service__list {
     max-width: 31.25rem;
+    margin: 0 auto;
   }
 }
 
