@@ -87,7 +87,7 @@ jQuery(function ($) {
       delay: i * 0.8,
       scrollTrigger: {
         trigger: line,
-        start: "top 70%",
+        start: "top 60%",
         toggleActions: "play none none none",
       },
     });
@@ -99,7 +99,7 @@ jQuery(function ($) {
       ease: "power2.out",
       scrollTrigger: {
         trigger: line,
-        start: "top 80%",
+        start: "top 60%",
         toggleActions: "play none none none",
       },
     });
@@ -115,7 +115,7 @@ $(window).on("scroll", function () {
     const scroll = $(window).scrollTop();
     const wHeight = $(window).height();
 
-    if (scroll > offset - wHeight + wHeight / 10) {
+    if (scroll > offset - wHeight / 1.3) {
       $(this).addClass("show");
     }
   });

@@ -5,7 +5,7 @@
   position: relative;
   opacity: 0;
   transform: perspective(1000px) rotateY(90deg);
-  transition: all 0.8s ease-out;
+  transition: all 0.5s ease-out;
   &.show {
     opacity: 1;
     transform: perspective(1000px) rotateY(0deg);
@@ -16,7 +16,7 @@
   position: relative;
   opacity: 0;
   transform: perspective(1000px) rotateY(-90deg);
-  transition: all 0.8s ease-out;
+  transition: all 0.5s ease-out;
   &.show {
     opacity: 1;
     transform: perspective(1000px) rotateY(0deg);
@@ -28,8 +28,7 @@
   position: relative;
   opacity: 0;
   transform: translateX(rem(-40));
-  transition: all 0.6s ease-out;
-  transition-delay: 0.3s;
+  transition: all 0.5s ease-out;
   &.show {
     opacity: 1;
     transform: translateX(0);
@@ -40,8 +39,7 @@
   position: relative;
   opacity: 0;
   transform: translateX(rem(40));
-  transition: all 0.6s ease-out;
-  transition-delay: 0.3s;
+  transition: all 0.5s ease-out;
   &.show {
     opacity: 1;
     transform: translateX(0);
@@ -53,8 +51,7 @@
   position: relative;
   opacity: 0;
   transform: translateY(rem(40));
-  transition: all 0.6s ease-out;
-  transition-delay: 0.3s;
+  transition: all 0.5s ease-out;
   overflow: hidden;
   &.show {
     opacity: 1;
@@ -65,8 +62,7 @@
 // fade-in
 .fade-in {
   opacity: 0;
-  transition: opacity 0.6s ease-out;
-  transition-delay: 0.3s;
+  transition: opacity 0.5s ease-out;
   &.show {
     opacity: 1;
   }
